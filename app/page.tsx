@@ -11,22 +11,22 @@ export default function Home() {
   return (
     <>
       <HomeHero />
-      <Section>
+      <Section className="bg-[#eef4f0]">
         <HomeNeedEditorial />
       </Section>
-      <Section className="bg-mist">
+      <Section className="bg-[#e7efeb]">
         <HomeMethodSection />
       </Section>
-      <Section>
+      <Section className="bg-linen">
         <HomeServiceEditorial />
       </Section>
-      <Section className="bg-linen">
+      <Section className="bg-[#edf2ee]">
         <VideoBlock
           title="Vídeo institucional do Dr. Pedro"
           text="Espaço provisório para um vídeo curto sobre escuta clínica, investigação, exames, rotina do paciente e decisões individualizadas. O conteúdo final deve ser validado antes da publicação."
         />
       </Section>
-      <Section>
+      <Section className="bg-[#f6f4ee]">
         <SectionHeading
           eyebrow="Processo"
           title="Um acompanhamento construído em etapas"
@@ -34,9 +34,10 @@ export default function Home() {
         />
         <div className="grid gap-4 md:grid-cols-4">
           {processSteps.map((step, index) => (
-            <div key={step} className="rounded-subtle border border-petrol/10 bg-white p-6 shadow-[0_10px_32px_rgba(22,74,81,0.05)]">
+            <div key={step.title} className="rounded-subtle border border-petrol/10 bg-white/88 p-7 shadow-[0_10px_32px_rgba(22,74,81,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-soft">
               <span className="text-sm font-semibold text-gold">0{index + 1}</span>
-              <h3 className="mt-4 text-lg font-semibold text-ink">{step}</h3>
+              <h3 className="mt-4 text-lg font-semibold text-ink">{step.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-graphite">{step.text}</p>
             </div>
           ))}
         </div>
@@ -44,10 +45,10 @@ export default function Home() {
       <Section className="bg-mist">
         <HomeBioAuthority />
       </Section>
-      <Section>
+      <Section className="bg-[#e9f0ed]">
         <LocationSection />
       </Section>
-      <Section>
+      <Section className="bg-linen">
         <SectionHeading eyebrow="Dúvidas" title="Perguntas frequentes" />
         <FAQ items={generalFaq} />
       </Section>

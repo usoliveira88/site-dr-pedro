@@ -112,15 +112,13 @@ export function HomeBioAuthority() {
         <h2 className="max-w-2xl text-3xl font-semibold leading-tight text-ink sm:text-4xl">
           Autoridade e proximidade para uma avaliação mais consciente
         </h2>
-        <p className="mt-5 text-base leading-8 text-graphite">
-          {doctor.bio}
-        </p>
-        <p className="mt-5 text-base leading-8 text-graphite">
-          Esta seção deve receber a versão final da trajetória, formação validada, áreas registradas e forma de atendimento aprovada pelo cliente.
+        <p className="mt-5 text-base leading-8 text-graphite">{doctor.bio}</p>
+        <p className="mt-4 text-sm font-medium text-petrol">
+          {doctor.professionalId} · {doctor.complementaryTraining}
         </p>
         <div className="mt-7 flex flex-col gap-3 sm:flex-row">
           <ButtonLink href="/sobre">Conhecer trajetória</ButtonLink>
-          <ButtonLink href="/contato" variant="secondary">
+          <ButtonLink href={doctor.whatsappUrl} variant="secondary">
             Agendar consulta
           </ButtonLink>
         </div>

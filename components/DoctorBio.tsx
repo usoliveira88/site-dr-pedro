@@ -18,15 +18,15 @@ export function DoctorBio({ compact = false }: { compact?: boolean }) {
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Sobre o médico</p>
         <h2 className="text-3xl font-semibold text-ink sm:text-4xl">{doctor.name}</h2>
         <p className="mt-3 text-sm font-medium text-petrol">{doctor.professionalId}</p>
-        <p className="mt-5 text-base leading-8 text-graphite">{doctor.bio}</p>
-        {!compact ? (
-          <p className="mt-5 text-base leading-8 text-graphite">
-            O texto final deve confirmar formação, áreas registradas de atuação, credenciais e escopo real de atendimento.
-          </p>
-        ) : null}
+        <div className="mt-5 grid gap-4 text-base leading-8 text-graphite">
+          {(compact ? [doctor.bio] : doctor.fullBio.split("\n\n")).map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
+        <p className="mt-4 text-sm font-medium text-petrol">{doctor.complementaryTraining}</p>
         <div className="mt-7 flex flex-col gap-3 sm:flex-row">
           <ButtonLink href="/sobre">Conhecer trajetória</ButtonLink>
-          <ButtonLink href="/contato" variant="secondary">
+          <ButtonLink href={doctor.whatsappUrl} variant="secondary">
             Agendar consulta
           </ButtonLink>
         </div>

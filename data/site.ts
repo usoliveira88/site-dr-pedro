@@ -12,12 +12,18 @@ export type Service = {
 
 export const doctor = {
   name: "Dr. Pedro Machado",
-  professionalId: "CRM/RQE: inserir e validar dados oficiais",
-  role: "Médico com atuação em emagrecimento, saúde hormonal, composição corporal e prevenção",
+  professionalId: "CRM 01198564/RJ",
+  role: "Médico Nutrólogo em Petrópolis",
+  complementaryTraining: "Pós-graduado em Nutrologia Esportiva",
   bio:
-    "Texto provisório editável. Apresente aqui trajetória, formação validada, credenciais oficiais, forma de atendimento e visão clínica do Dr. Pedro Machado após revisão do cliente.",
-  location: "Endereço do consultório: inserir endereço completo validado",
-  whatsapp: "WhatsApp: inserir número oficial",
+    "Dr. Pedro Machado é Médico Nutrólogo em Petrópolis, com pós-graduação em Nutrologia Esportiva. Seu atendimento é voltado a adultos e idosos que buscam cuidar da saúde metabólica, melhorar a composição corporal, prevenir doenças crônicas e alcançar mais vitalidade com acompanhamento médico individualizado.",
+  fullBio:
+    "Dr. Pedro Machado é Médico Nutrólogo em Petrópolis, com pós-graduação em Nutrologia Esportiva. Seu atendimento é voltado a adultos e idosos que buscam cuidar da saúde metabólica, melhorar a composição corporal, prevenir doenças crônicas e alcançar mais vitalidade com acompanhamento médico individualizado.\n\nSua atuação inclui emagrecimento saudável, controle e tratamento da obesidade, saúde metabólica, performance, hipertrofia e estratégias clínicas voltadas à melhora da qualidade de vida. O acompanhamento considera histórico, rotina, exames, objetivos e segurança antes da definição de qualquer conduta.\n\nQuando há indicação clínica, o Dr. Pedro também realiza acompanhamento hormonal individualizado e prescrição de terapias medicamentosas modernas para controle de peso e tratamento da obesidade, incluindo medicações injetáveis conhecidas popularmente como “canetas emagrecedoras”. Todo o processo deve ser conduzido com avaliação médica, critérios de segurança e acompanhamento contínuo.",
+  phone: "(24) 2245-9374",
+  whatsapp: "(24) 2245-9374",
+  whatsappUrl: "https://wa.me/552422459374",
+  instagram: "@drpedromachado_",
+  location: "R. Paulino Afonso, 108, Centro, Petrópolis, RJ, 25680-195",
   hours: "Horários de atendimento: inserir horários validados"
 };
 
@@ -256,10 +262,22 @@ export const services: Service[] = [
 ];
 
 export const processSteps = [
-  "Consulta inicial e escuta clínica",
-  "Investigação médica e exames",
-  "Plano individualizado",
-  "Acompanhamento e ajustes"
+  {
+    title: "Consulta inicial e escuta clínica",
+    text: "Momento de compreender sintomas, histórico, rotina, objetivos e dificuldades que impactam sua saúde e qualidade de vida."
+  },
+  {
+    title: "Investigação médica e exames",
+    text: "A conduta parte da avaliação clínica e, quando necessário, da análise de exames para entender melhor metabolismo, composição corporal e fatores de risco."
+  },
+  {
+    title: "Plano individualizado",
+    text: "As decisões são construídas considerando contexto, metas, segurança e possibilidades reais para cada paciente."
+  },
+  {
+    title: "Acompanhamento e ajustes",
+    text: "O cuidado continua após a primeira consulta, com reavaliações e ajustes conforme a evolução clínica e a resposta do paciente."
+  }
 ];
 
 export const generalFaq = [

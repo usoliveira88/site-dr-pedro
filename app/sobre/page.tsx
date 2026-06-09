@@ -31,9 +31,9 @@ export default function AboutPage() {
         <SectionHeading
           eyebrow="Filosofia"
           title="Atendimento orientado por avaliação, exames e contexto individual"
-          text="Texto provisório. Ajustar após confirmação do escopo real de atendimento, credenciais, condutas oferecidas e tom de voz aprovado."
+          text="O acompanhamento considera histórico, rotina, exames, objetivos, segurança e possibilidades reais antes da definição de qualquer conduta."
         />
-        <ButtonLink href="/contato">Agendar consulta</ButtonLink>
+        <ButtonLink href="/contato">Ver contato</ButtonLink>
       </Section>
       <Section>
         <VideoBlock

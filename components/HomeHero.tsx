@@ -7,20 +7,20 @@ export function HomeHero() {
   return (
     <section className="relative isolate overflow-hidden bg-linen">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_72%_16%,rgba(185,154,95,0.18),transparent_30%),linear-gradient(135deg,#fbfaf7_0%,#f3f7f4_52%,#e2eeeb_100%)]" />
-      <Container className="grid min-h-[calc(100vh-5rem)] items-center gap-12 py-12 lg:grid-cols-[0.95fr_1.05fr] lg:py-16">
-        <div className="section-reveal max-w-3xl">
+      <Container className="grid min-h-[calc(100vh-5rem)] items-center gap-12 py-12 lg:grid-cols-[0.9fr_1.1fr] lg:py-16">
+        <div className="section-reveal max-w-[42rem]">
           <p className="mb-5 inline-flex rounded-full border border-petrol/10 bg-white/72 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-petrol shadow-[0_12px_36px_rgba(22,74,81,0.08)] backdrop-blur">
             Avaliação clínica individualizada
           </p>
-          <h1 className="max-w-4xl text-4xl font-semibold leading-[1.04] tracking-normal text-ink sm:text-5xl lg:text-[4.5rem]">
-            Acompanhamento Médico para Emagrecimento, Saúde Hormonal e Qualidade de Vida
+          <h1 className="max-w-[42rem] text-3xl font-semibold leading-[1.12] tracking-normal text-ink sm:text-4xl lg:text-[3.65rem]">
+            Acompanhamento médico para emagrecimento, saúde hormonal e qualidade de vida
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-graphite sm:text-xl">
             Uma avaliação individualizada para entender seu corpo, sua rotina e suas necessidades antes de qualquer conduta.
           </p>
           <p className="mt-4 text-sm font-medium text-petrol">{doctor.professionalId}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href="/contato">Agendar consulta</ButtonLink>
+            <ButtonLink href={doctor.whatsappUrl}>Agendar consulta</ButtonLink>
             <ButtonLink href="/servicos" variant="secondary">
               Conhecer serviços
             </ButtonLink>

@@ -61,7 +61,7 @@ export default async function ServicePage({ params }: PageProps) {
           <p className="mt-6 text-lg leading-8 text-graphite">{service.description}</p>
           <p className="mt-4 text-sm font-medium text-petrol">{doctor.professionalId}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href="/contato">Agendar consulta</ButtonLink>
+            <ButtonLink href={doctor.whatsappUrl}>Agendar consulta</ButtonLink>
             <ButtonLink href="/servicos" variant="secondary">
               Ver todos os serviços
             </ButtonLink>
@@ -99,9 +99,10 @@ export default async function ServicePage({ params }: PageProps) {
         <SectionHeading eyebrow="Processo" title="Como funciona" />
         <div className="grid gap-4 md:grid-cols-4">
           {processSteps.map((step, index) => (
-            <div key={step} className="rounded-subtle border border-petrol/10 bg-white p-6 shadow-[0_10px_32px_rgba(22,74,81,0.05)]">
+            <div key={step.title} className="rounded-subtle border border-petrol/10 bg-white p-6 shadow-[0_10px_32px_rgba(22,74,81,0.05)]">
               <span className="text-sm font-semibold text-gold">0{index + 1}</span>
-              <h3 className="mt-4 text-lg font-semibold text-ink">{step}</h3>
+              <h3 className="mt-4 text-lg font-semibold text-ink">{step.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-graphite">{step.text}</p>
             </div>
           ))}
         </div>

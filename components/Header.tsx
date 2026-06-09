@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { navItems, services } from "@/data/site";
+import { doctor, navItems, services } from "@/data/site";
 import { Container } from "@/components/Container";
 import { ButtonLink } from "@/components/ButtonLink";
 
@@ -10,11 +10,11 @@ export function Header() {
       <Container className="flex min-h-20 items-center justify-between gap-6">
         <Link href="/" className="focus-ring flex items-center gap-3" aria-label="Ir para a página inicial">
           <Image
-            src="/images/logo-dr-pedro-machado.png"
+            src="/images/logo-dr-pedro-machado-header.png"
             alt="Logo Dr. Pedro Machado"
-            width={210}
-            height={118}
-            className="h-10 w-auto object-contain brightness-0"
+            width={430}
+            height={52}
+            className="h-9 w-auto object-contain brightness-0 sm:h-10"
             priority
           />
         </Link>
@@ -47,7 +47,7 @@ export function Header() {
           )}
         </nav>
         <div className="hidden lg:block">
-          <ButtonLink href="/contato">Agendar consulta</ButtonLink>
+          <ButtonLink href={doctor.whatsappUrl}>Agendar consulta</ButtonLink>
         </div>
         <details className="relative lg:hidden">
           <summary className="focus-ring flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-subtle border border-petrol/15 bg-white text-petrol">

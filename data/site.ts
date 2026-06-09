@@ -38,6 +38,73 @@ export const patientNeeds = [
   "Quero fazer um check-up mais completo da minha saúde."
 ];
 
+export const homeNeedCards = [
+  {
+    title: "Quando o peso não responde como antes",
+    text: "Dificuldade para emagrecer, efeito sanfona, fome frequente ou mudanças corporais que merecem investigação clínica."
+  },
+  {
+    title: "Quando energia e disposição caem",
+    text: "Cansaço persistente, queda de força, libido ou recuperação podem exigir uma avaliação mais ampla da saúde."
+  },
+  {
+    title: "Quando a prevenção precisa sair do papel",
+    text: "Check-up, histórico familiar, risco metabólico e exames ajudam a orientar decisões com mais segurança."
+  }
+];
+
+export const homeMethodPillars = [
+  {
+    title: "Investigação médica",
+    text: "Antes de definir qualquer conduta, o atendimento parte de escuta clínica, sintomas, histórico e contexto de saúde."
+  },
+  {
+    title: "Exames e dados clínicos",
+    text: "Marcadores laboratoriais, composição corporal e fatores de risco ajudam a construir uma leitura mais precisa."
+  },
+  {
+    title: "Rotina possível",
+    text: "O plano precisa conversar com sono, alimentação, treino, trabalho, estresse e objetivos reais do paciente."
+  },
+  {
+    title: "Acompanhamento individualizado",
+    text: "A evolução é monitorada com ajustes, metas realistas e decisões tomadas com segurança médica."
+  }
+];
+
+export const homeServiceHighlights = [
+  {
+    slug: "emagrecimento",
+    title: "Emagrecimento",
+    text: "Para investigar por que perder peso tem sido difícil e orientar um caminho clínico compatível com sua rotina."
+  },
+  {
+    slug: "obesidade",
+    title: "Obesidade",
+    text: "Cuidado médico contínuo para uma condição multifatorial, com atenção a riscos, exames e contexto individual."
+  },
+  {
+    slug: "reposicao-hormonal-masculina",
+    title: "Saúde hormonal masculina",
+    text: "Avaliação criteriosa de sintomas, exames e indicação real antes de qualquer decisão terapêutica."
+  },
+  {
+    slug: "reposicao-hormonal-feminina",
+    title: "Saúde hormonal feminina",
+    text: "Acompanhamento para sintomas hormonais, climatério ou menopausa com análise de riscos e necessidades."
+  },
+  {
+    slug: "hipertrofia",
+    title: "Hipertrofia e composição corporal",
+    text: "Avaliação para quem treina, busca evolução e quer acompanhar performance sem perder segurança clínica."
+  },
+  {
+    slug: "check-up-da-saude",
+    title: "Check-up da saúde",
+    text: "Um mapa clínico para prevenção, clareza sobre exames e decisões mais bem orientadas."
+  }
+];
+
 export const services: Service[] = [
   {
     slug: "emagrecimento",

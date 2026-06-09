@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Imagem conceitual de bem-estar e cuidado médico premium</title>
+  <desc id="desc">Composição abstrata com luz natural, formas suaves e sensação de vitalidade.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fdfbf6"/>
+      <stop offset="0.48" stop-color="#edf5f1"/>
+      <stop offset="1" stop-color="#dcebe8"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.82"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.28"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fff9df" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#fff9df" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="32" flood-color="#164a51" flood-opacity="0.13"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1100" fill="url(#bg)"/>
+  <circle cx="1240" cy="210" r="360" fill="url(#sun)"/>
+  <path d="M-80 898C226 708 424 789 655 638c204-134 282-365 577-373 177-5 322 58 448 151v784H-80Z" fill="#ffffff" opacity="0.42"/>
+  <path d="M166 846c160-92 315-120 465-84 152 36 268 124 435 112 132-10 246-77 367-161" fill="none" stroke="#2f7274" stroke-width="3" opacity="0.22"/>
+  <g filter="url(#softShadow)">
+    <rect x="210" y="210" width="540" height="650" rx="44" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.76"/>
+    <rect x="282" y="292" width="260" height="18" rx="9" fill="#164a51" opacity="0.2"/>
+    <rect x="282" y="345" width="356" height="10" rx="5" fill="#164a51" opacity="0.12"/>
+    <rect x="282" y="377" width="310" height="10" rx="5" fill="#164a51" opacity="0.10"/>
+    <circle cx="480" cy="552" r="124" fill="#dcebe8"/>
+    <path d="M418 570c33 34 87 34 121 0" fill="none" stroke="#164a51" stroke-width="12" stroke-linecap="round" opacity="0.22"/>
+    <path d="M480 429v118m-59-59h118" fill="none" stroke="#b99a5f" stroke-width="16" stroke-linecap="round" opacity="0.72"/>
+    <rect x="292" y="732" width="336" height="64" rx="32" fill="#164a51" opacity="0.9"/>
+  </g>
+  <g opacity="0.78">
+    <path d="M1024 772c-74-136-62-285 47-405 40 156 4 298-47 405Z" fill="#2f7274" opacity="0.24"/>
+    <path d="M1122 792c-12-160 57-288 197-354-18 157-91 274-197 354Z" fill="#164a51" opacity="0.18"/>
+    <path d="M987 788c86-114 207-173 365-159-85 114-202 167-365 159Z" fill="#b99a5f" opacity="0.23"/>
+  </g>
+  <circle cx="1284" cy="708" r="86" fill="#ffffff" opacity="0.46"/>
+  <circle cx="1337" cy="650" r="18" fill="#b99a5f" opacity="0.55"/>
+</svg>

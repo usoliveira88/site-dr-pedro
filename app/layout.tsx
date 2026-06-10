@@ -11,12 +11,12 @@ export const metadata: Metadata = {
     template: "%s | Dr. Pedro Machado"
   },
   description:
-    "Dr. Pedro Machado, Médico Nutrólogo em Petrópolis. Acompanhamento médico para emagrecimento, saúde hormonal, composição corporal e prevenção.",
+    "Dr. Pedro Machado, Médico Pós-Graduado em Medicina Esportiva em Petrópolis. Acompanhamento médico para emagrecimento, saúde hormonal, composição corporal e prevenção.",
   metadataBase: new URL("https://example.com"),
   openGraph: {
     title: "Dr. Pedro Machado",
     description:
-      "Médico Nutrólogo em Petrópolis, com acompanhamento individualizado para saúde metabólica, peso, composição corporal e qualidade de vida.",
+      "Médico Pós-Graduado em Medicina Esportiva em Petrópolis, com acompanhamento individualizado para saúde metabólica, peso, composição corporal e qualidade de vida.",
     type: "website"
   }
 };

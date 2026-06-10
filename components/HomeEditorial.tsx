@@ -5,7 +5,8 @@ import { doctor, homeMethodPillars, homeNeedCards, homeServiceHighlights } from 
 
 export function HomeNeedEditorial() {
   return (
-    <div className="grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
+    <div className="relative grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
+      <div className="pointer-events-none absolute -top-8 right-10 hidden h-px w-40 bg-gradient-to-r from-transparent via-gold/45 to-transparent lg:block" />
       <div className="rounded-[24px] border border-petrol/10 bg-linen p-8 shadow-soft lg:p-10">
         <p className="inline-flex rounded-full bg-sage/25 px-3 py-1 text-sm font-semibold uppercase tracking-[0.18em] text-petrol">Para quem é</p>
         <h2 className="mt-4 max-w-2xl text-3xl font-semibold leading-tight text-ink sm:text-4xl">
@@ -63,14 +64,15 @@ export function HomeMethodSection() {
 
 export function HomeServiceEditorial() {
   return (
-    <div>
+    <div className="relative">
+      <div className="pointer-events-none absolute -left-10 top-20 hidden h-32 w-32 rounded-full border border-deep/10 lg:block" />
       <div className="mb-10 grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">Serviços</p>
-          <h2 className="mt-4 text-3xl font-semibold leading-tight text-ink sm:text-4xl">Acompanhamentos com páginas próprias e leitura clínica clara</h2>
+          <h2 className="mt-4 text-3xl font-semibold leading-tight text-ink sm:text-4xl">Linhas de cuidado para investigar, orientar e acompanhar com critério</h2>
         </div>
-        <p className="text-base leading-8 text-graphite">
-          Cada frente de atendimento aprofunda uma necessidade diferente, sem promessas e sem fórmulas genéricas. A proposta é orientar o paciente com clareza antes do contato.
+        <p className="text-[1.03rem] leading-8 text-graphite">
+          Cada serviço aprofunda uma necessidade clínica específica, conectando sintomas, exames, rotina e objetivos. A proposta é conduzir decisões individualizadas, sem promessas, atalhos ou soluções padronizadas.
         </p>
       </div>
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -78,13 +80,13 @@ export function HomeServiceEditorial() {
           <Link
             key={service.slug}
             href={`/servicos/${service.slug}`}
-            className="focus-ring group relative overflow-hidden rounded-subtle border border-petrol/10 bg-linen/82 p-6 shadow-[0_10px_32px_rgba(15,76,92,0.07)] transition duration-300 hover:-translate-y-1 hover:border-gold/50 hover:bg-white/88 hover:shadow-soft"
+            className="focus-ring group relative overflow-hidden rounded-subtle border border-deep/10 bg-white p-6 shadow-[0_10px_32px_rgba(2,37,61,0.07)] transition duration-300 hover:-translate-y-1 hover:border-gold/50 hover:bg-deep hover:shadow-lift"
           >
-            <span className="absolute right-5 top-5 text-5xl font-semibold text-sage/30">{String(index + 1).padStart(2, "0")}</span>
+            <span className="absolute right-5 top-5 text-5xl font-semibold text-deep/[0.06] transition group-hover:text-white/[0.08]">{String(index + 1).padStart(2, "0")}</span>
             <span className="mb-6 block h-px w-12 bg-gold transition duration-300 group-hover:w-20" />
-            <h3 className="relative text-xl font-semibold text-ink">{service.title}</h3>
-            <p className="relative mt-4 text-sm leading-7 text-graphite">{service.text}</p>
-            <span className="relative mt-6 inline-flex text-sm font-semibold text-petrol">Ver página do serviço</span>
+            <h3 className="relative text-xl font-semibold text-ink transition group-hover:text-white">{service.title}</h3>
+            <p className="relative mt-4 text-sm leading-7 text-graphite transition group-hover:text-white/78">{service.text}</p>
+            <span className="relative mt-6 inline-flex text-sm font-semibold text-petrol transition group-hover:text-gold">Saiba Mais</span>
           </Link>
         ))}
       </div>
@@ -94,7 +96,8 @@ export function HomeServiceEditorial() {
 
 export function HomeBioAuthority() {
   return (
-    <div className="grid items-center gap-10 rounded-[28px] border border-petrol/10 bg-linen p-6 shadow-soft md:grid-cols-[0.78fr_1.22fr] lg:p-10">
+    <div className="relative grid items-center gap-10 overflow-hidden rounded-[28px] border border-petrol/10 bg-white p-6 shadow-soft md:grid-cols-[0.78fr_1.22fr] lg:p-10">
+      <div className="pointer-events-none absolute right-0 top-0 h-32 w-32 rounded-bl-full bg-gold/10" />
       <div className="relative overflow-hidden rounded-[22px] bg-mist">
         <Image
           src="/images/dr-pedro-machado.jpg"

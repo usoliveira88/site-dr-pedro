@@ -10,11 +10,11 @@ export function LocationSection() {
     <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
       <div className="overflow-hidden rounded-[24px] border border-deep/10 bg-white shadow-soft">
         <Image
-          src="/images/consultation-premium-placeholder.svg"
-          alt="Imagem conceitual de ambiente médico premium"
-          width={1200}
-          height={860}
-          className="aspect-[16/9] w-full object-cover"
+          src="/images/fachada-consultorio.jpg"
+          alt="Fachada do local de atendimento"
+          width={1400}
+          height={875}
+          className="aspect-[16/10] w-full object-cover"
         />
         <div className="p-7">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Localização</p>

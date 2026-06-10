@@ -35,10 +35,10 @@ export default function Home() {
         />
         <div className="grid gap-4 md:grid-cols-4">
           {processSteps.map((step, index) => (
-            <div key={step.title} className="rounded-subtle border border-petrol/12 bg-white/72 p-7 shadow-[0_10px_32px_rgba(15,76,92,0.07)] transition duration-300 hover:-translate-y-1 hover:border-gold/40 hover:bg-white/90 hover:shadow-soft">
-              <span className="inline-flex rounded-full bg-sage/25 px-3 py-1 text-sm font-semibold text-petrol">0{index + 1}</span>
-              <h3 className="mt-4 text-lg font-semibold text-ink">{step.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-graphite">{step.text}</p>
+            <div key={step.title} className="group rounded-subtle border border-deep/10 bg-white p-7 shadow-[0_10px_32px_rgba(2,37,61,0.07)] transition duration-300 hover:-translate-y-1 hover:border-gold/40 hover:bg-deep hover:shadow-lift">
+              <span className="inline-flex rounded-full bg-mist px-3 py-1 text-sm font-semibold text-petrol transition group-hover:bg-white/10 group-hover:text-gold">0{index + 1}</span>
+              <h3 className="mt-4 text-lg font-semibold text-ink transition group-hover:text-white">{step.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-graphite transition group-hover:text-white/78">{step.text}</p>
             </div>
           ))}
         </div>

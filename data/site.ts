@@ -13,12 +13,12 @@ export type Service = {
 export const doctor = {
   name: "Dr. Pedro Machado",
   professionalId: "CRM 01198564/RJ",
-  role: "Médico Nutrólogo em Petrópolis",
+  role: "Médico Pós-Graduado em Medicina Esportiva",
   complementaryTraining: "Pós-graduado em Nutrologia Esportiva",
   bio:
-    "Dr. Pedro Machado é Médico Nutrólogo em Petrópolis, com pós-graduação em Nutrologia Esportiva. Seu atendimento é voltado a adultos e idosos que buscam cuidar da saúde metabólica, melhorar a composição corporal, prevenir doenças crônicas e alcançar mais vitalidade com acompanhamento médico individualizado.",
+    "Dr. Pedro Machado é Médico Pós-Graduado em Medicina Esportiva em Petrópolis, com pós-graduação em Nutrologia Esportiva. Seu atendimento é voltado a adultos e idosos que buscam cuidar da saúde metabólica, melhorar a composição corporal, prevenir doenças crônicas e alcançar mais vitalidade com acompanhamento médico individualizado.",
   fullBio:
-    "Dr. Pedro Machado é Médico Nutrólogo em Petrópolis, com pós-graduação em Nutrologia Esportiva. Seu atendimento é voltado a adultos e idosos que buscam cuidar da saúde metabólica, melhorar a composição corporal, prevenir doenças crônicas e alcançar mais vitalidade com acompanhamento médico individualizado.\n\nSua atuação inclui emagrecimento saudável, controle e tratamento da obesidade, saúde metabólica, performance, hipertrofia e estratégias clínicas voltadas à melhora da qualidade de vida. O acompanhamento considera histórico, rotina, exames, objetivos e segurança antes da definição de qualquer conduta.\n\nQuando há indicação clínica, o Dr. Pedro também realiza acompanhamento hormonal individualizado e prescrição de terapias medicamentosas modernas para controle de peso e tratamento da obesidade, incluindo medicações injetáveis conhecidas popularmente como “canetas emagrecedoras”. Todo o processo deve ser conduzido com avaliação médica, critérios de segurança e acompanhamento contínuo.",
+    "Dr. Pedro Machado é Médico Pós-Graduado em Medicina Esportiva em Petrópolis, com pós-graduação em Nutrologia Esportiva. Seu atendimento é voltado a adultos e idosos que buscam cuidar da saúde metabólica, melhorar a composição corporal, prevenir doenças crônicas e alcançar mais vitalidade com acompanhamento médico individualizado.\n\nSua atuação inclui emagrecimento saudável, controle e tratamento da obesidade, saúde metabólica, performance, hipertrofia e estratégias clínicas voltadas à melhora da qualidade de vida. O acompanhamento considera histórico, rotina, exames, objetivos e segurança antes da definição de qualquer conduta.\n\nQuando há indicação clínica, o Dr. Pedro também realiza acompanhamento hormonal individualizado e prescrição de terapias medicamentosas modernas para controle de peso e tratamento da obesidade, incluindo medicações injetáveis conhecidas popularmente como “canetas emagrecedoras”. Todo o processo deve ser conduzido com avaliação médica, critérios de segurança e acompanhamento contínuo.",
   phone: "(24) 2245-9374",
   whatsapp: "(24) 2245-9374",
   whatsappUrl: "https://wa.me/552422459374",
@@ -282,20 +282,44 @@ export const processSteps = [
 
 export const generalFaq = [
   {
+    question: "Como sei se preciso de acompanhamento médico para emagrecer?",
+    answer: "Quando há dificuldade para perder peso, efeito sanfona, ganho de gordura abdominal, alterações em exames ou dúvidas sobre condutas seguras, uma avaliação médica pode ajudar a entender causas e possibilidades."
+  },
+  {
+    question: "O atendimento é indicado apenas para quem quer emagrecer?",
+    answer: "Não. O acompanhamento também pode envolver saúde metabólica, composição corporal, disposição, prevenção, check-up, performance e avaliação hormonal quando houver indicação clínica."
+  },
+  {
+    question: "O Dr. Pedro atende homens e mulheres?",
+    answer: "Sim. O atendimento é voltado a adultos e idosos, com avaliação individualizada conforme histórico, sintomas, rotina, exames e objetivos."
+  },
+  {
+    question: "Quando a reposição hormonal pode ser indicada?",
+    answer: "A possibilidade deve ser avaliada caso a caso, considerando sintomas, exames, riscos, histórico pessoal e critérios médicos. Não é uma conduta indicada automaticamente para todos."
+  },
+  {
+    question: "Preciso levar exames na primeira consulta?",
+    answer: "Se você já tiver exames recentes, pode levá-los. A necessidade de novos exames será definida após avaliação clínica."
+  },
+  {
+    question: "O acompanhamento pode ajudar na melhora da disposição e da composição corporal?",
+    answer: "O acompanhamento pode investigar fatores associados a energia, rotina, sono, metabolismo e composição corporal, sempre com metas realistas e condutas individualizadas."
+  },
+  {
+    question: "Como funciona o tratamento para obesidade?",
+    answer: "O cuidado envolve avaliação clínica, investigação de fatores associados, definição de condutas individualizadas e acompanhamento contínuo, sem promessa de resultado."
+  },
+  {
+    question: "As medicações para controle de peso são indicadas para qualquer pessoa?",
+    answer: "Não. Medicações só devem ser consideradas quando clinicamente indicadas, com avaliação médica, critérios de segurança e acompanhamento."
+  },
+  {
+    question: "Como faço para agendar uma consulta?",
+    answer: "O agendamento pode ser feito pelo WhatsApp ou telefone informado no site: (24) 2245-9374."
+  },
+  {
     question: "O atendimento é presencial, online ou ambos?",
     answer: "Informação provisória. Confirmar modalidade oficial de atendimento antes da publicação."
-  },
-  {
-    question: "O site pode prometer resultados?",
-    answer: "Não. A comunicação deve ser informativa, ética e baseada em avaliação individual."
-  },
-  {
-    question: "Preciso levar exames para a consulta?",
-    answer: "Texto provisório. O fluxo exato deve ser validado com a equipe do consultório."
-  },
-  {
-    question: "Como faço para agendar?",
-    answer: "Inserir aqui o WhatsApp oficial, telefone ou link de agendamento validado."
   }
 ];
 

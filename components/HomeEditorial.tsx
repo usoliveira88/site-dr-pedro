@@ -6,8 +6,8 @@ import { doctor, homeMethodPillars, homeNeedCards, homeServiceHighlights } from 
 export function HomeNeedEditorial() {
   return (
     <div className="grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
-      <div className="rounded-[24px] border border-petrol/10 bg-white p-8 shadow-soft lg:p-10">
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">Para quem é</p>
+      <div className="rounded-[24px] border border-petrol/10 bg-linen p-8 shadow-soft lg:p-10">
+        <p className="inline-flex rounded-full bg-sage/25 px-3 py-1 text-sm font-semibold uppercase tracking-[0.18em] text-petrol">Para quem é</p>
         <h2 className="mt-4 max-w-2xl text-3xl font-semibold leading-tight text-ink sm:text-4xl">
           Quando sintomas, peso e rotina começam a pedir uma investigação mais cuidadosa
         </h2>
@@ -19,10 +19,10 @@ export function HomeNeedEditorial() {
         {homeNeedCards.map((card, index) => (
           <div
             key={card.title}
-            className="group rounded-subtle border border-petrol/10 bg-white p-6 shadow-[0_10px_32px_rgba(22,74,81,0.05)] transition duration-300 hover:-translate-y-1 hover:border-gold/50 hover:shadow-soft"
+            className="group rounded-subtle border border-petrol/10 bg-white/74 p-6 shadow-[0_10px_32px_rgba(15,76,92,0.06)] transition duration-300 hover:-translate-y-1 hover:border-gold/50 hover:bg-linen hover:shadow-soft"
           >
             <div className="flex items-start gap-4">
-              <span className="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-mist text-sm font-semibold text-petrol transition group-hover:bg-petrol group-hover:text-white">
+              <span className="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-sage/30 text-sm font-semibold text-petrol transition group-hover:bg-petrol group-hover:text-white">
                 {index + 1}
               </span>
               <div>
@@ -39,7 +39,7 @@ export function HomeNeedEditorial() {
 
 export function HomeMethodSection() {
   return (
-    <div className="rounded-[28px] bg-ink p-7 text-white shadow-lift sm:p-10 lg:p-12">
+    <div className="rounded-[28px] bg-petrol p-7 text-white shadow-lift sm:p-10 lg:p-12">
       <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">Método clínico</p>
@@ -50,7 +50,7 @@ export function HomeMethodSection() {
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
           {homeMethodPillars.map((pillar) => (
-            <div key={pillar.title} className="rounded-subtle border border-white/10 bg-white/[0.06] p-5 transition duration-300 hover:-translate-y-1 hover:bg-white/[0.09]">
+            <div key={pillar.title} className="rounded-subtle border border-sage/20 bg-white/[0.07] p-5 transition duration-300 hover:-translate-y-1 hover:border-gold/35 hover:bg-white/[0.1]">
               <h3 className="text-lg font-semibold text-white">{pillar.title}</h3>
               <p className="mt-3 text-sm leading-7 text-white/68">{pillar.text}</p>
             </div>
@@ -78,9 +78,9 @@ export function HomeServiceEditorial() {
           <Link
             key={service.slug}
             href={`/servicos/${service.slug}`}
-            className="focus-ring group relative overflow-hidden rounded-subtle border border-petrol/10 bg-white p-6 shadow-[0_10px_32px_rgba(22,74,81,0.06)] transition duration-300 hover:-translate-y-1 hover:border-gold/50 hover:shadow-soft"
+            className="focus-ring group relative overflow-hidden rounded-subtle border border-petrol/10 bg-linen/82 p-6 shadow-[0_10px_32px_rgba(15,76,92,0.07)] transition duration-300 hover:-translate-y-1 hover:border-gold/50 hover:bg-white/88 hover:shadow-soft"
           >
-            <span className="absolute right-5 top-5 text-5xl font-semibold text-petrol/[0.06]">{String(index + 1).padStart(2, "0")}</span>
+            <span className="absolute right-5 top-5 text-5xl font-semibold text-sage/30">{String(index + 1).padStart(2, "0")}</span>
             <span className="mb-6 block h-px w-12 bg-gold transition duration-300 group-hover:w-20" />
             <h3 className="relative text-xl font-semibold text-ink">{service.title}</h3>
             <p className="relative mt-4 text-sm leading-7 text-graphite">{service.text}</p>
@@ -94,7 +94,7 @@ export function HomeServiceEditorial() {
 
 export function HomeBioAuthority() {
   return (
-    <div className="grid items-center gap-10 rounded-[28px] border border-petrol/10 bg-white p-6 shadow-soft md:grid-cols-[0.78fr_1.22fr] lg:p-10">
+    <div className="grid items-center gap-10 rounded-[28px] border border-petrol/10 bg-linen p-6 shadow-soft md:grid-cols-[0.78fr_1.22fr] lg:p-10">
       <div className="relative overflow-hidden rounded-[22px] bg-mist">
         <Image
           src="/images/dr-pedro-machado.jpg"

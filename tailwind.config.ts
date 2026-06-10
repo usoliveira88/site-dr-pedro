@@ -11,14 +11,18 @@ const config: Config = {
       colors: {
         ink: "#1f2a2d",
         graphite: "#3f4a4d",
-        mist: "#f4f7f5",
-        linen: "#fbfaf7",
-        petrol: "#164a51",
-        teal: "#2f7274",
-        gold: "#b99a5f"
+        mist: "#DDE8E2",
+        linen: "#F7F3EA",
+        petrol: "#124E59",
+        teal: "#0F4C5C",
+        sage: "#A8BFA3",
+        sand: "#E9DDC7",
+        bluegray: "#E6ECEC",
+        clay: "#D6C3A5",
+        gold: "#B9935A"
       },
       boxShadow: {
-        soft: "0 18px 60px rgba(22, 74, 81, 0.10)",
+        soft: "0 18px 60px rgba(15, 76, 92, 0.11)",
         lift: "0 18px 40px rgba(31, 42, 45, 0.12)"
       },
       borderRadius: {

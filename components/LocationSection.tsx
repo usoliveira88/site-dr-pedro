@@ -6,7 +6,7 @@ export function LocationSection() {
 
   return (
     <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr]">
-      <div className="overflow-hidden rounded-[24px] border border-petrol/10 bg-white shadow-soft">
+      <div className="overflow-hidden rounded-[24px] border border-petrol/10 bg-linen shadow-soft">
         <Image
           src="/images/consultation-premium-placeholder.svg"
           alt="Imagem conceitual de ambiente médico premium"
@@ -27,7 +27,7 @@ export function LocationSection() {
           </div>
         </div>
       </div>
-      <div className="overflow-hidden rounded-[24px] border border-petrol/10 bg-white shadow-soft">
+      <div className="overflow-hidden rounded-[24px] border border-petrol/10 bg-linen shadow-soft">
         <iframe
           title="Mapa do consultório do Dr. Pedro Machado"
           src={mapSrc}

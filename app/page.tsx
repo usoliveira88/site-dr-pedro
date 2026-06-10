@@ -11,22 +11,22 @@ export default function Home() {
   return (
     <>
       <HomeHero />
-      <Section className="bg-[#eef4f0]">
+      <Section className="bg-mist">
         <HomeNeedEditorial />
       </Section>
-      <Section className="bg-[#e7efeb]">
+      <Section className="bg-bluegray">
         <HomeMethodSection />
       </Section>
-      <Section className="bg-linen">
+      <Section className="bg-sand/70">
         <HomeServiceEditorial />
       </Section>
-      <Section className="bg-[#edf2ee]">
+      <Section className="bg-mist/80">
         <VideoBlock
           title="Vídeo institucional do Dr. Pedro"
           text="Espaço provisório para um vídeo curto sobre escuta clínica, investigação, exames, rotina do paciente e decisões individualizadas. O conteúdo final deve ser validado antes da publicação."
         />
       </Section>
-      <Section className="bg-[#f6f4ee]">
+      <Section className="bg-linen">
         <SectionHeading
           eyebrow="Processo"
           title="Um acompanhamento construído em etapas"
@@ -34,21 +34,21 @@ export default function Home() {
         />
         <div className="grid gap-4 md:grid-cols-4">
           {processSteps.map((step, index) => (
-            <div key={step.title} className="rounded-subtle border border-petrol/10 bg-white/88 p-7 shadow-[0_10px_32px_rgba(22,74,81,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-soft">
-              <span className="text-sm font-semibold text-gold">0{index + 1}</span>
+            <div key={step.title} className="rounded-subtle border border-petrol/12 bg-white/72 p-7 shadow-[0_10px_32px_rgba(15,76,92,0.07)] transition duration-300 hover:-translate-y-1 hover:border-gold/40 hover:bg-white/90 hover:shadow-soft">
+              <span className="inline-flex rounded-full bg-sage/25 px-3 py-1 text-sm font-semibold text-petrol">0{index + 1}</span>
               <h3 className="mt-4 text-lg font-semibold text-ink">{step.title}</h3>
               <p className="mt-3 text-sm leading-7 text-graphite">{step.text}</p>
             </div>
           ))}
         </div>
       </Section>
-      <Section className="bg-mist">
+      <Section className="bg-bluegray">
         <HomeBioAuthority />
       </Section>
-      <Section className="bg-[#e9f0ed]">
+      <Section className="bg-sand/60">
         <LocationSection />
       </Section>
-      <Section className="bg-linen">
+      <Section className="bg-mist/70">
         <SectionHeading eyebrow="Dúvidas" title="Perguntas frequentes" />
         <FAQ items={generalFaq} />
       </Section>

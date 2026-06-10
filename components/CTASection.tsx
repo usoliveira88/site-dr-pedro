@@ -9,7 +9,7 @@ export function CTASection({
   text?: string;
 }) {
   return (
-    <div className="rounded-[24px] bg-petrol p-8 text-white shadow-lift sm:p-10 lg:p-12">
+    <div className="rounded-[24px] bg-petrol p-8 text-white shadow-lift ring-1 ring-sage/15 sm:p-10 lg:p-12">
       <div className="grid items-center gap-8 lg:grid-cols-[1fr_auto]">
         <div>
           <h2 className="text-3xl font-semibold sm:text-4xl">{title}</h2>

@@ -6,15 +6,15 @@ import { ButtonLink } from "@/components/ButtonLink";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-petrol/10 bg-linen/92 backdrop-blur-xl">
-      <Container className="flex min-h-20 items-center justify-between gap-6">
+    <header className="sticky top-0 z-50 border-b border-petrol/10 bg-[#f4f1e9]/94 shadow-[0_8px_28px_rgba(22,74,81,0.06)] backdrop-blur-xl">
+      <Container className="flex min-h-[4.25rem] items-center justify-between gap-6">
         <Link href="/" className="focus-ring flex items-center gap-3" aria-label="Ir para a página inicial">
           <Image
-            src="/images/logo-dr-pedro-machado-header.png"
+            src="/images/logo-dr-pedro-machado-nav.png"
             alt="Logo Dr. Pedro Machado"
-            width={430}
-            height={52}
-            className="h-9 w-auto object-contain brightness-0 sm:h-10"
+            width={420}
+            height={40}
+            className="h-6 w-auto object-contain sm:h-7 lg:h-8"
             priority
           />
         </Link>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Composição médica premium para saúde e acompanhamento</title>
+  <desc id="desc">Imagem editorial abstrata com luz natural, elementos clínicos sutis, azul petróleo e dourado discreto.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".46" stop-color="#EEF3F1"/>
+      <stop offset="1" stop-color="#DDE8E2"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".96"/>
+      <stop offset="1" stop-color="#F6F8F7" stop-opacity=".72"/>
+    </linearGradient>
+    <linearGradient id="deep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#02253D"/>
+      <stop offset="1" stop-color="#124E59"/>
+    </linearGradient>
+    <radialGradient id="light" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#F1E8D8" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#F1E8D8" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="26" stdDeviation="36" flood-color="#02253D" flood-opacity=".16"/>
+    </filter>
+  </defs>
+  <rect width="1400" height="1200" fill="url(#bg)"/>
+  <circle cx="1090" cy="210" r="310" fill="url(#light)"/>
+  <path d="M-60 880c184-94 324-119 482-75 184 51 283 180 493 129 150-37 235-142 372-130 78 7 138 47 184 91v360H-60Z" fill="#02253D" opacity=".055"/>
+  <g filter="url(#shadow)">
+    <rect x="165" y="165" width="980" height="760" rx="46" fill="url(#panel)" stroke="#fff" stroke-width="2"/>
+    <rect x="238" y="244" width="410" height="540" rx="26" fill="#fff" opacity=".94"/>
+    <rect x="292" y="316" width="238" height="14" rx="7" fill="#02253D" opacity=".24"/>
+    <rect x="292" y="365" width="294" height="10" rx="5" fill="#02253D" opacity=".13"/>
+    <rect x="292" y="397" width="250" height="10" rx="5" fill="#02253D" opacity=".1"/>
+    <rect x="292" y="470" width="286" height="130" rx="22" fill="#EEF3F1"/>
+    <path d="M326 535h54l28-38 46 78 32-48h65" fill="none" stroke="#124E59" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="292" y="672" width="210" height="12" rx="6" fill="#B9935A" opacity=".72"/>
+    <rect x="292" y="714" width="265" height="10" rx="5" fill="#02253D" opacity=".1"/>
+    <circle cx="845" cy="500" r="180" fill="#DDE8E2"/>
+    <circle cx="845" cy="500" r="112" fill="#ffffff" opacity=".82"/>
+    <path d="M845 396v208m-104-104h208" fill="none" stroke="#B9935A" stroke-width="24" stroke-linecap="round"/>
+    <path d="M747 747c112-74 244-96 392-42" fill="none" stroke="#124E59" stroke-width="8" stroke-linecap="round" opacity=".28"/>
+    <rect x="755" y="710" width="210" height="60" rx="30" fill="url(#deep)" opacity=".94"/>
+  </g>
+  <g opacity=".55">
+    <path d="M1025 870c-62-128-30-261 78-350 14 145-14 261-78 350Z" fill="#124E59"/>
+    <path d="M1104 892c12-128 82-225 205-270-22 124-93 213-205 270Z" fill="#A8BFA3"/>
+    <path d="M962 912c96-82 204-111 326-87-96 82-203 111-326 87Z" fill="#B9935A" opacity=".58"/>
+  </g>
+</svg>

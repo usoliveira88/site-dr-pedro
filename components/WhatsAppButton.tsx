@@ -1,4 +1,5 @@
 import { doctor } from "@/data/site";
+import { WhatsAppIcon } from "@/components/Icons";
 
 export function WhatsAppButton() {
   return (
@@ -6,10 +7,10 @@ export function WhatsAppButton() {
       href={doctor.whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="focus-ring fixed bottom-4 right-4 z-40 hidden h-12 w-12 items-center justify-center rounded-full bg-petrol text-xs font-semibold text-white shadow-[0_14px_36px_rgba(22,74,81,0.2)] transition duration-300 hover:-translate-y-0.5 hover:bg-teal md:flex"
+      className="focus-ring fixed bottom-5 right-5 z-40 hidden h-14 w-14 items-center justify-center rounded-full bg-deep text-white shadow-[0_16px_42px_rgba(2,37,61,0.28)] ring-1 ring-white/50 transition duration-300 hover:-translate-y-0.5 hover:bg-petrol md:flex"
       aria-label="Falar com a equipe pelo WhatsApp"
     >
-      WA
+      <WhatsAppIcon className="h-7 w-7" />
     </a>
   );
 }

@@ -1,5 +1,6 @@
 import { CTASection } from "@/components/CTASection";
 import { FAQ } from "@/components/FAQ";
+import { GoogleReviews } from "@/components/GoogleReviews";
 import { HomeBioAuthority, HomeMethodSection, HomeNeedEditorial, HomeServiceEditorial } from "@/components/HomeEditorial";
 import { HomeHero } from "@/components/HomeHero";
 import { LocationSection } from "@/components/LocationSection";
@@ -17,16 +18,16 @@ export default function Home() {
       <Section className="bg-bluegray">
         <HomeMethodSection />
       </Section>
-      <Section className="bg-sand/70">
+      <Section className="bg-white">
         <HomeServiceEditorial />
       </Section>
-      <Section className="bg-mist/80">
+      <Section className="bg-bluegray">
         <VideoBlock
           title="Vídeo institucional do Dr. Pedro"
           text="Espaço provisório para um vídeo curto sobre escuta clínica, investigação, exames, rotina do paciente e decisões individualizadas. O conteúdo final deve ser validado antes da publicação."
         />
       </Section>
-      <Section className="bg-linen">
+      <Section className="bg-pearl">
         <SectionHeading
           eyebrow="Processo"
           title="Um acompanhamento construído em etapas"
@@ -45,10 +46,13 @@ export default function Home() {
       <Section className="bg-bluegray">
         <HomeBioAuthority />
       </Section>
-      <Section className="bg-sand/60">
+      <Section className="bg-white">
         <LocationSection />
       </Section>
-      <Section className="bg-mist/70">
+      <Section className="bg-bluegray">
+        <GoogleReviews />
+      </Section>
+      <Section className="bg-pearl">
         <SectionHeading eyebrow="Dúvidas" title="Perguntas frequentes" />
         <FAQ items={generalFaq} />
       </Section>

@@ -6,16 +6,16 @@ import { doctor } from "@/data/site";
 export function HomeHero() {
   return (
     <section className="relative isolate overflow-hidden bg-linen">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_76%_12%,rgba(185,147,90,0.16),transparent_27%),linear-gradient(135deg,#F7F3EA_0%,#DDE8E2_54%,#A8BFA3_145%)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_76%_12%,rgba(185,147,90,0.14),transparent_27%),radial-gradient(circle_at_8%_80%,rgba(2,37,61,0.08),transparent_34%),linear-gradient(135deg,#FFFFFF_0%,#F6F8F7_48%,#E6ECEC_100%)]" />
       <Container className="grid min-h-[calc(100vh-4.25rem)] items-center gap-10 py-10 lg:grid-cols-[1fr_0.92fr] lg:py-14">
         <div className="section-reveal max-w-[38rem]">
-          <p className="mb-4 inline-flex rounded-full border border-petrol/10 bg-sand/60 px-4 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-petrol shadow-[0_10px_28px_rgba(15,76,92,0.07)] backdrop-blur">
+          <p className="mb-4 inline-flex rounded-full border border-gold/30 bg-white/78 px-4 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-deep shadow-[0_10px_28px_rgba(2,37,61,0.07)] backdrop-blur">
             Avaliação clínica individualizada
           </p>
-          <h1 className="max-w-[38rem] text-[2rem] font-semibold leading-[1.16] tracking-normal text-ink sm:text-[2.55rem] lg:text-[3.05rem]">
-            Acompanhamento médico para emagrecimento, saúde hormonal e qualidade de vida
+          <h1 className="max-w-[39rem] text-[2rem] font-semibold leading-[1.15] tracking-normal text-ink sm:text-[2.5rem] lg:text-[3rem]">
+            Acompanhamento Médico para Emagrecimento, Saúde Hormonal e Qualidade de Vida
           </h1>
-          <p className="mt-5 max-w-xl text-base leading-8 text-graphite sm:text-lg">
+          <p className="mt-5 max-w-xl text-[1.03rem] leading-8 text-graphite sm:text-lg">
             Uma avaliação individualizada para entender seu corpo, sua rotina e suas necessidades antes de qualquer conduta.
           </p>
           <p className="mt-4 text-sm font-medium text-petrol">{doctor.professionalId}</p>
@@ -32,9 +32,9 @@ export function HomeHero() {
           </div>
         </div>
         <div className="section-reveal relative mx-auto w-full max-w-[36rem] lg:mr-0">
-          <div className="float-slow relative overflow-hidden rounded-[26px] border border-linen/70 bg-linen/68 shadow-[0_24px_72px_rgba(15,76,92,0.16)] backdrop-blur">
+          <div className="shine-subtle float-slow relative overflow-hidden rounded-[26px] border border-white/80 bg-white/78 shadow-[0_24px_78px_rgba(2,37,61,0.16)] backdrop-blur">
             <Image
-              src="/images/hero-wellness-placeholder.svg"
+              src="/images/hero-medical-premium.svg"
               alt="Imagem conceitual de bem-estar, rotina saudável e cuidado médico sofisticado"
               width={1600}
               height={1100}

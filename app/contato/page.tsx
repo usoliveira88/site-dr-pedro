@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { CTASection } from "@/components/CTASection";
+import { ClockIcon, InstagramIcon, MapPinIcon, WhatsAppIcon } from "@/components/Icons";
 import { LocationSection } from "@/components/LocationSection";
 import { Section, SectionHeading } from "@/components/Section";
 import { doctor } from "@/data/site";
@@ -22,25 +24,21 @@ export default function ContactPage() {
         </div>
       </Section>
       <Section>
-        <div className="grid gap-5 md:grid-cols-3">
-          <div className="rounded-subtle border border-petrol/10 bg-white p-6 shadow-soft">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">WhatsApp</p>
-            <a href={doctor.whatsappUrl} target="_blank" rel="noopener noreferrer" className="mt-4 block text-base font-semibold leading-7 text-petrol transition hover:text-teal">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <ContactCard title="WhatsApp" icon={<WhatsAppIcon className="h-5 w-5" />}>
+            <a href={doctor.whatsappUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-petrol transition hover:text-teal">
               {doctor.whatsapp}
             </a>
-          </div>
-          <div className="rounded-subtle border border-petrol/10 bg-white p-6 shadow-soft">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">Endereço</p>
-            <p className="mt-4 text-base leading-7 text-graphite">{doctor.location}</p>
-          </div>
-          <div className="rounded-subtle border border-petrol/10 bg-white p-6 shadow-soft">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">Horários</p>
-            <p className="mt-4 text-base leading-7 text-graphite">{doctor.hours}</p>
-          </div>
-          <div className="rounded-subtle border border-petrol/10 bg-white p-6 shadow-soft md:col-span-3">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">Instagram</p>
-            <p className="mt-4 text-base leading-7 text-graphite">{doctor.instagram}</p>
-          </div>
+          </ContactCard>
+          <ContactCard title="Endereço" icon={<MapPinIcon className="h-5 w-5" />}>
+            {doctor.location}
+          </ContactCard>
+          <ContactCard title="Horários" icon={<ClockIcon className="h-5 w-5" />}>
+            {doctor.hours}
+          </ContactCard>
+          <ContactCard title="Instagram" icon={<InstagramIcon className="h-5 w-5" />}>
+            {doctor.instagram}
+          </ContactCard>
         </div>
       </Section>
       <Section className="bg-linen">
@@ -51,5 +49,15 @@ export default function ContactPage() {
         <CTASection />
       </Section>
     </>
+  );
+}
+
+function ContactCard({ title, icon, children }: { title: string; icon: ReactNode; children: ReactNode }) {
+  return (
+    <div className="rounded-subtle border border-deep/10 bg-white p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-gold/45">
+      <span className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-deep text-white">{icon}</span>
+      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">{title}</p>
+      <div className="mt-4 text-base leading-7 text-graphite">{children}</div>
+    </div>
   );
 }

@@ -1,12 +1,14 @@
 import Image from "next/image";
+import type { ReactNode } from "react";
+import { ClockIcon, InstagramIcon, MapPinIcon, WhatsAppIcon } from "@/components/Icons";
 import { doctor } from "@/data/site";
 
 export function LocationSection() {
   const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(doctor.location)}&output=embed`;
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr]">
-      <div className="overflow-hidden rounded-[24px] border border-petrol/10 bg-linen shadow-soft">
+    <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+      <div className="overflow-hidden rounded-[24px] border border-deep/10 bg-white shadow-soft">
         <Image
           src="/images/consultation-premium-placeholder.svg"
           alt="Imagem conceitual de ambiente médico premium"
@@ -17,17 +19,20 @@ export function LocationSection() {
         <div className="p-7">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Localização</p>
           <h2 className="text-3xl font-semibold text-ink">Atendimento em ambiente médico</h2>
-          <div className="mt-6 grid gap-4 text-sm leading-7 text-graphite">
-            <p>{doctor.location}</p>
-            <p>{doctor.hours}</p>
-            <a href={doctor.whatsappUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-petrol transition hover:text-teal">
-              {doctor.whatsapp}
+          <div className="mt-6 grid gap-4 text-[0.96rem] leading-7 text-graphite">
+            <InfoLine icon={<MapPinIcon className="h-5 w-5" />} text={doctor.location} />
+            <InfoLine icon={<ClockIcon className="h-5 w-5" />} text={doctor.hours} />
+            <a href={doctor.whatsappUrl} target="_blank" rel="noopener noreferrer" className="group flex gap-3 rounded-subtle border border-deep/10 bg-pearl p-4 font-semibold text-petrol transition hover:-translate-y-0.5 hover:border-gold/45 hover:bg-white hover:shadow-soft">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-deep text-white transition group-hover:bg-petrol">
+                <WhatsAppIcon className="h-5 w-5" />
+              </span>
+              <span className="pt-1">{doctor.whatsapp}</span>
             </a>
-            <p>Instagram: {doctor.instagram}</p>
+            <InfoLine icon={<InstagramIcon className="h-5 w-5" />} text={`Instagram: ${doctor.instagram}`} />
           </div>
         </div>
       </div>
-      <div className="overflow-hidden rounded-[24px] border border-petrol/10 bg-linen shadow-soft">
+      <div className="overflow-hidden rounded-[24px] border border-deep/10 bg-white shadow-soft">
         <iframe
           title="Mapa do consultório do Dr. Pedro Machado"
           src={mapSrc}
@@ -36,6 +41,15 @@ export function LocationSection() {
           referrerPolicy="no-referrer-when-downgrade"
         />
       </div>
+    </div>
+  );
+}
+
+function InfoLine({ icon, text }: { icon: ReactNode; text: string }) {
+  return (
+    <div className="flex gap-3 rounded-subtle border border-deep/10 bg-pearl p-4">
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-mist text-deep">{icon}</span>
+      <p className="pt-1">{text}</p>
     </div>
   );
 }

@@ -9,21 +9,23 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#1f2a2d",
-        graphite: "#3f4a4d",
-        mist: "#DDE8E2",
-        linen: "#F7F3EA",
+        ink: "#11181B",
+        graphite: "#283439",
+        mist: "#EEF3F1",
+        linen: "#FAFAF7",
         petrol: "#124E59",
+        deep: "#02253D",
         teal: "#0F4C5C",
         sage: "#A8BFA3",
-        sand: "#E9DDC7",
+        sand: "#F1E8D8",
         bluegray: "#E6ECEC",
-        clay: "#D6C3A5",
+        pearl: "#F6F8F7",
         gold: "#B9935A"
       },
       boxShadow: {
-        soft: "0 18px 60px rgba(15, 76, 92, 0.11)",
-        lift: "0 18px 40px rgba(31, 42, 45, 0.12)"
+        soft: "0 18px 60px rgba(2, 37, 61, 0.10)",
+        lift: "0 22px 48px rgba(2, 37, 61, 0.15)",
+        glow: "0 24px 80px rgba(185, 147, 90, 0.18)"
       },
       borderRadius: {
         subtle: "8px"

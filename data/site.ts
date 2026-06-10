@@ -298,3 +298,23 @@ export const generalFaq = [
     answer: "Inserir aqui o WhatsApp oficial, telefone ou link de agendamento validado."
   }
 ];
+
+export const googleReviews = {
+  ratingLabel: "Nota média no Google: inserir nota real",
+  totalLabel: "Quantidade de avaliações: inserir número real",
+  sourceLabel: "Avaliações do Google",
+  items: [
+    {
+      name: "Nome do paciente",
+      text: "Depoimento real a ser inserido após autorização e revisão."
+    },
+    {
+      name: "Nome do paciente",
+      text: "Espaço preparado para avaliação real do Google."
+    },
+    {
+      name: "Nome do paciente",
+      text: "Substituir por relato autorizado, sem promessas de resultado."
+    }
+  ]
+};

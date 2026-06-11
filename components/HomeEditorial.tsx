@@ -100,8 +100,8 @@ export function HomeBioAuthority() {
       <div className="pointer-events-none absolute right-0 top-0 h-32 w-32 rounded-bl-full bg-gold/10" />
       <div className="relative overflow-hidden rounded-[22px] bg-mist">
         <Image
-          src="/images/dr-pedro-machado.jpg"
-          alt="Foto do Dr. Pedro Machado"
+          src="/images/dr-pedro-bio-medico.webp"
+          alt="Dr. Pedro Machado em ambiente médico profissional"
           width={636}
           height={800}
           className="aspect-[4/5] w-full object-cover"

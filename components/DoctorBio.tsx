@@ -7,8 +7,8 @@ export function DoctorBio({ compact = false }: { compact?: boolean }) {
     <div className="grid items-center gap-10 rounded-[24px] border border-petrol/10 bg-white p-6 shadow-soft md:grid-cols-[0.82fr_1.18fr] lg:p-10">
       <div className="overflow-hidden rounded-[20px] bg-mist">
         <Image
-          src="/images/dr-pedro-machado.jpg"
-          alt="Foto do Dr. Pedro Machado"
+          src="/images/dr-pedro-bio-medico.webp"
+          alt="Dr. Pedro Machado em ambiente médico profissional"
           width={636}
           height={800}
           className="aspect-[4/5] w-full object-cover"

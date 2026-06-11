@@ -52,8 +52,11 @@ export default function Home() {
       <Section className="bg-bluegray">
         <GoogleReviews />
       </Section>
-      <Section className="bg-pearl">
-        <SectionHeading eyebrow="Dúvidas" title="Perguntas frequentes" />
+      <Section className="bg-deep">
+        <div className="mb-10 max-w-3xl">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Dúvidas</p>
+          <h2 className="text-3xl font-semibold tracking-normal text-white sm:text-4xl">Perguntas frequentes</h2>
+        </div>
         <FAQ items={generalFaq} />
       </Section>
       <Section className="pt-0">

@@ -66,6 +66,31 @@ img {
   transform: translateX(120%);
 }
 
+.hover-ink-card {
+  transition:
+    background-color 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease,
+    transform 300ms ease;
+}
+
+.hover-ink-card:hover {
+  background: #02253d !important;
+  border-color: rgba(185, 147, 90, 0.55) !important;
+}
+
+.hover-ink-card:hover :is(h1, h2, h3, h4, h5, h6, p, a, span, small, strong, em, li, dt, dd, svg) {
+  color: #ffffff !important;
+}
+
+.hover-ink-card:hover .hover-ink-muted {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+.hover-ink-card:hover .hover-ink-decor {
+  color: rgba(255, 255, 255, 0.12) !important;
+}
+
 .focus-ring {
   outline: 2px solid transparent;
   outline-offset: 3px;

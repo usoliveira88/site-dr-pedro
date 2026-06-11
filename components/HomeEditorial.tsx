@@ -20,7 +20,7 @@ export function HomeNeedEditorial() {
         {homeNeedCards.map((card, index) => (
           <div
             key={card.title}
-            className="group rounded-subtle border border-petrol/10 bg-white/74 p-6 shadow-[0_10px_32px_rgba(15,76,92,0.06)] transition duration-300 hover:-translate-y-1 hover:border-gold/50 hover:bg-linen hover:shadow-soft"
+            className="hover-ink-card group rounded-subtle border border-deep/10 bg-white/74 p-6 shadow-[0_10px_32px_rgba(2,37,61,0.07)] transition duration-300 hover:-translate-y-1 hover:shadow-lift"
           >
             <div className="flex items-start gap-4">
               <span className="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-sage/30 text-sm font-semibold text-petrol transition group-hover:bg-petrol group-hover:text-white">
@@ -28,7 +28,7 @@ export function HomeNeedEditorial() {
               </span>
               <div>
                 <h3 className="text-lg font-semibold text-ink">{card.title}</h3>
-                <p className="mt-2 text-sm leading-7 text-graphite">{card.text}</p>
+                <p className="hover-ink-muted mt-2 text-sm leading-7 text-graphite">{card.text}</p>
               </div>
             </div>
           </div>
@@ -80,13 +80,13 @@ export function HomeServiceEditorial() {
           <Link
             key={service.slug}
             href={`/servicos/${service.slug}`}
-            className="focus-ring group relative overflow-hidden rounded-subtle border border-deep/10 bg-white p-6 shadow-[0_10px_32px_rgba(2,37,61,0.07)] transition duration-300 hover:-translate-y-1 hover:border-gold/50 hover:bg-deep hover:shadow-lift"
+            className="hover-ink-card focus-ring group relative overflow-hidden rounded-subtle border border-deep/10 bg-white p-6 shadow-[0_10px_32px_rgba(2,37,61,0.07)] transition duration-300 hover:-translate-y-1 hover:shadow-lift"
           >
-            <span className="absolute right-5 top-5 text-5xl font-semibold text-deep/[0.06] transition group-hover:text-white/[0.08]">{String(index + 1).padStart(2, "0")}</span>
+            <span className="hover-ink-decor absolute right-5 top-5 text-5xl font-semibold text-deep/[0.06] transition">{String(index + 1).padStart(2, "0")}</span>
             <span className="mb-6 block h-px w-12 bg-gold transition duration-300 group-hover:w-20" />
             <h3 className="relative text-xl font-semibold text-ink transition group-hover:text-white">{service.title}</h3>
-            <p className="relative mt-4 text-sm leading-7 text-graphite transition group-hover:text-white/78">{service.text}</p>
-            <span className="relative mt-6 inline-flex text-sm font-semibold text-petrol transition group-hover:text-gold">Saiba Mais</span>
+            <p className="hover-ink-muted relative mt-4 text-sm leading-7 text-graphite">{service.text}</p>
+            <span className="relative mt-6 inline-flex text-sm font-semibold text-petrol">Saiba Mais</span>
           </Link>
         ))}
       </div>

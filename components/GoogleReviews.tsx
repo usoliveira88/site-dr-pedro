@@ -28,7 +28,7 @@ export function GoogleReviews() {
         </div>
         <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-1">
           {googleReviews.items.map((review, index) => (
-            <div key={`${review.name}-${index}`} className="rounded-subtle border border-deep/10 bg-pearl p-5 transition duration-300 hover:-translate-y-1 hover:border-gold/45 hover:bg-white hover:shadow-soft">
+            <div key={`${review.name}-${index}`} className="hover-ink-card rounded-subtle border border-deep/10 bg-pearl p-5 transition duration-300 hover:-translate-y-1 hover:shadow-lift">
               <div className="mb-3 flex gap-1 text-gold">
                 {Array.from({ length: 5 }).map((_, starIndex) => (
                   <StarIcon key={starIndex} className="h-4 w-4" />

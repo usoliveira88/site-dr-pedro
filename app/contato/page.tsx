@@ -54,7 +54,7 @@ export default function ContactPage() {
 
 function ContactCard({ title, icon, children }: { title: string; icon: ReactNode; children: ReactNode }) {
   return (
-    <div className="rounded-subtle border border-deep/10 bg-white p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-gold/45">
+    <div className="hover-ink-card rounded-subtle border border-deep/10 bg-white p-6 shadow-soft transition duration-300 hover:-translate-y-1">
       <span className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-deep text-white">{icon}</span>
       <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">{title}</p>
       <div className="mt-4 text-base leading-7 text-graphite">{children}</div>

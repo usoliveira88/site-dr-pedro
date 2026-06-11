@@ -26,7 +26,7 @@ export default function ContentPage() {
         />
         <div className="grid gap-5 md:grid-cols-3">
           {["Emagrecimento", "Saúde hormonal", "Prevenção"].map((item) => (
-            <div key={item} className="rounded-subtle border border-petrol/10 bg-white p-6 shadow-[0_10px_32px_rgba(22,74,81,0.05)]">
+            <div key={item} className="hover-ink-card rounded-subtle border border-deep/10 bg-white p-6 shadow-[0_10px_32px_rgba(2,37,61,0.07)] transition duration-300 hover:-translate-y-1 hover:shadow-lift">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">Categoria</p>
               <h2 className="mt-4 text-xl font-semibold text-ink">{item}</h2>
               <p className="mt-3 text-sm leading-7 text-graphite">Placeholder editável para conteúdo futuro.</p>

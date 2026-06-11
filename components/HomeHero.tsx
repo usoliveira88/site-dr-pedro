@@ -39,11 +39,11 @@ export function HomeHero() {
           <div className="pointer-events-none absolute -bottom-7 left-8 h-20 w-40 rounded-full border border-deep/10" />
           <div className="shine-subtle float-slow relative overflow-hidden rounded-[26px] border border-white/80 bg-white/78 shadow-[0_24px_78px_rgba(2,37,61,0.16)] backdrop-blur">
             <Image
-              src="/images/hero-medical-premium.svg"
-              alt="Imagem conceitual de bem-estar, rotina saudável e cuidado médico sofisticado"
+              src="/images/hero-dr-pedro-machado.webp"
+              alt="Dr. Pedro Machado em ambiente médico profissional"
               width={1600}
-              height={1100}
-              className="aspect-[1.12/1] w-full object-cover opacity-95"
+              height={1429}
+              className="aspect-[1.12/1] w-full object-cover object-[42%_42%] opacity-95"
               priority
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-petrol/12 via-white/0 to-white/18" />

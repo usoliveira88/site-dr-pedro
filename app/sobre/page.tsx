@@ -39,7 +39,7 @@ export default function AboutPage() {
       <Section className="bg-white">
         <div className="mb-10 max-w-3xl">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Áreas</p>
-          <h2 className="text-3xl font-semibold leading-tight text-ink sm:text-4xl">Frentes de cuidado acompanhadas pelo Dr. Pedro</h2>
+          <h2 className="text-3xl font-semibold leading-tight text-ink sm:text-4xl">Frentes de cuidado acompanhadas pelo Dr.&nbsp;Pedro</h2>
           <p className="mt-4 text-[1.03rem] leading-8 text-graphite">
             Cada área de acompanhamento parte de avaliação clínica, histórico, exames e objetivos individuais, sempre com foco em segurança e orientação médica.
           </p>

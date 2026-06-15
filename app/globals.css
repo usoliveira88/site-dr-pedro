@@ -91,6 +91,11 @@ img {
   color: rgba(255, 255, 255, 0.12) !important;
 }
 
+.hover-ink-card:hover .hover-ink-number {
+  color: rgba(255, 255, 255, 0.72) !important;
+  background: rgba(255, 255, 255, 0.10) !important;
+}
+
 .about-philosophy-card {
   opacity: 0;
   transform: translateY(18px);

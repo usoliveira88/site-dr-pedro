@@ -6,40 +6,57 @@ export function GoogleReviews() {
     <div className="rounded-[28px] border border-deep/10 bg-white p-7 shadow-soft sm:p-10">
       <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">{googleReviews.sourceLabel}</p>
-          <h2 className="mt-4 text-3xl font-semibold leading-tight text-ink sm:text-4xl">Espaço preparado para avaliações reais</h2>
-          <p className="mt-5 text-[1.03rem] leading-8 text-graphite">
-            Estrutura pronta para receber nota média, quantidade de avaliações e depoimentos reais autorizados.
+          <p className="inline-flex rounded-full border border-gold/30 bg-pearl px-3 py-1 text-sm font-semibold uppercase tracking-[0.18em] text-gold">
+            {googleReviews.sourceLabel}
           </p>
-          <div className="mt-7 grid gap-3 sm:grid-cols-2">
-            <div className="rounded-subtle bg-deep p-5 text-white">
-              <div className="flex gap-1 text-gold">
-                {Array.from({ length: 5 }).map((_, index) => (
-                  <StarIcon key={index} className="h-5 w-5" />
-                ))}
-              </div>
-              <p className="mt-4 text-sm leading-6 text-white/74">{googleReviews.ratingLabel}</p>
-            </div>
-            <div className="rounded-subtle border border-deep/10 bg-pearl p-5">
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-petrol">Volume</p>
-              <p className="mt-4 text-sm leading-6 text-graphite">{googleReviews.totalLabel}</p>
-            </div>
-          </div>
+          <h2 className="mt-4 text-3xl font-semibold leading-tight text-ink sm:text-4xl">{googleReviews.title}</h2>
+          <p className="mt-5 text-[1.03rem] leading-8 text-graphite">{googleReviews.intro}</p>
         </div>
         <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-1">
           {googleReviews.items.map((review, index) => (
-            <div key={`${review.name}-${index}`} className="hover-ink-card rounded-subtle border border-deep/10 bg-pearl p-5 transition duration-300 hover:-translate-y-1 hover:shadow-lift">
-              <div className="mb-3 flex gap-1 text-gold">
-                {Array.from({ length: 5 }).map((_, starIndex) => (
-                  <StarIcon key={starIndex} className="h-4 w-4" />
-                ))}
+            <article
+              key={`${review.name}-${index}`}
+              className="rounded-subtle border border-deep/10 bg-white p-5 shadow-[0_10px_32px_rgba(2,37,61,0.07)] transition duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-soft"
+            >
+              <div className="mb-4 flex items-center justify-between gap-4">
+                <div className="flex gap-1 text-gold" aria-label={`${review.rating} estrelas`}>
+                  {Array.from({ length: review.rating }).map((_, starIndex) => (
+                    <StarIcon key={starIndex} className="h-4 w-4" />
+                  ))}
+                </div>
+                <span className="text-xs font-semibold uppercase tracking-[0.14em] text-petrol">Google</span>
               </div>
-              <p className="text-sm leading-7 text-graphite">{review.text}</p>
+              <p className="text-sm leading-7 text-graphite">{renderHighlightedReview(review.text, review.highlights)}</p>
               <p className="mt-4 text-sm font-semibold text-deep">{review.name}</p>
-            </div>
+            </article>
           ))}
         </div>
       </div>
     </div>
   );
+}
+
+function renderHighlightedReview(text: string, highlights: string[]) {
+  if (!highlights.length) {
+    return text;
+  }
+
+  const ordered = [...highlights].sort((a, b) => b.length - a.length);
+  const escaped = ordered.map((item) => item.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+  const matcher = new RegExp(`(${escaped.join("|")})`, "gi");
+  const parts = text.split(matcher);
+
+  return parts.map((part, index) => {
+    const isHighlight = ordered.some((highlight) => highlight.toLowerCase() === part.toLowerCase());
+
+    if (!isHighlight) {
+      return part;
+    }
+
+    return (
+      <strong key={`${part}-${index}`} className="font-semibold text-deep">
+        {part}
+      </strong>
+    );
+  });
 }

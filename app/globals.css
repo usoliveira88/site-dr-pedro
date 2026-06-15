@@ -91,6 +91,17 @@ img {
   color: rgba(255, 255, 255, 0.12) !important;
 }
 
+.about-philosophy-card {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: about-card-rise 720ms ease forwards;
+}
+
+.about-line {
+  transform-origin: left center;
+  animation: about-line-grow 820ms ease both;
+}
+
 .focus-ring {
   outline: 2px solid transparent;
   outline-offset: 3px;
@@ -118,6 +129,24 @@ img {
   }
   50% {
     transform: translate3d(0, -10px, 0);
+  }
+}
+
+@keyframes about-card-rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes about-line-grow {
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
   }
 }
 

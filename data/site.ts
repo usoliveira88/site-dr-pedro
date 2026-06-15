@@ -324,21 +324,28 @@ export const generalFaq = [
 ];
 
 export const googleReviews = {
-  ratingLabel: "Nota média no Google: inserir nota real",
-  totalLabel: "Quantidade de avaliações: inserir número real",
-  sourceLabel: "Avaliações do Google",
+  sourceLabel: "Avaliações no Google",
+  title: "O que os pacientes dizem sobre o acompanhamento",
+  intro:
+    "Conheça relatos de pacientes que passaram pelo acompanhamento do Dr. Pedro Machado e destacaram pontos como escuta, ética, planejamento alimentar, emagrecimento, ganho de massa muscular e melhora da qualidade de vida.",
   items: [
     {
-      name: "Nome do paciente",
-      text: "Depoimento real a ser inserido após autorização e revisão."
+      name: "Mariana Beck",
+      rating: 5,
+      text: "Profissional muito atualizado, ético e empático. Faz meu acompanhamento e de toda a minha família.",
+      highlights: ["ético", "empático", "acompanhamento"]
     },
     {
-      name: "Nome do paciente",
-      text: "Espaço preparado para avaliação real do Google."
+      name: "Danusa Krugen",
+      rating: 5,
+      text: "Dr. Pedro é um ótimo nutrólogo. Ele me ajudou muito no meu planejamento alimentar e na melhora da minha qualidade de vida. Recomendo muito.",
+      highlights: ["nutrólogo", "planejamento alimentar", "qualidade de vida"]
     },
     {
-      name: "Nome do paciente",
-      text: "Substituir por relato autorizado, sem promessas de resultado."
+      name: "Uiliam Sérgio de Oliveira",
+      rating: 5,
+      text: "Dr. Pedro Machado é um ótimo nutrólogo. Ele me acompanhou em todo o processo de emagrecimento e de ganho de massa muscular, tendo todo o atendimento pautado por exames e com um planejamento desenvolvido especialmente para mim.",
+      highlights: ["nutrólogo", "emagrecimento", "ganho de massa muscular", "exames", "planejamento"]
     }
   ]
 };

@@ -169,6 +169,8 @@ function WeightLossLanding({ service }: { service: Service }) {
       text: "Medicações em uso, fatores metabólicos, histórico de saúde e individualidade clínica."
     }
   ];
+  const mapsUrl =
+    "https://www.google.com/maps?q=R.%20Paulino%20Afonso%2C%20108%2C%20Centro%2C%20Petr%C3%B3polis%2C%20RJ%2C%2025680-195&output=embed";
   const faqItems = [
     {
       question: "Como funciona o acompanhamento médico para emagrecimento?",
@@ -370,8 +372,64 @@ function WeightLossLanding({ service }: { service: Service }) {
         <FAQ items={faqItems} />
       </Section>
 
-      <Section className="pt-0">
-        <CTASection title="Agende uma avaliação para emagrecimento" />
+      <Section className="bg-white pt-0">
+        <div className="section-reveal relative overflow-hidden rounded-[30px] bg-deep p-5 text-white shadow-lift sm:p-8 lg:p-10">
+          <div className="pointer-events-none absolute -left-16 top-10 h-52 w-52 rounded-full border border-gold/20" />
+          <div className="pointer-events-none absolute -right-20 -top-16 h-64 w-64 rounded-full border border-white/10" />
+          <div className="pointer-events-none absolute bottom-8 left-10 h-px w-56 bg-gradient-to-r from-gold/70 to-transparent" />
+          <div className="relative grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            <div>
+              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Agendamento</p>
+              <h2 className="max-w-2xl text-[1.9rem] font-semibold leading-tight sm:text-4xl lg:text-[2.65rem]">
+                Agende sua avaliação médica em Petrópolis
+              </h2>
+              <p className="mt-5 max-w-2xl text-base leading-7 text-white sm:text-lg sm:leading-8">
+                Fale com a equipe para verificar disponibilidade de consulta e receber orientação sobre o próximo passo do seu acompanhamento.
+              </p>
+              <div className="mt-7 grid gap-3 text-sm text-white/86 sm:grid-cols-3">
+                {["Atendimento com avaliação individualizada", "Clínica em Petrópolis", "Contato rápido pelo WhatsApp"].map((item) => (
+                  <div key={item} className="rounded-[16px] border border-white/12 bg-white/[0.08] p-4">
+                    <span className="block h-px w-10 bg-gold" />
+                    <span className="mt-3 block leading-6">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <ButtonLink href={doctor.whatsappUrl} variant="secondary" className="min-h-14 w-full bg-white px-7 text-base shadow-[0_18px_42px_rgba(0,0,0,0.22)] hover:bg-gold hover:text-deep sm:w-auto">
+                  Agendar consulta
+                </ButtonLink>
+                <ButtonLink href="#localizacao-emagrecimento" variant="ghost" className="min-h-14 w-full border border-white/24 bg-white/10 px-7 text-base text-white hover:bg-white hover:text-deep sm:w-auto">
+                  Ver localização
+                </ButtonLink>
+              </div>
+            </div>
+            <div id="localizacao-emagrecimento" className="overflow-hidden rounded-[26px] border border-white/14 bg-white/[0.08] p-3 shadow-[0_24px_80px_rgba(0,0,0,0.24)]">
+              <Image
+                src="/images/fachada-consultorio.jpg"
+                alt="Fachada do local de atendimento"
+                width={1400}
+                height={875}
+                className="aspect-[16/9] w-full rounded-[20px] object-cover"
+              />
+              <div className="mt-3 grid gap-3 lg:grid-cols-[0.92fr_1.08fr]">
+                <div className="rounded-[18px] border border-white/12 bg-white/[0.08] p-4 text-sm leading-6 text-white">
+                  <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-gold">Localização</p>
+                  <p>{doctor.location}</p>
+                  <p className="mt-3">{doctor.phone}</p>
+                  <p className="mt-1">{doctor.instagram}</p>
+                </div>
+                <iframe
+                  title="Mapa da clínica em Petrópolis"
+                  src={mapsUrl}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="h-48 w-full rounded-[18px] border-0 sm:h-56 lg:h-full"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </Section>
     </>
   );

@@ -40,10 +40,10 @@ export default function Home() {
         />
         <div className="grid gap-4 md:grid-cols-4">
           {processSteps.map((step, index) => (
-            <div key={step.title} className="hover-ink-card group rounded-subtle border border-deep/10 bg-white p-7 shadow-[0_10px_32px_rgba(2,37,61,0.07)] transition duration-300 hover:-translate-y-1 hover:shadow-lift">
+            <div key={step.title} className="hover-ink-card group rounded-subtle border border-deep/10 bg-white p-5 shadow-[0_10px_32px_rgba(2,37,61,0.07)] transition duration-300 hover:-translate-y-1 hover:shadow-lift sm:p-7">
               <span className="inline-flex rounded-full bg-mist px-3 py-1 text-sm font-semibold text-petrol transition group-hover:bg-white/10 group-hover:text-gold">0{index + 1}</span>
               <h3 className="mt-4 text-lg font-semibold text-ink transition group-hover:text-white">{step.title}</h3>
-              <p className="hover-ink-muted mt-3 text-sm leading-7 text-graphite">{step.text}</p>
+              <p className="hover-ink-muted mt-3 text-sm leading-6 text-graphite sm:leading-7">{step.text}</p>
             </div>
           ))}
         </div>
@@ -55,9 +55,9 @@ export default function Home() {
         <HomeLocationFeature />
       </Section>
       <Section className="bg-deep">
-        <div className="mb-10 max-w-3xl">
+        <div className="mb-8 max-w-3xl sm:mb-10">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Dúvidas</p>
-          <h2 className="text-3xl font-semibold tracking-normal text-white sm:text-4xl">Perguntas frequentes</h2>
+          <h2 className="text-[1.65rem] font-semibold leading-tight tracking-normal text-white sm:text-4xl">Perguntas frequentes</h2>
         </div>
         <FAQ items={generalFaq} />
       </Section>

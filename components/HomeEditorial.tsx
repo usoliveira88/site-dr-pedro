@@ -5,25 +5,45 @@ import { InstagramIcon, MapPinIcon, WhatsAppIcon } from "@/components/Icons";
 import { doctor, homeMethodPillars, homeNeedCards, homeServiceHighlights } from "@/data/site";
 
 export function HomeClinicalBridge() {
-  const items = ["Histórico e rotina", "Exames e composição corporal", "Conduta e acompanhamento"];
+  const items = [
+    {
+      title: "Histórico e rotina",
+      text: "Entendimento do contexto, sintomas, hábitos e objetivos do paciente."
+    },
+    {
+      title: "Exames e composição corporal",
+      text: "Análise de dados clínicos para orientar decisões com mais segurança."
+    },
+    {
+      title: "Conduta e acompanhamento",
+      text: "Definição de estratégias individualizadas e ajustes conforme evolução."
+    }
+  ];
 
   return (
-    <div className="relative overflow-hidden rounded-[28px] bg-deep p-7 text-white shadow-lift sm:p-10 lg:p-12">
+    <div className="relative overflow-hidden rounded-[24px] bg-deep p-5 text-white shadow-lift sm:rounded-[28px] sm:p-10 lg:p-12">
       <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full border border-gold/20" />
       <div className="pointer-events-none absolute bottom-8 left-10 h-px w-48 bg-gradient-to-r from-gold/70 to-transparent" />
       <div className="grid gap-9 lg:grid-cols-[0.95fr_1.05fr]">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">Critério clínico</p>
-          <h2 className="mt-4 text-3xl font-semibold leading-tight sm:text-4xl">Um acompanhamento que começa antes da conduta</h2>
-          <p className="mt-5 text-base leading-8 text-white/76">
+          <h2 className="mt-4 text-[1.65rem] font-semibold leading-tight sm:text-4xl">Um acompanhamento que começa antes da conduta</h2>
+          <p className="mt-5 text-base leading-7 text-white/76 sm:leading-8">
             O cuidado parte de avaliação, contexto e segurança para que cada decisão faça sentido dentro da realidade do paciente.
           </p>
         </div>
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid gap-4">
           {items.map((item, index) => (
-            <div key={item} className="rounded-subtle border border-white/12 bg-white/[0.07] p-5">
-              <span className="text-sm font-semibold text-gold">0{index + 1}</span>
-              <p className="mt-4 text-base font-semibold leading-7 text-white">{item}</p>
+            <div key={item.title} className="rounded-[18px] border border-white/12 bg-white/[0.075] p-4 shadow-[0_18px_44px_rgba(0,0,0,0.12)] transition duration-300 hover:-translate-y-0.5 hover:border-gold/35 hover:bg-white/[0.1] sm:p-6">
+              <div className="flex items-start gap-4">
+                <span className="mt-1 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-gold/35 bg-gold/10 text-xs font-semibold text-gold">
+                  0{index + 1}
+                </span>
+                <div>
+                  <h3 className="text-lg font-semibold leading-snug text-white">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-white/72 sm:leading-7">{item.text}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -36,12 +56,12 @@ export function HomeNeedEditorial() {
   return (
     <div className="relative grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
       <div className="pointer-events-none absolute -top-8 right-10 hidden h-px w-40 bg-gradient-to-r from-transparent via-gold/45 to-transparent lg:block" />
-      <div className="rounded-[24px] border border-petrol/10 bg-linen p-8 shadow-soft lg:p-10">
+      <div className="rounded-[24px] border border-petrol/10 bg-linen p-5 shadow-soft sm:p-8 lg:p-10">
         <p className="inline-flex rounded-full bg-sage/25 px-3 py-1 text-sm font-semibold uppercase tracking-[0.18em] text-petrol">Para quem é</p>
-        <h2 className="mt-4 max-w-2xl text-3xl font-semibold leading-tight text-ink sm:text-4xl">
+        <h2 className="mt-4 max-w-2xl text-[1.65rem] font-semibold leading-tight text-ink sm:text-4xl">
           Quando sintomas, peso e rotina começam a pedir uma investigação mais cuidadosa
         </h2>
-        <p className="mt-5 max-w-2xl text-base leading-8 text-graphite">
+        <p className="mt-5 max-w-2xl text-base leading-7 text-graphite sm:leading-8">
           A primeira decisão não precisa ser uma conduta pronta. O ponto de partida é entender o que está acontecendo no corpo, na rotina e nos exames.
         </p>
       </div>
@@ -49,7 +69,7 @@ export function HomeNeedEditorial() {
         {homeNeedCards.map((card, index) => (
           <div
             key={card.title}
-            className="hover-ink-card group rounded-subtle border border-deep/10 bg-white/74 p-6 shadow-[0_10px_32px_rgba(2,37,61,0.07)] transition duration-300 hover:-translate-y-1 hover:shadow-lift"
+            className="hover-ink-card group rounded-subtle border border-deep/10 bg-white/74 p-5 shadow-[0_10px_32px_rgba(2,37,61,0.07)] transition duration-300 hover:-translate-y-1 hover:shadow-lift sm:p-6"
           >
             <div className="flex items-start gap-4">
               <span className="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-sage/30 text-sm font-semibold text-petrol transition group-hover:bg-petrol group-hover:text-white">
@@ -69,18 +89,18 @@ export function HomeNeedEditorial() {
 
 export function HomeMethodSection() {
   return (
-    <div className="rounded-[28px] bg-petrol p-7 text-white shadow-lift sm:p-10 lg:p-12">
+    <div className="rounded-[24px] bg-petrol p-5 text-white shadow-lift sm:rounded-[28px] sm:p-10 lg:p-12">
       <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">Método clínico</p>
-          <h2 className="mt-4 text-3xl font-semibold leading-tight sm:text-4xl">Precisão clínica antes de qualquer conduta</h2>
-          <p className="mt-5 text-base leading-8 text-white/72">
+          <h2 className="mt-4 text-[1.65rem] font-semibold leading-tight sm:text-4xl">Precisão clínica antes de qualquer conduta</h2>
+          <p className="mt-5 text-base leading-7 text-white/72 sm:leading-8">
             O acompanhamento ganha valor quando cada decisão nasce de uma leitura responsável: histórico, exames, rotina, sintomas, riscos e objetivos possíveis.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
           {homeMethodPillars.map((pillar) => (
-            <div key={pillar.title} className="rounded-subtle border border-sage/20 bg-white/[0.07] p-5 transition duration-300 hover:-translate-y-1 hover:border-gold/35 hover:bg-white/[0.1]">
+            <div key={pillar.title} className="rounded-subtle border border-sage/20 bg-white/[0.07] p-4 transition duration-300 hover:-translate-y-1 hover:border-gold/35 hover:bg-white/[0.1] sm:p-5">
               <h3 className="text-lg font-semibold text-white">{pillar.title}</h3>
               <p className="mt-3 text-sm leading-7 text-white/68">{pillar.text}</p>
             </div>
@@ -98,9 +118,9 @@ export function HomeServiceEditorial() {
       <div className="mb-10 grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">Serviços</p>
-          <h2 className="mt-4 text-3xl font-semibold leading-tight text-ink sm:text-4xl">Linhas de cuidado para investigar, orientar e acompanhar com critério</h2>
+          <h2 className="mt-4 text-[1.65rem] font-semibold leading-tight text-ink sm:text-4xl">Linhas de cuidado para investigar, orientar e acompanhar com critério</h2>
         </div>
-        <p className="text-[1.03rem] leading-8 text-graphite">
+        <p className="text-base leading-7 text-graphite sm:text-[1.03rem] sm:leading-8">
           Cada serviço aprofunda uma necessidade clínica específica, conectando sintomas, exames, rotina e objetivos. A proposta é conduzir decisões individualizadas, sem promessas, atalhos ou soluções padronizadas.
         </p>
       </div>
@@ -109,7 +129,7 @@ export function HomeServiceEditorial() {
           <Link
             key={service.slug}
             href={`/servicos/${service.slug}`}
-            className="hover-ink-card focus-ring group relative overflow-hidden rounded-[14px] border border-deep/10 bg-white p-7 shadow-[0_16px_42px_rgba(2,37,61,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-lift"
+            className="hover-ink-card focus-ring group relative overflow-hidden rounded-[14px] border border-deep/10 bg-white p-5 shadow-[0_16px_42px_rgba(2,37,61,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-lift sm:p-7"
           >
             <span className="hover-ink-decor absolute right-5 top-4 text-6xl font-semibold text-deep/[0.06] transition">{String(index + 1).padStart(2, "0")}</span>
             <span className="mb-6 block h-px w-14 bg-gold transition duration-300 group-hover:w-24" />
@@ -127,9 +147,12 @@ export function HomeServiceEditorial() {
 }
 
 export function HomeLocationFeature() {
+  const mapsUrl =
+    "https://www.google.com/maps?q=R.%20Paulino%20Afonso%2C%20108%2C%20Centro%2C%20Petr%C3%B3polis%2C%20RJ%2C%2025680-195&output=embed";
+
   return (
     <div className="grid gap-6 lg:grid-cols-[0.94fr_1.06fr]">
-      <div className="overflow-hidden rounded-[28px] border border-deep/10 bg-white shadow-soft">
+      <div className="overflow-hidden rounded-[24px] border border-deep/10 bg-white shadow-soft sm:rounded-[28px]">
         <Image
           src="/images/fachada-consultorio.jpg"
           alt="Fachada do local de atendimento"
@@ -137,11 +160,21 @@ export function HomeLocationFeature() {
           height={875}
           className="aspect-[16/10] w-full object-cover"
         />
+        <div className="border-t border-deep/10 bg-pearl p-3">
+          <iframe
+            title="Mapa do atendimento em Petrópolis"
+            src={mapsUrl}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="h-44 w-full rounded-[18px] border-0 sm:h-56 lg:h-52"
+            allowFullScreen
+          />
+        </div>
       </div>
-      <div className="rounded-[28px] border border-deep/10 bg-white p-7 shadow-soft sm:p-10">
+      <div className="rounded-[24px] border border-deep/10 bg-white p-5 shadow-soft sm:rounded-[28px] sm:p-10">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Localização</p>
-        <h2 className="text-3xl font-semibold leading-tight text-ink sm:text-4xl">Atendimento em Petrópolis</h2>
-        <p className="mt-4 text-[1.03rem] leading-8 text-graphite">
+        <h2 className="text-[1.65rem] font-semibold leading-tight text-ink sm:text-4xl">Atendimento em Petrópolis</h2>
+        <p className="mt-4 text-base leading-7 text-graphite sm:text-[1.03rem] sm:leading-8">
           Ambiente preparado para consulta médica, avaliação clínica e acompanhamento individualizado.
         </p>
         <div className="mt-7 grid gap-4 text-sm leading-7 text-graphite">
@@ -171,18 +204,18 @@ export function HomeLocationFeature() {
 
 export function HomeFinalCTA() {
   return (
-    <div className="relative overflow-hidden rounded-[28px] bg-deep p-8 text-white shadow-lift sm:p-10 lg:p-12">
+    <div className="relative overflow-hidden rounded-[24px] bg-deep p-5 text-white shadow-lift sm:rounded-[28px] sm:p-10 lg:p-12">
       <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full border border-gold/20" />
       <div className="pointer-events-none absolute bottom-8 left-10 h-px w-40 bg-gold/60" />
       <div className="grid items-center gap-8 lg:grid-cols-[1fr_0.34fr]">
         <div>
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Próximo passo</p>
-          <h2 className="text-3xl font-semibold leading-tight sm:text-4xl">Dê o próximo passo com orientação médica individualizada</h2>
-          <p className="mt-4 max-w-2xl text-base leading-8 text-white/76">
+          <h2 className="text-[1.65rem] font-semibold leading-tight sm:text-4xl">Dê o próximo passo com orientação médica individualizada</h2>
+          <p className="mt-4 max-w-2xl text-base leading-7 text-white/76 sm:leading-8">
             Fale com a equipe para verificar disponibilidade de consulta e entender como funciona o atendimento.
           </p>
           <div className="mt-7">
-            <ButtonLink href={doctor.whatsappUrl} variant="secondary" className="bg-white">
+            <ButtonLink href={doctor.whatsappUrl} variant="secondary" className="w-full bg-white sm:w-auto">
               Agendar consulta
             </ButtonLink>
           </div>
@@ -197,7 +230,7 @@ export function HomeFinalCTA() {
 
 export function HomeBioAuthority() {
   return (
-    <div className="relative grid items-center gap-10 overflow-hidden rounded-[28px] border border-petrol/10 bg-white p-6 shadow-soft md:grid-cols-[0.78fr_1.22fr] lg:p-10">
+    <div className="relative grid items-center gap-7 overflow-hidden rounded-[24px] border border-petrol/10 bg-white p-5 shadow-soft sm:rounded-[28px] sm:p-6 md:grid-cols-[0.78fr_1.22fr] lg:gap-10 lg:p-10">
       <div className="pointer-events-none absolute right-0 top-0 h-32 w-32 rounded-bl-full bg-gold/10" />
       <div className="relative overflow-hidden rounded-[22px] bg-mist">
         <Image
@@ -213,16 +246,16 @@ export function HomeBioAuthority() {
       </div>
       <div>
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Sobre o médico</p>
-        <h2 className="max-w-2xl text-3xl font-semibold leading-tight text-ink sm:text-4xl">
+        <h2 className="max-w-2xl text-[1.65rem] font-semibold leading-tight text-ink sm:text-4xl">
           Autoridade e proximidade para uma avaliação mais consciente
         </h2>
-        <p className="mt-5 text-base leading-8 text-graphite">{doctor.bio}</p>
+        <p className="mt-5 text-base leading-7 text-graphite sm:leading-8">{doctor.bio}</p>
         <p className="mt-4 text-sm font-medium text-petrol">
           {doctor.professionalId} · {doctor.complementaryTraining}
         </p>
         <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-          <ButtonLink href="/sobre">Conhecer trajetória</ButtonLink>
-          <ButtonLink href={doctor.whatsappUrl} variant="secondary">
+          <ButtonLink href="/sobre" className="w-full sm:w-auto">Conhecer trajetória</ButtonLink>
+          <ButtonLink href={doctor.whatsappUrl} variant="secondary" className="w-full sm:w-auto">
             Agendar consulta
           </ButtonLink>
         </div>

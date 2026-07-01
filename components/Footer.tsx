@@ -5,9 +5,9 @@ import { doctor, navItems, services } from "@/data/site";
 export function Footer() {
   return (
     <footer className="border-t border-white/10 bg-deep text-white">
-      <Container className="grid gap-10 py-12 md:grid-cols-[1.25fr_0.85fr_0.9fr_1fr]">
+      <Container className="grid gap-8 py-10 sm:gap-10 sm:py-12 md:grid-cols-[1.25fr_0.85fr_0.9fr_1fr]">
         <div>
-          <p className="text-xl font-semibold text-white">{doctor.name}</p>
+          <p className="text-lg font-semibold text-white sm:text-xl">{doctor.name}</p>
           <p className="mt-3 max-w-md text-sm leading-7 text-white/72">{doctor.role}</p>
           <p className="mt-5 text-sm text-white/64">{doctor.professionalId}</p>
           <p className="mt-2 text-sm text-white/64">{doctor.complementaryTraining}</p>
@@ -43,7 +43,7 @@ export function Footer() {
           </div>
         </div>
       </Container>
-      <div className="border-t border-white/12 py-5 text-center text-xs text-white/64">
+      <div className="border-t border-white/12 px-5 py-5 text-center text-xs leading-5 text-white/64">
         Comunicação médica informativa, sem promessa de resultados. Consulte disponibilidade de atendimento.
       </div>
     </footer>

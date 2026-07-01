@@ -141,6 +141,34 @@ function WeightLossLanding({ service }: { service: Service }) {
     "Alterações metabólicas",
     "Necessidade de avaliação criteriosa"
   ];
+  const indicatedCards = [
+    {
+      title: "Dificuldade para emagrecer",
+      text: "Para pessoas que já tentaram mudanças anteriores, mas têm dificuldade de manter constância e evolução."
+    },
+    {
+      title: "Fome excessiva ou efeito sanfona",
+      text: "Para quem enfrenta oscilação frequente de peso, fome aumentada ou dificuldade de sustentar hábitos."
+    },
+    {
+      title: "Busca por segurança médica",
+      text: "Para quem deseja perder gordura com acompanhamento individualizado e mais critério clínico."
+    }
+  ];
+  const evaluationCards = [
+    {
+      title: "Histórico e composição corporal",
+      text: "Peso, exames laboratoriais, composição corporal e sinais relacionados ao metabolismo."
+    },
+    {
+      title: "Rotina e hábitos",
+      text: "Alimentação, sono, estresse, atividade física e fatores que interferem na evolução."
+    },
+    {
+      title: "Contexto clínico",
+      text: "Medicações em uso, fatores metabólicos, histórico de saúde e individualidade clínica."
+    }
+  ];
   const faqItems = [
     {
       question: "Como funciona o acompanhamento médico para emagrecimento?",
@@ -255,10 +283,12 @@ function WeightLossLanding({ service }: { service: Service }) {
           <div>
             <SectionHeading eyebrow="Indicação" title="Para quem é indicado" />
             <ul className="grid gap-4">
-              {service.indicatedFor.map((item, index) => (
-                <li key={item} className="section-reveal hover-ink-card group rounded-subtle border border-deep/10 bg-white p-5 text-sm leading-7 text-graphite shadow-[0_12px_34px_rgba(2,37,61,0.07)] transition duration-300 hover:-translate-y-1 sm:p-6" style={{ animationDelay: `${index * 80}ms` }}>
-                  <span className="hover-ink-number mb-4 inline-flex rounded-full bg-mist px-3 py-1 text-xs font-semibold text-petrol">0{index + 1}</span>
-                  <p>{item}</p>
+              {indicatedCards.map((item, index) => (
+                <li key={item.title} className="section-reveal hover-ink-card group relative overflow-hidden rounded-[18px] border border-deep/10 bg-white p-5 shadow-[0_16px_40px_rgba(2,37,61,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-lift sm:p-7" style={{ animationDelay: `${index * 80}ms` }}>
+                  <span className="absolute inset-x-5 top-0 h-px bg-gradient-to-r from-gold via-gold/45 to-transparent sm:inset-x-7" />
+                  <span className="hover-ink-number inline-flex h-8 min-w-8 items-center justify-center rounded-full bg-mist px-2 text-xs font-semibold text-petrol">0{index + 1}</span>
+                  <h3 className="mt-5 text-xl font-semibold leading-snug text-ink transition group-hover:text-white">{item.title}</h3>
+                  <p className="hover-ink-muted mt-3 text-[0.98rem] leading-7 text-graphite">{item.text}</p>
                 </li>
               ))}
             </ul>
@@ -266,10 +296,12 @@ function WeightLossLanding({ service }: { service: Service }) {
           <div>
             <SectionHeading eyebrow="Avaliação" title="O que pode ser avaliado" />
             <ul className="grid gap-4">
-              {service.evaluatedItems.map((item, index) => (
-                <li key={item} className="section-reveal hover-ink-card group rounded-subtle border border-deep/10 bg-white p-5 text-sm leading-7 text-graphite shadow-[0_12px_34px_rgba(2,37,61,0.07)] transition duration-300 hover:-translate-y-1 sm:p-6" style={{ animationDelay: `${index * 80}ms` }}>
-                  <span className="hover-ink-number mb-4 inline-flex rounded-full bg-sage/25 px-3 py-1 text-xs font-semibold text-petrol">0{index + 1}</span>
-                  <p>{item}</p>
+              {evaluationCards.map((item, index) => (
+                <li key={item.title} className="section-reveal hover-ink-card group relative overflow-hidden rounded-[18px] border border-deep/10 bg-white p-5 shadow-[0_16px_40px_rgba(2,37,61,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-lift sm:p-7" style={{ animationDelay: `${index * 80}ms` }}>
+                  <span className="absolute inset-x-5 top-0 h-px bg-gradient-to-r from-gold via-gold/45 to-transparent sm:inset-x-7" />
+                  <span className="hover-ink-number inline-flex h-8 min-w-8 items-center justify-center rounded-full bg-sage/25 px-2 text-xs font-semibold text-petrol">0{index + 1}</span>
+                  <h3 className="mt-5 text-xl font-semibold leading-snug text-ink transition group-hover:text-white">{item.title}</h3>
+                  <p className="hover-ink-muted mt-3 text-[0.98rem] leading-7 text-graphite">{item.text}</p>
                 </li>
               ))}
             </ul>
@@ -281,7 +313,7 @@ function WeightLossLanding({ service }: { service: Service }) {
         <div className="mb-8 max-w-3xl sm:mb-10">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Processo</p>
           <h2 className="text-[1.75rem] font-semibold leading-tight text-white sm:text-4xl">Como funciona o acompanhamento</h2>
-          <p className="mt-4 text-base leading-7 text-white/72 sm:text-lg sm:leading-8">
+          <p className="mt-4 text-base leading-7 text-white sm:text-lg sm:leading-8">
             Um caminho organizado ajuda a entender o ponto de partida, orientar decisões e acompanhar ajustes com segurança clínica.
           </p>
         </div>
@@ -290,7 +322,7 @@ function WeightLossLanding({ service }: { service: Service }) {
             <div key={step.title} className="section-reveal rounded-subtle border border-white/12 bg-white/[0.075] p-5 shadow-[0_18px_44px_rgba(0,0,0,0.12)] transition duration-300 hover:-translate-y-1 hover:border-gold/35 hover:bg-white/[0.1] sm:p-6" style={{ animationDelay: `${index * 80}ms` }}>
               <span className="text-sm font-semibold text-gold">0{index + 1}</span>
               <h3 className="mt-4 text-lg font-semibold text-white">{step.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-white/72">{step.text}</p>
+              <p className="mt-3 text-sm leading-7 text-white">{step.text}</p>
             </div>
           ))}
         </div>

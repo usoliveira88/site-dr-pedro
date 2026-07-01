@@ -156,10 +156,10 @@ export const services: Service[] = [
   },
   {
     slug: "obesidade",
-    title: "Tratamento médico da obesidade com acompanhamento contínuo",
+    title: "Tratamento médico da obesidade em Petrópolis com acompanhamento contínuo",
     shortTitle: "Obesidade",
     description:
-      "A obesidade é uma condição clínica multifatorial e deve ser acompanhada com investigação, seriedade e continuidade.",
+      "Acompanhamento médico para obesidade em Petrópolis, com avaliação clínica, saúde metabólica, controle de peso e tratamento individualizado sem promessas de resultado.",
     indicatedFor: [
       "Pacientes com IMC elevado ou gordura abdominal importante.",
       "Pessoas com efeito sanfona, resistência à insulina ou hipertensão.",
@@ -171,9 +171,9 @@ export const services: Service[] = [
       "Riscos cardiovasculares e fatores emocionais relevantes."
     ],
     realisticExpectations:
-      "O cuidado busca redução de riscos, melhora metabólica e construção de estratégia sustentável, sem garantias de resultado.",
+      "O cuidado busca compreender fatores associados à obesidade, reduzir riscos clínicos e orientar um tratamento individualizado, sem prometer resultado ou simplificar uma condição multifatorial.",
     videoPlaceholder: "Vídeo provisório: Obesidade não é falta de força de vontade.",
-    seoTerms: ["tratamento médico da obesidade", "médico para obesidade", "obesidade e saúde metabólica"]
+    seoTerms: ["tratamento da obesidade em Petrópolis", "médico para obesidade em Petrópolis", "acompanhamento médico para obesidade", "saúde metabólica", "controle de peso", "tratamento individualizado da obesidade"]
   },
   {
     slug: "reposicao-hormonal-masculina",

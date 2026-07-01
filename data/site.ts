@@ -319,7 +319,7 @@ export const generalFaq = [
   },
   {
     question: "O atendimento é presencial, online ou ambos?",
-    answer: "Informação provisória. Confirmar modalidade oficial de atendimento antes da publicação."
+    answer: "A modalidade de atendimento deve ser confirmada com a equipe no momento do agendamento."
   }
 ];
 
@@ -327,7 +327,7 @@ export const googleReviews = {
   sourceLabel: "Avaliações no Google",
   title: "O que os pacientes dizem sobre o acompanhamento",
   intro:
-    "Conheça relatos de pacientes que passaram pelo acompanhamento do Dr. Pedro Machado e destacaram pontos como escuta, ética, planejamento alimentar, emagrecimento, ganho de massa muscular e melhora da qualidade de vida.",
+    "Conheça relatos de pacientes que destacaram pontos como emagrecimento, planejamento alimentar, ganho de massa muscular, qualidade de vida e acompanhamento individualizado.",
   items: [
     {
       name: "Mariana Beck",

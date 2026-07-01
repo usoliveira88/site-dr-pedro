@@ -1,17 +1,25 @@
-import { CTASection } from "@/components/CTASection";
 import { FAQ } from "@/components/FAQ";
 import { GoogleReviews } from "@/components/GoogleReviews";
-import { HomeBioAuthority, HomeMethodSection, HomeNeedEditorial, HomeServiceEditorial } from "@/components/HomeEditorial";
+import {
+  HomeBioAuthority,
+  HomeClinicalBridge,
+  HomeFinalCTA,
+  HomeLocationFeature,
+  HomeMethodSection,
+  HomeNeedEditorial,
+  HomeServiceEditorial
+} from "@/components/HomeEditorial";
 import { HomeHero } from "@/components/HomeHero";
-import { LocationSection } from "@/components/LocationSection";
 import { Section, SectionHeading } from "@/components/Section";
-import { VideoBlock } from "@/components/VideoBlock";
 import { processSteps, generalFaq } from "@/data/site";
 
 export default function Home() {
   return (
     <>
       <HomeHero />
+      <Section className="bg-white">
+        <HomeClinicalBridge />
+      </Section>
       <Section className="bg-mist">
         <HomeNeedEditorial />
       </Section>
@@ -22,10 +30,7 @@ export default function Home() {
         <HomeServiceEditorial />
       </Section>
       <Section className="bg-bluegray">
-        <VideoBlock
-          title="Vídeo institucional do Dr. Pedro"
-          text="Espaço provisório para um vídeo curto sobre escuta clínica, investigação, exames, rotina do paciente e decisões individualizadas. O conteúdo final deve ser validado antes da publicação."
-        />
+        <GoogleReviews />
       </Section>
       <Section className="bg-pearl">
         <SectionHeading
@@ -47,10 +52,7 @@ export default function Home() {
         <HomeBioAuthority />
       </Section>
       <Section className="bg-white">
-        <LocationSection />
-      </Section>
-      <Section className="bg-bluegray">
-        <GoogleReviews />
+        <HomeLocationFeature />
       </Section>
       <Section className="bg-deep">
         <div className="mb-10 max-w-3xl">
@@ -60,7 +62,7 @@ export default function Home() {
         <FAQ items={generalFaq} />
       </Section>
       <Section className="pt-0">
-        <CTASection />
+        <HomeFinalCTA />
       </Section>
     </>
   );

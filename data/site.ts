@@ -29,7 +29,7 @@ export const doctor = {
 export const navItems = [
   { href: "/", label: "Home" },
   { href: "/sobre", label: "Sobre" },
-  { href: "/servicos", label: "Serviços" },
+  { href: "/servicos", label: "Atendimentos" },
   { href: "/conteudos", label: "Conteúdos" },
   { href: "/contato", label: "Contato" }
 ];

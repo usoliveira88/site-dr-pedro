@@ -25,7 +25,7 @@ export function HomeHero() {
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <ButtonLink href={doctor.whatsappUrl} className="w-full sm:w-auto">Agendar consulta</ButtonLink>
             <ButtonLink href="/servicos" variant="secondary" className="w-full sm:w-auto">
-              Conhecer serviços
+              Conhecer atendimentos
             </ButtonLink>
           </div>
           <div className="mt-7 grid max-w-[34rem] gap-3 border-l border-gold/50 pl-5 text-sm leading-6 text-graphite sm:mt-8 sm:grid-cols-3 sm:border-l-0 sm:pl-0">

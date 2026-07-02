@@ -6,7 +6,7 @@ import { ServiceIntentCards } from "@/components/ServiceIntentCards";
 import { doctor, services } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Serviços | Dr. Pedro Machado em Petrópolis",
+  title: "Atendimentos | Dr. Pedro Machado em Petrópolis",
   description:
     "Conheça os acompanhamentos médicos do Dr. Pedro Machado em Petrópolis: emagrecimento, sobrepeso, obesidade, saúde hormonal, hipertrofia e check-up da saúde."
 };
@@ -57,35 +57,13 @@ export default function ServicesPage() {
     <>
       <ServicesHero />
 
-      <Section className="bg-pearl">
-        <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
-          <SectionHeading
-            eyebrow="Escolha com clareza"
-            title="Como encontrar o acompanhamento certo"
-            text="A página reúne os principais caminhos de cuidado para ajudar você a identificar rapidamente qual atendimento conversa melhor com seu momento."
-          />
-          <div className="grid gap-4 sm:grid-cols-3">
-            {heroSteps.map((step) => (
-              <div key={step.number} className="rounded-[18px] border border-deep/10 bg-white p-5 shadow-[0_14px_42px_rgba(2,37,61,0.07)]">
-                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">{step.number}</span>
-                <h3 className="mt-4 text-lg font-semibold leading-tight text-ink">{step.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-graphite">{step.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
       <Section className="bg-white">
-        <div className="mb-9 grid gap-5 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+        <div className="mb-9 max-w-3xl">
           <SectionHeading
-            eyebrow="Escolha um caminho"
-            title="Encontre a página mais adequada para seu objetivo"
-            text="Toque ou passe o mouse sobre uma intenção para ver os acompanhamentos relacionados e seguir para a página específica."
+            eyebrow="Acompanhamentos médicos"
+            title="Qual objetivo você busca?"
+            text="Cada pessoa chega com uma necessidade diferente. Escolha abaixo o tema que mais se aproxima do seu momento para conhecer o acompanhamento indicado."
           />
-          <div className="rounded-[22px] border border-gold/25 bg-sand/50 p-5 text-sm leading-7 text-graphite shadow-[0_18px_50px_rgba(2,37,61,0.08)]">
-            <strong className="text-deep">Para quem chegou por QR Code:</strong> use os cards abaixo como um atalho. Em poucos segundos, você encontra o tema mais próximo da sua necessidade e pode falar com a equipe pelo WhatsApp.
-          </div>
         </div>
         <ServiceIntentCards />
       </Section>
@@ -130,7 +108,7 @@ export default function ServicesPage() {
       <Section className="bg-bluegray/50">
         <SectionHeading
           eyebrow="Acompanhamentos"
-          title="Páginas de serviço"
+          title="Páginas de atendimento"
           text="Cada página aprofunda um tipo de acompanhamento e mostra quando ele pode fazer sentido, o que pode ser avaliado e como funciona o cuidado."
         />
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -154,8 +132,8 @@ function ServicesHero() {
       <div className="pointer-events-none absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
       <div className="mx-auto grid max-w-[1240px] gap-10 px-5 py-12 sm:px-6 sm:py-16 lg:grid-cols-[1.03fr_0.97fr] lg:items-center lg:px-8 lg:py-20">
         <div className="relative z-10">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-gold sm:text-sm">Serviços médicos em Petrópolis</p>
-          <h1 className="max-w-4xl text-[2.25rem] font-semibold leading-[1.05] tracking-normal sm:text-5xl lg:text-[4.35rem]">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-gold sm:text-sm">Atendimentos médicos em Petrópolis</p>
+          <h1 className="max-w-5xl text-[2.25rem] font-semibold leading-[1.05] tracking-normal sm:text-5xl lg:text-[4.35rem]">
             Encontre o acompanhamento médico mais adequado para seu objetivo
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-8 text-white/80 sm:text-lg">
@@ -182,12 +160,9 @@ function ServicesHero() {
           <div className="relative overflow-hidden rounded-[30px] border border-white/15 bg-white/[0.08] p-4 shadow-[0_28px_90px_rgba(0,0,0,0.28)] backdrop-blur">
             <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-gold/20 blur-3xl" />
             <div className="relative rounded-[22px] border border-white/10 bg-[#082f4b]/80 p-5 sm:p-6">
-              <div className="flex items-start justify-between gap-5 border-b border-white/12 pb-5">
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Como funciona</p>
-                  <h2 className="mt-3 text-2xl font-semibold leading-tight">Um caminho mais claro para decidir</h2>
-                </div>
-                <span className="rounded-full border border-gold/35 px-3 py-1 text-xs font-semibold text-gold">3 passos</span>
+              <div className="border-b border-white/12 pb-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Como funciona</p>
+                <h2 className="mt-3 text-2xl font-semibold leading-tight">Um caminho mais claro para decidir</h2>
               </div>
               <div className="mt-5 grid gap-3">
                 {heroSteps.map((step) => (

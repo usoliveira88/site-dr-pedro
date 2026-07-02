@@ -22,7 +22,7 @@ export function Footer() {
           </div>
         </div>
         <div>
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Serviços</p>
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Atendimentos</p>
           <div className="grid gap-3 text-sm text-white/82">
             {services.slice(0, 5).map((service) => (
               <Link key={service.slug} href={`/servicos/${service.slug}`} className="transition hover:text-white">

@@ -93,7 +93,7 @@ export default async function ServicePage({ params }: PageProps) {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <ButtonLink href={doctor.whatsappUrl}>Agendar consulta</ButtonLink>
             <ButtonLink href="/servicos" variant="secondary">
-              Ver todos os serviços
+              Ver todos os atendimentos
             </ButtonLink>
           </div>
         </div>

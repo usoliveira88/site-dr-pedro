@@ -117,7 +117,7 @@ export function HomeServiceEditorial() {
       <div className="pointer-events-none absolute -left-10 top-20 hidden h-32 w-32 rounded-full border border-deep/10 lg:block" />
       <div className="mb-10 grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">Serviços</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">Atendimentos</p>
           <h2 className="mt-4 text-[1.65rem] font-semibold leading-tight text-ink sm:text-4xl">Linhas de cuidado para investigar, orientar e acompanhar com critério</h2>
         </div>
         <p className="text-base leading-7 text-graphite sm:text-[1.03rem] sm:leading-8">

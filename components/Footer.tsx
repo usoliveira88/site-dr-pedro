@@ -10,7 +10,6 @@ export function Footer() {
           <p className="text-lg font-semibold text-white sm:text-xl">{doctor.name}</p>
           <p className="mt-3 max-w-md text-sm leading-7 text-white/72">{doctor.role}</p>
           <p className="mt-5 text-sm text-white/64">{doctor.professionalId}</p>
-          <p className="mt-2 text-sm text-white/64">{doctor.complementaryTraining}</p>
         </div>
         <div>
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Páginas</p>

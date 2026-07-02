@@ -1,7 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { ButtonLink } from "@/components/ButtonLink";
 import { ClockIcon, InstagramIcon, MapPinIcon, WhatsAppIcon } from "@/components/Icons";
 import { Section } from "@/components/Section";
 import { doctor } from "@/data/site";
@@ -98,21 +97,34 @@ export default function ContactPage() {
               ))}
             </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href={doctor.whatsappUrl} className="min-h-14 bg-gold px-7 text-deep hover:bg-white">
+              <ContactAction href={doctor.whatsappUrl} variant="primary">
                 Chamar no WhatsApp
-              </ButtonLink>
-              <ButtonLink href="#localizacao" variant="secondary" className="min-h-14 border-white/20 bg-white/10 px-7 text-white hover:border-gold hover:bg-white/[0.16]">
+              </ContactAction>
+              <ContactAction href="#localizacao" variant="secondary">
                 Ver localização
-              </ButtonLink>
+              </ContactAction>
             </div>
           </div>
           <aside className="section-reveal rounded-[28px] border border-white/14 bg-white/[0.08] p-5 shadow-[0_24px_70px_rgba(0,0,0,0.18)] backdrop-blur sm:p-6">
             <div className="rounded-[22px] border border-white/14 bg-white/[0.08] p-5">
-              <span className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-gold text-deep">
-                <WhatsAppIcon className="h-6 w-6" />
-              </span>
+              <a
+                href={doctor.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Falar com a equipe pelo WhatsApp"
+                className="focus-ring mb-5 flex h-16 w-16 items-center justify-center rounded-[18px] bg-white p-2 shadow-[0_14px_34px_rgba(0,0,0,0.18)] ring-1 ring-white/70 transition duration-300 hover:-translate-y-0.5 hover:scale-[1.03] hover:shadow-[0_18px_42px_rgba(0,0,0,0.24)] active:translate-y-0 active:scale-[0.99]"
+              >
+                <Image src="/images/whatsapp-icon.png" alt="" width={256} height={256} className="h-full w-full rounded-[14px] object-cover" />
+              </a>
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">Canal direto</p>
-              <p className="mt-3 text-2xl font-semibold">{doctor.whatsapp}</p>
+              <a
+                href={doctor.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="focus-ring mt-3 inline-flex rounded-subtle text-2xl font-semibold text-white transition duration-300 hover:text-gold"
+              >
+                {doctor.whatsapp}
+              </a>
               <p className="mt-4 text-sm leading-7 text-white/72">
                 Use o WhatsApp para iniciar o agendamento, confirmar disponibilidade e receber informações iniciais da equipe.
               </p>
@@ -147,9 +159,9 @@ export default function ContactPage() {
               </ContactInfo>
             </div>
 
-            <ButtonLink href={doctor.whatsappUrl} className="mt-7 min-h-14 w-full bg-deep text-white hover:bg-petrol sm:w-auto">
+            <ContactAction href={doctor.whatsappUrl} variant="primary" className="mt-7 w-full sm:w-auto">
               Chamar no WhatsApp
-            </ButtonLink>
+            </ContactAction>
           </div>
 
           <div className="section-reveal overflow-hidden rounded-[28px] border border-deep/10 bg-white shadow-soft">
@@ -261,13 +273,48 @@ export default function ContactPage() {
                 Entre em contato pelo WhatsApp para verificar horários, endereço e orientações iniciais para sua avaliação médica.
               </p>
             </div>
-            <ButtonLink href={doctor.whatsappUrl} className="min-h-14 w-full bg-gold px-7 text-deep hover:bg-white lg:w-auto">
+            <ContactAction href={doctor.whatsappUrl} variant="primary" className="w-full lg:w-auto">
               Chamar no WhatsApp
-            </ButtonLink>
+            </ContactAction>
           </div>
         </div>
       </Section>
     </>
+  );
+}
+
+function ContactAction({
+  href,
+  children,
+  variant,
+  className = ""
+}: {
+  href: string;
+  children: ReactNode;
+  variant: "primary" | "secondary";
+  className?: string;
+}) {
+  const isExternal = href.startsWith("http");
+  const base =
+    "focus-ring inline-flex min-h-14 items-center justify-center rounded-subtle px-7 text-sm font-semibold shadow-soft transition duration-300 hover:-translate-y-0.5 hover:shadow-lift active:translate-y-0 active:shadow-soft";
+  const styles = {
+    primary: "border border-gold/55 bg-deep text-white ring-1 ring-white/12 hover:border-gold hover:bg-[#06324f] active:bg-deep",
+    secondary: "border border-deep bg-white/95 text-deep hover:border-deep hover:bg-deep hover:text-white active:bg-petrol active:text-white"
+  };
+  const classes = `${base} ${styles[variant]} ${className}`;
+
+  if (isExternal) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>
+        {children}
+      </a>
+    );
+  }
+
+  return (
+    <a href={href} className={classes}>
+      {children}
+    </a>
   );
 }
 

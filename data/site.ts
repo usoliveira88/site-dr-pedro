@@ -13,18 +13,17 @@ export type Service = {
 export const doctor = {
   name: "Dr. Pedro Machado",
   professionalId: "CRM 01198564/RJ",
-  role: "Médico Pós-Graduado em Medicina Esportiva",
-  complementaryTraining: "Pós-graduado em Nutrologia Esportiva",
+  role: "Médico em Petrópolis",
   bio:
-    "Dr. Pedro Machado é Médico Pós-Graduado em Medicina Esportiva em Petrópolis, com pós-graduação em Nutrologia Esportiva. Seu atendimento é voltado a adultos e idosos que buscam cuidar da saúde metabólica, melhorar a composição corporal, prevenir doenças crônicas e alcançar mais vitalidade com acompanhamento médico individualizado.",
+    "Dr. Pedro Machado é médico em Petrópolis. Seu atendimento é voltado a adultos e idosos que buscam cuidar da saúde metabólica, melhorar a composição corporal, prevenir doenças crônicas e alcançar mais vitalidade com acompanhamento médico individualizado.",
   fullBio:
-    "Dr. Pedro Machado é Médico Pós-Graduado em Medicina Esportiva em Petrópolis, com pós-graduação em Nutrologia Esportiva. Seu atendimento é voltado a adultos e idosos que buscam cuidar da saúde metabólica, melhorar a composição corporal, prevenir doenças crônicas e alcançar mais vitalidade com acompanhamento médico individualizado.\n\nSua atuação inclui emagrecimento saudável, controle e tratamento da obesidade, saúde metabólica, performance, hipertrofia e estratégias clínicas voltadas à melhora da qualidade de vida. O acompanhamento considera histórico, rotina, exames, objetivos e segurança antes da definição de qualquer conduta.\n\nQuando há indicação clínica, o Dr. Pedro também realiza acompanhamento hormonal individualizado e prescrição de terapias medicamentosas modernas para controle de peso e tratamento da obesidade, incluindo medicações injetáveis conhecidas popularmente como “canetas emagrecedoras”. Todo o processo deve ser conduzido com avaliação médica, critérios de segurança e acompanhamento contínuo.",
+    "Dr. Pedro Machado é médico em Petrópolis. Seu atendimento é voltado a adultos e idosos que buscam cuidar da saúde metabólica, melhorar a composição corporal, prevenir doenças crônicas e alcançar mais vitalidade com acompanhamento médico individualizado.\n\nSua atuação inclui emagrecimento saudável, controle e tratamento da obesidade, saúde metabólica, performance, hipertrofia e estratégias clínicas voltadas à melhora da qualidade de vida. O acompanhamento considera histórico, rotina, exames, objetivos e segurança antes da definição de qualquer conduta.\n\nQuando há indicação clínica, o Dr. Pedro também realiza acompanhamento hormonal individualizado e prescrição de terapias medicamentosas modernas para controle de peso e tratamento da obesidade, incluindo medicações injetáveis conhecidas popularmente como “canetas emagrecedoras”. Todo o processo deve ser conduzido com avaliação médica, critérios de segurança e acompanhamento contínuo.",
   phone: "(24) 2245-9374",
   whatsapp: "(24) 2245-9374",
   whatsappUrl: "https://wa.me/552422459374",
   instagram: "@drpedromachado_",
   location: "R. Paulino Afonso, 108, Centro, Petrópolis, RJ, 25680-195",
-  hours: "Horários de atendimento: inserir horários validados"
+  hours: "Horários disponíveis devem ser confirmados com a equipe no momento do agendamento."
 };
 
 export const navItems = [
@@ -130,7 +129,7 @@ export const services: Service[] = [
     ],
     realisticExpectations:
       "O acompanhamento busca evolução progressiva, melhora de hábitos e monitoramento de marcadores de saúde, sem promessa de resultado.",
-    videoPlaceholder: "Vídeo provisório: Por que emagrecer não é apenas comer menos?",
+    videoPlaceholder: "Por que emagrecer não é apenas comer menos?",
     seoTerms: ["emagrecimento médico", "médico para emagrecer", "tratamento para perda de peso"]
   },
   {
@@ -151,7 +150,7 @@ export const services: Service[] = [
     ],
     realisticExpectations:
       "O acompanhamento do sobrepeso busca orientar decisões mais seguras, melhorar hábitos, monitorar fatores de risco e construir um plano compatível com a realidade do paciente, sem promessas de resultado.",
-    videoPlaceholder: "Vídeo provisório: Por que tratar o sobrepeso cedo pode mudar sua saúde futura?",
+    videoPlaceholder: "Por que tratar o sobrepeso cedo pode mudar sua saúde futura?",
     seoTerms: ["acompanhamento médico para sobrepeso em Petrópolis", "médico para sobrepeso em Petrópolis", "tratamento do sobrepeso", "saúde metabólica", "controle de peso", "prevenção da obesidade", "avaliação médica para sobrepeso", "composição corporal", "emagrecimento saudável em Petrópolis"]
   },
   {
@@ -172,7 +171,7 @@ export const services: Service[] = [
     ],
     realisticExpectations:
       "O cuidado busca compreender fatores associados à obesidade, reduzir riscos clínicos e orientar um tratamento individualizado, sem prometer resultado ou simplificar uma condição multifatorial.",
-    videoPlaceholder: "Vídeo provisório: Obesidade não é falta de força de vontade.",
+    videoPlaceholder: "Obesidade não é falta de força de vontade.",
     seoTerms: ["tratamento da obesidade em Petrópolis", "médico para obesidade em Petrópolis", "acompanhamento médico para obesidade", "saúde metabólica", "controle de peso", "tratamento individualizado da obesidade"]
   },
   {
@@ -193,7 +192,7 @@ export const services: Service[] = [
     ],
     realisticExpectations:
       "O acompanhamento hormonal masculino busca orientar decisões seguras, investigar sintomas com critério e avaliar se existe indicação real para alguma conduta. A reposição hormonal, quando indicada, deve ser conduzida com acompanhamento médico e monitoramento contínuo.",
-    videoPlaceholder: "Vídeo provisório: Quando a reposição hormonal masculina pode ser considerada?",
+    videoPlaceholder: "Quando a reposição hormonal masculina pode ser considerada?",
     seoTerms: ["reposição hormonal masculina em Petrópolis", "médico para reposição hormonal masculina em Petrópolis", "saúde hormonal masculina", "avaliação hormonal masculina", "testosterona baixa", "acompanhamento hormonal masculino", "tratamento hormonal masculino", "disposição libido e composição corporal", "acompanhamento médico para saúde hormonal", "terapia hormonal masculina quando indicada"]
   },
   {
@@ -214,7 +213,7 @@ export const services: Service[] = [
     ],
     realisticExpectations:
       "O acompanhamento hormonal feminino busca orientar decisões seguras, investigar sintomas com critério e avaliar se existe indicação real para alguma conduta. A terapia hormonal, quando indicada, deve ser conduzida com avaliação médica e monitoramento contínuo.",
-    videoPlaceholder: "Vídeo provisório: Reposição hormonal feminina: quando avaliar?",
+    videoPlaceholder: "Reposição hormonal feminina: quando avaliar?",
     seoTerms: ["reposição hormonal feminina em Petrópolis", "médico para reposição hormonal feminina em Petrópolis", "saúde hormonal feminina", "avaliação hormonal feminina", "climatério", "menopausa", "terapia hormonal feminina quando indicada", "acompanhamento hormonal feminino", "disposição sono e qualidade de vida", "acompanhamento médico para saúde hormonal feminina", "avaliação médica para menopausa em Petrópolis"]
   },
   {
@@ -235,8 +234,8 @@ export const services: Service[] = [
     ],
     realisticExpectations:
       "O acompanhamento para hipertrofia busca orientar decisões mais seguras, melhorar a leitura da composição corporal, acompanhar fatores clínicos e construir estratégias compatíveis com a rotina do paciente, sem promessas de resultado.",
-    videoPlaceholder: "Vídeo provisório: Por que ganhar massa muscular também exige avaliação de saúde?",
-    seoTerms: ["acompanhamento médico para hipertrofia em Petrópolis", "médico para ganho de massa muscular em Petrópolis", "hipertrofia com acompanhamento médico", "ganho de massa muscular", "composição corporal", "performance física", "saúde metabólica", "nutrologia esportiva", "avaliação médica para hipertrofia", "acompanhamento individualizado para hipertrofia"]
+    videoPlaceholder: "Por que ganhar massa muscular também exige avaliação de saúde?",
+    seoTerms: ["acompanhamento médico para hipertrofia em Petrópolis", "médico para ganho de massa muscular em Petrópolis", "hipertrofia com acompanhamento médico", "ganho de massa muscular", "composição corporal", "performance física", "saúde metabólica", "avaliação médica para hipertrofia", "acompanhamento individualizado para hipertrofia"]
   },
   {
     slug: "check-up-da-saude",
@@ -256,7 +255,7 @@ export const services: Service[] = [
     ],
     realisticExpectations:
       "O check-up da saúde busca organizar informações clínicas, identificar fatores que merecem atenção e orientar decisões preventivas. A avaliação não substitui acompanhamentos específicos quando necessários, mas ajuda a construir um panorama mais claro da saúde.",
-    videoPlaceholder: "Vídeo provisório: O que um bom check-up pode revelar sobre sua saúde?",
+    videoPlaceholder: "O que um bom check-up pode revelar sobre sua saúde?",
     seoTerms: ["check-up médico em Petrópolis", "check-up da saúde em Petrópolis", "avaliação médica preventiva em Petrópolis", "exames de rotina com acompanhamento médico", "saúde metabólica", "prevenção de doenças crônicas", "acompanhamento médico preventivo", "avaliação clínica individualizada", "médico para check-up em Petrópolis", "consulta médica preventiva"]
   }
 ];

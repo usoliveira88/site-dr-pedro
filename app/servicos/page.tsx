@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { InfoCard, ServiceCard } from "@/components/Cards";
-import { CTASection } from "@/components/CTASection";
+import { ServiceCard } from "@/components/Cards";
 import { Section, SectionHeading } from "@/components/Section";
-import { services } from "@/data/site";
+import { ServiceIntentCards } from "@/components/ServiceIntentCards";
+import { doctor, services } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Serviços",
@@ -23,12 +23,7 @@ export default function ServicesPage() {
       </Section>
       <Section>
         <SectionHeading eyebrow="Escolha um caminho" title="Encontre a página mais adequada" />
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          <InfoCard title="Quero perder peso" text="Emagrecimento, Sobrepeso ou Obesidade." />
-          <InfoCard title="Quero investigar hormônios" text="Reposição Hormonal Masculina ou Reposição Hormonal Feminina." />
-          <InfoCard title="Quero ganhar massa" text="Hipertrofia." />
-          <InfoCard title="Quero prevenir problemas" text="Check-up da Saúde." />
-        </div>
+        <ServiceIntentCards />
       </Section>
       <Section className="bg-linen">
         <SectionHeading eyebrow="Acompanhamentos" title="Páginas de serviço" />
@@ -39,8 +34,39 @@ export default function ServicesPage() {
         </div>
       </Section>
       <Section className="pt-0">
-        <CTASection />
+        <ServicesFinalCTA />
       </Section>
     </>
+  );
+}
+
+function ServicesFinalCTA() {
+  return (
+    <div className="section-reveal relative overflow-hidden rounded-[28px] border border-deep/20 bg-white p-6 shadow-[0_24px_70px_rgba(2,37,61,0.12)] sm:p-8 lg:p-10">
+      <div className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full border border-deep/10" />
+      <div className="pointer-events-none absolute right-10 top-10 h-24 w-24 rounded-full bg-gold/10 blur-2xl" />
+      <div className="pointer-events-none absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-gold/65 via-deep/16 to-transparent" />
+      <div className="pointer-events-none absolute left-6 top-6 h-px w-28 bg-gradient-to-r from-deep/35 to-transparent" />
+
+      <div className="relative grid items-center gap-7 lg:grid-cols-[1fr_auto]">
+        <div className="max-w-3xl">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Próximo passo</p>
+          <h2 className="text-[1.85rem] font-semibold leading-tight text-deep sm:text-4xl">
+            Agende uma avaliação médica individualizada
+          </h2>
+          <p className="mt-4 max-w-2xl text-base leading-8 text-graphite">
+            Fale com a equipe para verificar disponibilidade de consulta e receber orientação sobre o próximo passo.
+          </p>
+        </div>
+        <a
+          href={doctor.whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="focus-ring inline-flex min-h-14 w-full items-center justify-center rounded-subtle border border-deep bg-deep px-8 text-sm font-semibold text-white shadow-soft transition duration-300 hover:-translate-y-0.5 hover:bg-[#06324f] hover:shadow-lift active:translate-y-0 active:bg-deep sm:w-auto"
+        >
+          Agendar consulta
+        </a>
+      </div>
+    </div>
   );
 }

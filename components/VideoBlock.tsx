@@ -7,9 +7,9 @@ export function VideoBlock({ title, text }: { title: string; text: string }) {
         <p className="mt-4 text-base leading-8 text-graphite">{text}</p>
       </div>
       <div className="flex aspect-video items-center justify-center rounded-subtle border border-dashed border-petrol/25 bg-mist text-center text-sm font-medium leading-6 text-petrol">
-        Área de vídeo provisória
+        Conteúdo em vídeo
         <br />
-        Inserir link ou arquivo aprovado
+        Material educativo do atendimento
       </div>
     </div>
   );

@@ -100,11 +100,10 @@ function AboutDoctorCard() {
         <p className="mt-3 text-sm font-medium text-petrol">{doctor.professionalId}</p>
         <div className="mt-5 grid gap-4 text-base leading-8 text-graphite">
           <p>
-            Dr. Pedro Machado é Médico Pós-Graduado em Medicina Esportiva em Petrópolis, com pós-graduação em Nutrologia Esportiva. Seu atendimento é voltado a adultos e idosos que buscam cuidar da saúde metabólica, melhorar a composição corporal, prevenir doenças crônicas e alcançar mais qualidade de vida com acompanhamento médico individualizado.
+            Dr. Pedro Machado é médico em Petrópolis. Seu atendimento é voltado a adultos e idosos que buscam cuidar da saúde metabólica, melhorar a composição corporal, prevenir doenças crônicas e alcançar mais qualidade de vida com acompanhamento médico individualizado.
           </p>
           <p>A avaliação considera histórico, rotina, exames, objetivos e segurança antes da definição de qualquer conduta.</p>
         </div>
-        <p className="mt-4 text-sm font-medium text-petrol">{doctor.complementaryTraining}</p>
         <div className="mt-7 flex flex-col gap-3 sm:flex-row">
           <ButtonLink href={doctor.whatsappUrl}>Falar com a equipe</ButtonLink>
           <ButtonLink href={doctor.whatsappUrl} variant="secondary">

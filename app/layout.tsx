@@ -11,12 +11,12 @@ export const metadata: Metadata = {
     template: "%s | Dr. Pedro Machado"
   },
   description:
-    "Dr. Pedro Machado, Médico Pós-Graduado em Medicina Esportiva em Petrópolis. Acompanhamento médico para emagrecimento, saúde hormonal, composição corporal e prevenção.",
+    "Dr. Pedro Machado, médico em Petrópolis. Acompanhamento médico para emagrecimento, saúde hormonal, composição corporal e prevenção.",
   metadataBase: new URL("https://example.com"),
   openGraph: {
     title: "Dr. Pedro Machado",
     description:
-      "Médico Pós-Graduado em Medicina Esportiva em Petrópolis, com acompanhamento individualizado para saúde metabólica, peso, composição corporal e qualidade de vida.",
+      "Médico em Petrópolis, com acompanhamento individualizado para saúde metabólica, peso, composição corporal e qualidade de vida.",
     type: "website"
   }
 };
@@ -26,7 +26,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
     name: doctor.name,
-    description: `${doctor.role}. ${doctor.complementaryTraining}.`,
+    description: `${doctor.role}. Atendimento médico individualizado em Petrópolis.`,
     telephone: doctor.phone,
     address: doctor.location,
     sameAs: [`https://www.instagram.com/${doctor.instagram.replace("@", "")}/`],

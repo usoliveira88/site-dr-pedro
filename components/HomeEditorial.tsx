@@ -250,9 +250,7 @@ export function HomeBioAuthority() {
           Autoridade e proximidade para uma avaliação mais consciente
         </h2>
         <p className="mt-5 text-base leading-7 text-graphite sm:leading-8">{doctor.bio}</p>
-        <p className="mt-4 text-sm font-medium text-petrol">
-          {doctor.professionalId} · {doctor.complementaryTraining}
-        </p>
+        <p className="mt-4 text-sm font-medium text-petrol">{doctor.professionalId}</p>
         <div className="mt-7 flex flex-col gap-3 sm:flex-row">
           <ButtonLink href="/sobre" className="w-full sm:w-auto">Conhecer trajetória</ButtonLink>
           <ButtonLink href={doctor.whatsappUrl} variant="secondary" className="w-full sm:w-auto">

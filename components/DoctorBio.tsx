@@ -23,7 +23,6 @@ export function DoctorBio({ compact = false }: { compact?: boolean }) {
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
-        <p className="mt-4 text-sm font-medium text-petrol">{doctor.complementaryTraining}</p>
         <div className="mt-7 flex flex-col gap-3 sm:flex-row">
           <ButtonLink href="/sobre">Conhecer trajetória</ButtonLink>
           <ButtonLink href={doctor.whatsappUrl} variant="secondary">

@@ -70,7 +70,7 @@ export default async function ServicePage({ params }: PageProps) {
   const faqItems = [
     {
       question: `Como funciona o acompanhamento de ${service.shortTitle.toLowerCase()}?`,
-      answer: "Texto provisório. Ajustar conforme fluxo real de consulta, exames, retorno e acompanhamento."
+      answer: "O acompanhamento parte de avaliação clínica, análise do histórico, exames quando indicados e definição de condutas individualizadas."
     },
     {
       question: "Esse atendimento garante resultado?",
@@ -78,7 +78,7 @@ export default async function ServicePage({ params }: PageProps) {
     },
     {
       question: "Quais exames são solicitados?",
-      answer: "Texto provisório. A solicitação de exames deve ser definida pelo médico após avaliação clínica."
+      answer: "A solicitação de exames deve ser definida pelo médico após avaliação clínica, considerando sintomas, histórico e objetivos do paciente."
     }
   ];
 
@@ -99,7 +99,7 @@ export default async function ServicePage({ params }: PageProps) {
         </div>
       </Section>
       <Section>
-        <VideoBlock title={service.videoPlaceholder} text="Espaço reservado para vídeo de 1 a 2 minutos, com explicação objetiva, natural e sem promessa de resultado." />
+        <VideoBlock title={service.videoPlaceholder} text="Conteúdo educativo sobre o acompanhamento, com explicação objetiva, natural e sem promessa de resultado." />
       </Section>
       <Section className="bg-linen">
         <div className="grid gap-10 lg:grid-cols-2">

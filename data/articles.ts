@@ -19,6 +19,8 @@ export type Article = {
   description: string;
   excerpt: string;
   category: string;
+  primaryCategory: string;
+  categories: string[];
   local: string;
   author: string;
   crm: string;
@@ -40,13 +42,15 @@ export const articles: Article[] = [
       "Cansaço, queda de libido ou perda de força? Entenda quando investigar a testosterona e agende avaliação com o Dr. Pedro Machado em Petrópolis.",
     excerpt:
       "Entenda sinais que podem justificar investigação dos níveis de testosterona, como funciona a avaliação médica e por que evitar automedicação hormonal.",
-    category: "Saúde hormonal masculina",
+    category: "Reposição Hormonal Masculina",
+    primaryCategory: "Reposição Hormonal Masculina",
+    categories: ["Reposição Hormonal Masculina", "Check-up da Saúde"],
     local: "Petrópolis/RJ",
     author: doctor.name,
     crm: "CRM 01198564/RJ",
     datePublished: "2026-07-01",
-    coverImage: "/images/artigo-testosterona-petropolis.svg",
-    coverAlt: "Composição editorial sobre avaliação médica e saúde hormonal masculina",
+    coverImage: "/images/testosterona-medico-petropolis.png",
+    coverAlt: "Imagem editorial sobre testosterona e saúde hormonal masculina",
     sections: [
       {
         id: "introducao",

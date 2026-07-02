@@ -1,10 +1,12 @@
+import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
-import { CTASection } from "@/components/CTASection";
-import { Section, SectionHeading } from "@/components/Section";
+import { Section } from "@/components/Section";
+import { articles, getArticleReadingTime } from "@/data/articles";
 
 export const metadata: Metadata = {
   title: "Conteúdos",
-  description: "Área provisória para artigos, vídeos e materiais educativos."
+  description: "Artigos educativos do Dr. Pedro Machado sobre saúde metabólica, saúde hormonal e acompanhamento médico em Petrópolis."
 };
 
 export default function ContentPage() {
@@ -13,29 +15,35 @@ export default function ContentPage() {
       <Section className="bg-mist">
         <div className="max-w-4xl">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Conteúdos</p>
-          <h1 className="text-4xl font-semibold leading-tight text-ink sm:text-5xl">Artigos e vídeos educativos</h1>
+          <h1 className="text-4xl font-semibold leading-tight text-ink sm:text-5xl">Artigos educativos</h1>
           <p className="mt-6 text-lg leading-8 text-graphite">
-            Página provisória preparada para receber conteúdos orgânicos, vídeos explicativos e pautas de SEO.
+            Informações sobre saúde metabólica, saúde hormonal, prevenção e acompanhamento médico individualizado em Petrópolis.
           </p>
         </div>
       </Section>
-      <Section>
-        <SectionHeading
-          title="Estrutura pronta para publicação futura"
-          text="Inserir aqui artigos validados, vídeos aprovados e materiais educativos sem promessas clínicas ou linguagem sensacionalista."
-        />
-        <div className="grid gap-5 md:grid-cols-3">
-          {["Emagrecimento", "Saúde hormonal", "Prevenção"].map((item) => (
-            <div key={item} className="hover-ink-card rounded-subtle border border-deep/10 bg-white p-6 shadow-[0_10px_32px_rgba(2,37,61,0.07)] transition duration-300 hover:-translate-y-1 hover:shadow-lift">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">Categoria</p>
-              <h2 className="mt-4 text-xl font-semibold text-ink">{item}</h2>
-              <p className="mt-3 text-sm leading-7 text-graphite">Placeholder editável para conteúdo futuro.</p>
-            </div>
+
+      <Section className="bg-linen">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {articles.map((article) => (
+            <Link
+              key={article.slug}
+              href={article.path}
+              className="hover-ink-card group overflow-hidden rounded-[22px] border border-deep/10 bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-lift"
+            >
+              <Image src={article.coverImage} alt={article.coverAlt} width={1200} height={860} className="aspect-[16/10] w-full object-cover" />
+              <div className="p-5 sm:p-6">
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">{article.category}</p>
+                <h2 className="mt-4 text-xl font-semibold leading-tight text-ink">{article.title}</h2>
+                <p className="hover-ink-muted mt-3 text-sm leading-7 text-graphite">{article.excerpt}</p>
+                <div className="mt-5 flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-petrol">
+                  <span>{article.local}</span>
+                  <span className="text-gold">•</span>
+                  <span>{getArticleReadingTime(article)} min de leitura</span>
+                </div>
+              </div>
+            </Link>
           ))}
         </div>
-      </Section>
-      <Section className="pt-0">
-        <CTASection />
       </Section>
     </>
   );

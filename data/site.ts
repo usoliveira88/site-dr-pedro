@@ -135,10 +135,10 @@ export const services: Service[] = [
   },
   {
     slug: "sobrepeso",
-    title: "Sobrepeso: cuidado médico antes que o problema avance",
+    title: "Sobrepeso com acompanhamento médico individualizado",
     shortTitle: "Sobrepeso",
     description:
-      "O sobrepeso pode estar associado a alterações metabólicas, hormonais ou comportamentais que merecem avaliação individual.",
+      "Acompanhamento médico para sobrepeso em Petrópolis, com avaliação clínica, composição corporal, saúde metabólica, controle de peso e foco em prevenção.",
     indicatedFor: [
       "Pacientes acima do peso ou com aumento de gordura abdominal.",
       "Pessoas com histórico familiar de diabetes, hipertensão ou colesterol alto.",
@@ -150,9 +150,9 @@ export const services: Service[] = [
       "Fatores de risco e rotina atual do paciente."
     ],
     realisticExpectations:
-      "O objetivo é identificar riscos, corrigir fatores associados ao ganho de peso e orientar prevenção de quadros mais complexos.",
+      "O acompanhamento do sobrepeso busca orientar decisões mais seguras, melhorar hábitos, monitorar fatores de risco e construir um plano compatível com a realidade do paciente, sem promessas de resultado.",
     videoPlaceholder: "Vídeo provisório: Por que tratar o sobrepeso cedo pode mudar sua saúde futura?",
-    seoTerms: ["tratamento para sobrepeso", "sobrepeso médico", "controle de peso"]
+    seoTerms: ["acompanhamento médico para sobrepeso em Petrópolis", "médico para sobrepeso em Petrópolis", "tratamento do sobrepeso", "saúde metabólica", "controle de peso", "prevenção da obesidade", "avaliação médica para sobrepeso", "composição corporal", "emagrecimento saudável em Petrópolis"]
   },
   {
     slug: "obesidade",
@@ -177,10 +177,10 @@ export const services: Service[] = [
   },
   {
     slug: "reposicao-hormonal-masculina",
-    title: "Reposição hormonal masculina com avaliação médica criteriosa",
+    title: "Reposição Hormonal Masculina com acompanhamento médico individualizado",
     shortTitle: "Reposição Hormonal Masculina",
     description:
-      "Investigação de sintomas relacionados a alterações hormonais masculinas, com análise clínica, exames e conduta individualizada.",
+      "Avaliação médica para saúde hormonal masculina em Petrópolis, com investigação de sintomas, exames, riscos e indicação clínica antes de qualquer conduta hormonal.",
     indicatedFor: [
       "Homens com queda de libido, cansaço persistente ou perda de força.",
       "Pacientes com dificuldade de ganhar massa muscular ou piora da disposição.",
@@ -192,16 +192,16 @@ export const services: Service[] = [
       "Riscos cardiovasculares e critérios médicos de indicação."
     ],
     realisticExpectations:
-      "A avaliação deve identificar se há indicação clínica real, mapear riscos e evitar uso inadequado de hormônios.",
+      "O acompanhamento hormonal masculino busca orientar decisões seguras, investigar sintomas com critério e avaliar se existe indicação real para alguma conduta. A reposição hormonal, quando indicada, deve ser conduzida com acompanhamento médico e monitoramento contínuo.",
     videoPlaceholder: "Vídeo provisório: Quando a reposição hormonal masculina pode ser considerada?",
-    seoTerms: ["reposição hormonal masculina", "baixa testosterona", "avaliação hormonal masculina"]
+    seoTerms: ["reposição hormonal masculina em Petrópolis", "médico para reposição hormonal masculina em Petrópolis", "saúde hormonal masculina", "avaliação hormonal masculina", "testosterona baixa", "acompanhamento hormonal masculino", "tratamento hormonal masculino", "disposição libido e composição corporal", "acompanhamento médico para saúde hormonal", "terapia hormonal masculina quando indicada"]
   },
   {
     slug: "reposicao-hormonal-feminina",
-    title: "Reposição hormonal feminina com cuidado individualizado",
+    title: "Reposição Hormonal Feminina com acompanhamento médico individualizado",
     shortTitle: "Reposição Hormonal Feminina",
     description:
-      "Avaliação médica para mulheres com sintomas associados a alterações hormonais, climatério, menopausa ou outras fases da vida.",
+      "Avaliação médica para saúde hormonal feminina em Petrópolis, com investigação de sintomas, climatério, menopausa, exames, riscos e indicação clínica antes de qualquer conduta hormonal.",
     indicatedFor: [
       "Mulheres com ondas de calor, queda de libido ou piora do sono.",
       "Pacientes com irritabilidade, cansaço ou alteração de composição corporal.",
@@ -213,16 +213,16 @@ export const services: Service[] = [
       "Composição corporal e contexto clínico individual."
     ],
     realisticExpectations:
-      "O acompanhamento busca entender sintomas, riscos e possibilidades terapêuticas com segurança e individualização.",
+      "O acompanhamento hormonal feminino busca orientar decisões seguras, investigar sintomas com critério e avaliar se existe indicação real para alguma conduta. A terapia hormonal, quando indicada, deve ser conduzida com avaliação médica e monitoramento contínuo.",
     videoPlaceholder: "Vídeo provisório: Reposição hormonal feminina: quando avaliar?",
-    seoTerms: ["reposição hormonal feminina", "menopausa", "climatério"]
+    seoTerms: ["reposição hormonal feminina em Petrópolis", "médico para reposição hormonal feminina em Petrópolis", "saúde hormonal feminina", "avaliação hormonal feminina", "climatério", "menopausa", "terapia hormonal feminina quando indicada", "acompanhamento hormonal feminino", "disposição sono e qualidade de vida", "acompanhamento médico para saúde hormonal feminina", "avaliação médica para menopausa em Petrópolis"]
   },
   {
     slug: "hipertrofia",
-    title: "Hipertrofia e composição corporal com acompanhamento médico",
+    title: "Hipertrofia com acompanhamento médico individualizado",
     shortTitle: "Hipertrofia",
     description:
-      "Avaliação médica para quem deseja ganhar massa muscular, melhorar performance e acompanhar saúde durante o processo.",
+      "Acompanhamento médico para hipertrofia em Petrópolis, com avaliação clínica, composição corporal, saúde metabólica, performance física e estratégias individualizadas.",
     indicatedFor: [
       "Pessoas que treinam e têm dificuldade de evoluir.",
       "Pacientes com fadiga intensa ou dificuldade de recuperação.",
@@ -234,16 +234,16 @@ export const services: Service[] = [
       "Marcadores de saúde e fatores que podem limitar evolução."
     ],
     realisticExpectations:
-      "O foco é investigar limitadores, orientar condutas seguras e acompanhar força, composição corporal e marcadores clínicos.",
+      "O acompanhamento para hipertrofia busca orientar decisões mais seguras, melhorar a leitura da composição corporal, acompanhar fatores clínicos e construir estratégias compatíveis com a rotina do paciente, sem promessas de resultado.",
     videoPlaceholder: "Vídeo provisório: Por que ganhar massa muscular também exige avaliação de saúde?",
-    seoTerms: ["médico para hipertrofia", "ganho de massa muscular", "composição corporal"]
+    seoTerms: ["acompanhamento médico para hipertrofia em Petrópolis", "médico para ganho de massa muscular em Petrópolis", "hipertrofia com acompanhamento médico", "ganho de massa muscular", "composição corporal", "performance física", "saúde metabólica", "nutrologia esportiva", "avaliação médica para hipertrofia", "acompanhamento individualizado para hipertrofia"]
   },
   {
     slug: "check-up-da-saude",
-    title: "Check-up da saúde para prevenção e clareza clínica",
+    title: "Check-up da Saúde com acompanhamento médico individualizado",
     shortTitle: "Check-up da Saúde",
     description:
-      "Avaliação médica para entender o estado geral da saúde, identificar riscos e orientar decisões preventivas com mais clareza.",
+      "Check-up médico em Petrópolis com avaliação preventiva, exames, saúde metabólica, composição corporal, fatores de risco e orientação individualizada.",
     indicatedFor: [
       "Pacientes que desejam prevenir doenças ou acompanhar marcadores de saúde.",
       "Pessoas com histórico familiar importante.",
@@ -255,11 +255,133 @@ export const services: Service[] = [
       "Energia, composição corporal e marcadores preventivos."
     ],
     realisticExpectations:
-      "A proposta é criar um mapa clínico do paciente e orientar decisões preventivas com base em dados.",
+      "O check-up da saúde busca organizar informações clínicas, identificar fatores que merecem atenção e orientar decisões preventivas. A avaliação não substitui acompanhamentos específicos quando necessários, mas ajuda a construir um panorama mais claro da saúde.",
     videoPlaceholder: "Vídeo provisório: O que um bom check-up pode revelar sobre sua saúde?",
-    seoTerms: ["check-up médico", "check-up metabólico", "avaliação preventiva de saúde"]
+    seoTerms: ["check-up médico em Petrópolis", "check-up da saúde em Petrópolis", "avaliação médica preventiva em Petrópolis", "exames de rotina com acompanhamento médico", "saúde metabólica", "prevenção de doenças crônicas", "acompanhamento médico preventivo", "avaliação clínica individualizada", "médico para check-up em Petrópolis", "consulta médica preventiva"]
   }
 ];
+
+export const serviceEvidenceStats: Record<string, { value: string; text: string; source: string }[]> = {
+  emagrecimento: [
+    {
+      value: "Mais de 60%",
+      text: "Mais de 60% dos adultos brasileiros estão com excesso de peso, segundo dados recentes do Vigitel.",
+      source: "Fonte: Vigitel/Ministério da Saúde"
+    },
+    {
+      value: "Mais de 80%",
+      text: "Em estudos de manutenção de peso, mais de 80% do peso perdido pode ser recuperado em até 5 anos.",
+      source: "Fonte: Revisão científica sobre manutenção de peso"
+    },
+    {
+      value: "Contexto individual",
+      text: "O emagrecimento pode envolver rotina, sono, estresse, composição corporal, exames, medicações e saúde metabólica.",
+      source: "Fonte: avaliação clínica individualizada"
+    }
+  ],
+  obesidade: [
+    {
+      value: "25,7%",
+      text: "A obesidade atingiu 25,7% dos adultos brasileiros em 2024.",
+      source: "Fonte: Vigitel/Ministério da Saúde"
+    },
+    {
+      value: "62,6%",
+      text: "O excesso de peso chegou a 62,6% dos adultos brasileiros em 2024.",
+      source: "Fonte: Vigitel/Ministério da Saúde"
+    },
+    {
+      value: "12,9%",
+      text: "O diagnóstico médico autorreferido de diabetes subiu de 5,5% em 2006 para 12,9% em 2024.",
+      source: "Fonte: Vigitel/Ministério da Saúde"
+    }
+  ],
+  sobrepeso: [
+    {
+      value: "IMC ≥ 25",
+      text: "O Vigitel considera excesso de peso quando o IMC é igual ou superior a 25 kg/m².",
+      source: "Fonte: Vigitel/Ministério da Saúde"
+    },
+    {
+      value: "62,6%",
+      text: "Em 2024, 62,6% dos adultos brasileiros estavam com excesso de peso.",
+      source: "Fonte: Vigitel/Ministério da Saúde"
+    },
+    {
+      value: "Prevenção",
+      text: "O acompanhamento do sobrepeso permite avaliar riscos metabólicos e agir antes de possíveis agravamentos.",
+      source: "Fonte: avaliação clínica individualizada"
+    }
+  ],
+  hipertrofia: [
+    {
+      value: "Composição corporal",
+      text: "O peso na balança não diferencia massa muscular, gordura corporal e retenção hídrica. Por isso, a composição corporal precisa ser avaliada com contexto.",
+      source: "Fonte: avaliação clínica individualizada"
+    },
+    {
+      value: "Recuperação",
+      text: "Treino, alimentação, sono, estresse, exames e recuperação influenciam a evolução da massa muscular.",
+      source: "Fonte: avaliação clínica individualizada"
+    },
+    {
+      value: "Segurança",
+      text: "Acompanhamento médico ajuda a avaliar saúde metabólica, exames e fatores hormonais antes de qualquer estratégia.",
+      source: "Fonte: avaliação médica individualizada"
+    }
+  ],
+  "reposicao-hormonal-masculina": [
+    {
+      value: "Após os 40",
+      text: "Homens, principalmente após os 40 anos, podem apresentar redução dos níveis de testosterona, mas sintomas e exames precisam ser avaliados em conjunto.",
+      source: "Fonte: SBU"
+    },
+    {
+      value: "Sintomas + exames",
+      text: "A terapia de reposição de testosterona pode ser considerada quando há sintomas compatíveis, confirmação laboratorial e ausência de contraindicações.",
+      source: "Fonte: SBEM"
+    },
+    {
+      value: "Monitoramento",
+      text: "Quando indicada, a conduta hormonal exige acompanhamento médico, avaliação de riscos, benefícios e monitoramento contínuo.",
+      source: "Fonte: avaliação médica individualizada"
+    }
+  ],
+  "reposicao-hormonal-feminina": [
+    {
+      value: "Até 60 anos",
+      text: "A terapia hormonal costuma ser discutida dentro da chamada janela de oportunidade: antes dos 60 anos ou até 10 anos após a menopausa, quando não há contraindicações.",
+      source: "Fonte: FEBRASGO/SBRH"
+    },
+    {
+      value: "Até 30%",
+      text: "Algumas mulheres podem apresentar sintomas vasomotores mesmo após 10 anos da menopausa.",
+      source: "Fonte: SBRH"
+    },
+    {
+      value: "Individualização",
+      text: "A decisão sobre terapia hormonal depende de sintomas, histórico, exames, riscos, benefícios e preferências da paciente.",
+      source: "Fonte: avaliação médica individualizada"
+    }
+  ],
+  "check-up-da-saude": [
+    {
+      value: "12,9%",
+      text: "O diagnóstico médico autorreferido de diabetes em adultos brasileiros subiu de 5,5% em 2006 para 12,9% em 2024.",
+      source: "Fonte: Vigitel/Ministério da Saúde"
+    },
+    {
+      value: "+31%",
+      text: "A hipertensão também avançou no Brasil entre 2006 e 2024.",
+      source: "Fonte: Vigitel/Ministério da Saúde"
+    },
+    {
+      value: "Prevenção com critério",
+      text: "O check-up ajuda a organizar exames, histórico, rotina e fatores de risco para orientar decisões de saúde mais seguras.",
+      source: "Fonte: avaliação médica individualizada"
+    }
+  ]
+};
 
 export const processSteps = [
   {

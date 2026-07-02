@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" role="img" aria-labelledby="title desc">
+  <title id="title">Avaliação médica de saúde hormonal masculina</title>
+  <desc id="desc">Composição editorial abstrata com exames, ambiente clínico e detalhes premium para artigo sobre testosterona.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f3ea"/>
+      <stop offset="0.48" stop-color="#e6ecec"/>
+      <stop offset="1" stop-color="#dde8e2"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef3f1"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="28" flood-color="#02253d" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="860" fill="url(#bg)"/>
+  <circle cx="980" cy="150" r="270" fill="#f1e8d8" opacity="0.58"/>
+  <circle cx="210" cy="720" r="230" fill="#a8bfa3" opacity="0.22"/>
+  <g filter="url(#shadow)">
+    <rect x="142" y="150" width="916" height="568" rx="36" fill="#ffffff" opacity="0.68"/>
+    <rect x="212" y="220" width="392" height="452" rx="18" fill="url(#paper)"/>
+    <rect x="258" y="278" width="220" height="13" rx="6" fill="#02253d" opacity="0.24"/>
+    <rect x="258" y="328" width="286" height="9" rx="5" fill="#02253d" opacity="0.13"/>
+    <rect x="258" y="358" width="250" height="9" rx="5" fill="#02253d" opacity="0.11"/>
+    <rect x="258" y="410" width="286" height="76" rx="14" fill="#dde8e2"/>
+    <path d="M286 452h48l25-29 39 55 27-34h78" fill="none" stroke="#124e59" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity="0.76"/>
+    <rect x="258" y="542" width="180" height="10" rx="5" fill="#b9935a" opacity="0.64"/>
+    <rect x="258" y="578" width="250" height="9" rx="5" fill="#02253d" opacity="0.1"/>
+    <rect x="664" y="270" width="284" height="284" rx="142" fill="#dde8e2"/>
+    <path d="M806 350v124m-62-62h124" fill="none" stroke="#b9935a" stroke-width="17" stroke-linecap="round"/>
+    <path d="M642 612c78-54 164-74 258-55 35 7 67 20 96 38" fill="none" stroke="#02253d" stroke-width="5" opacity="0.27"/>
+  </g>
+</svg>

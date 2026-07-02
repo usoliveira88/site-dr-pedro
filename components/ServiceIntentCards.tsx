@@ -8,7 +8,8 @@ const intentCards = [
     id: "peso",
     number: "01",
     title: "Quero perder peso",
-    text: "Encontre o acompanhamento mais adequado para seu objetivo.",
+    text: "Para quem busca investigar peso, rotina, composição corporal e saúde metabólica com mais critério.",
+    note: "Emagrecimento, sobrepeso ou obesidade",
     links: [
       { label: "Emagrecimento", href: "/servicos/emagrecimento" },
       { label: "Sobrepeso", href: "/servicos/sobrepeso" },
@@ -19,7 +20,8 @@ const intentCards = [
     id: "hormonios",
     number: "02",
     title: "Quero investigar hormônios",
-    text: "Avaliação médica para sintomas, exames e saúde hormonal.",
+    text: "Para sintomas, dúvidas sobre exames e decisões que precisam de avaliação médica individualizada.",
+    note: "Saúde hormonal masculina e feminina",
     links: [
       { label: "Reposição Hormonal Masculina", href: "/servicos/reposicao-hormonal-masculina" },
       { label: "Reposição Hormonal Feminina", href: "/servicos/reposicao-hormonal-feminina" }
@@ -29,23 +31,25 @@ const intentCards = [
     id: "massa",
     number: "03",
     title: "Quero ganhar massa",
-    text: "Acompanhamento para composição corporal e evolução com segurança.",
+    text: "Para quem treina e deseja acompanhar composição corporal, exames, recuperação e evolução com segurança.",
+    note: "Hipertrofia e performance",
     links: [{ label: "Hipertrofia", href: "/servicos/hipertrofia" }]
   },
   {
     id: "prevencao",
     number: "04",
     title: "Quero prevenir problemas",
-    text: "Avaliação preventiva, exames e saúde metabólica.",
+    text: "Para organizar exames, mapear riscos e tomar decisões preventivas com acompanhamento médico.",
+    note: "Check-up e prevenção",
     links: [{ label: "Check-up da Saúde", href: "/servicos/check-up-da-saude" }]
   }
 ];
 
 export function ServiceIntentCards() {
-  const [expandedCard, setExpandedCard] = useState<string | null>(null);
+  const [expandedCard, setExpandedCard] = useState<string>("peso");
 
   return (
-    <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+    <div className="grid gap-4 lg:grid-cols-4">
       {intentCards.map((card, index) => {
         const isExpanded = expandedCard === card.id;
         const panelId = `intent-card-${card.id}`;
@@ -53,60 +57,73 @@ export function ServiceIntentCards() {
         return (
           <article
             key={card.id}
-            className={`section-reveal group relative flex min-h-[18.5rem] flex-col overflow-hidden rounded-[20px] border p-5 shadow-[0_14px_38px_rgba(2,37,61,0.08)] transition duration-300 hover:-translate-y-1 hover:border-gold/55 hover:bg-deep hover:shadow-lift focus-within:border-gold/55 focus-within:bg-deep sm:p-6 ${
-              isExpanded ? "border-gold/55 bg-deep shadow-lift" : "border-deep/10 bg-white"
+            className={`section-reveal group relative overflow-hidden rounded-[24px] border shadow-[0_16px_46px_rgba(2,37,61,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-lift ${
+              isExpanded ? "border-gold/45 bg-deep text-white" : "border-deep/10 bg-white text-ink hover:border-gold/35 hover:bg-deep"
             }`}
             style={{ animationDelay: `${index * 80}ms` }}
           >
-            <span className="absolute inset-x-5 top-0 h-px bg-gradient-to-r from-gold via-gold/45 to-transparent sm:inset-x-6" />
+            <span
+              className={`absolute inset-x-5 top-0 h-px bg-gradient-to-r transition duration-300 ${
+                isExpanded ? "from-gold via-gold/45 to-transparent" : "from-gold/80 via-deep/10 to-transparent"
+              }`}
+            />
+
             <button
               type="button"
               aria-expanded={isExpanded}
               aria-controls={panelId}
-              onClick={() => setExpandedCard(isExpanded ? null : card.id)}
-              className="focus-ring -m-2 flex flex-1 cursor-pointer flex-col rounded-subtle p-2 text-left"
+              onClick={() => setExpandedCard(isExpanded ? "" : card.id)}
+              className="focus-ring flex min-h-[15rem] w-full flex-col p-5 text-left sm:p-6 lg:min-h-[18rem]"
             >
-              <span
-                className={`mb-5 inline-flex h-9 w-9 items-center justify-center rounded-full text-sm font-semibold transition duration-300 ${
-                  isExpanded ? "bg-white/10 text-white" : "bg-mist text-petrol group-hover:bg-white/10 group-hover:text-white group-focus-within:bg-white/10 group-focus-within:text-white"
-                }`}
-              >
-                {card.number}
-              </span>
-              <h3
-                className={`text-xl font-semibold leading-tight transition duration-300 ${
-                  isExpanded ? "text-white" : "text-ink group-hover:text-white group-focus-within:text-white"
-                }`}
-              >
-                {card.title}
-              </h3>
-              <p
-                className={`mt-4 text-sm leading-7 transition duration-300 ${
-                  isExpanded ? "text-white/78" : "text-graphite group-hover:text-white/78 group-focus-within:text-white/78"
-                }`}
-              >
-                {card.text}
-              </p>
-              <span
-                className={`mt-5 text-xs font-semibold uppercase tracking-[0.16em] transition duration-300 ${
-                  isExpanded ? "text-gold" : "text-petrol group-hover:text-gold group-focus-within:text-gold"
-                }`}
-              >
-                {isExpanded ? "Ocultar opções" : "Ver opções"}
-              </span>
+              <div className="flex items-start justify-between gap-4">
+                <span
+                  className={`inline-flex h-10 w-10 items-center justify-center rounded-full text-sm font-semibold transition duration-300 ${
+                    isExpanded ? "bg-white/10 text-gold" : "bg-mist text-petrol group-hover:bg-white/10 group-hover:text-gold"
+                  }`}
+                >
+                  {card.number}
+                </span>
+                <span
+                  aria-hidden="true"
+                  className={`grid h-9 w-9 place-items-center rounded-full border text-lg leading-none transition duration-300 ${
+                    isExpanded ? "rotate-45 border-white/20 bg-white/10 text-white" : "border-deep/10 bg-pearl text-petrol group-hover:rotate-45 group-hover:border-white/20 group-hover:bg-white/10 group-hover:text-white"
+                  }`}
+                >
+                  +
+                </span>
+              </div>
+
+              <div className="mt-7 flex flex-1 flex-col">
+                <p className={`mb-3 text-xs font-semibold uppercase tracking-[0.16em] ${isExpanded ? "text-gold" : "text-gold"}`}>
+                  {card.note}
+                </p>
+                <h3 className={`text-[1.35rem] font-semibold leading-tight sm:text-2xl ${isExpanded ? "text-white" : "text-ink group-hover:text-white"}`}>
+                  {card.title}
+                </h3>
+                <p className={`mt-4 text-sm leading-7 sm:text-base ${isExpanded ? "text-white/80" : "text-graphite group-hover:text-white/80"}`}>
+                  {card.text}
+                </p>
+                <span className={`mt-auto pt-5 text-xs font-semibold uppercase tracking-[0.18em] ${isExpanded ? "text-white" : "text-petrol group-hover:text-white"}`}>
+                  {isExpanded ? "Escolha uma opção" : "Toque para abrir"}
+                </span>
+              </div>
             </button>
 
             <div
               id={panelId}
-              className={`grid gap-3 overflow-hidden transition-all duration-300 ease-out group-hover:max-h-64 group-hover:translate-y-0 group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:max-h-64 group-focus-within:translate-y-0 group-focus-within:opacity-100 group-focus-within:pointer-events-auto ${
-                isExpanded ? "mt-5 max-h-64 translate-y-0 opacity-100" : "mt-0 max-h-0 translate-y-2 opacity-0 pointer-events-none"
+              className={`grid gap-3 overflow-hidden px-5 transition-all duration-300 ease-out sm:px-6 lg:group-hover:max-h-72 lg:group-hover:pb-6 lg:group-hover:opacity-100 ${
+                isExpanded ? "max-h-72 pb-5 opacity-100 sm:pb-6" : "max-h-0 pb-0 opacity-0"
               }`}
             >
               {card.links.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="focus-ring flex min-h-12 items-center justify-between gap-3 rounded-subtle border border-white/20 bg-white px-4 py-3 text-sm font-semibold leading-5 text-deep shadow-[0_10px_26px_rgba(0,0,0,0.12)] transition duration-300 hover:-translate-y-0.5 hover:border-gold hover:bg-sand"
+                  className={`focus-ring flex min-h-12 items-center justify-between gap-3 rounded-subtle border px-4 py-3 text-sm font-semibold leading-5 shadow-[0_10px_26px_rgba(0,0,0,0.12)] transition duration-300 hover:-translate-y-0.5 ${
+                    isExpanded
+                      ? "border-white/20 bg-white text-deep hover:border-gold hover:bg-sand"
+                      : "border-deep/10 bg-pearl text-deep hover:border-gold"
+                  }`}
                 >
                   <span>{link.label}</span>
                   <span aria-hidden="true" className="text-gold">

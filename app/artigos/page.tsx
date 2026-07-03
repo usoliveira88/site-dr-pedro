@@ -12,8 +12,6 @@ export const metadata: Metadata = {
   }
 };
 
-const heroTopics = ["Emagrecimento", "Saúde hormonal", "Hipertrofia", "Check-up"];
-
 export default function ArticlesPage() {
   const articleCards: ArticleCardData[] = articles.map((article) => ({
     slug: article.slug,
@@ -32,30 +30,18 @@ export default function ArticlesPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-deep py-14 text-white sm:py-16 lg:py-20">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(185,147,90,0.22),transparent_28%),radial-gradient(circle_at_92%_18%,rgba(168,191,163,0.16),transparent_30%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(185,147,90,0.18),transparent_28%),radial-gradient(circle_at_92%_18%,rgba(168,191,163,0.14),transparent_30%)]" />
         <div className="pointer-events-none absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-gold/55 to-transparent" />
         <div className="pointer-events-none absolute -right-20 bottom-0 h-72 w-72 rounded-full border border-white/10" />
         <Container>
-          <div className="relative grid gap-8 lg:grid-cols-[0.95fr_0.75fr] lg:items-end">
-            <div className="max-w-4xl">
-              <p className="mb-4 inline-flex rounded-full border border-gold/35 bg-white/[0.08] px-3 py-1 text-sm font-semibold uppercase tracking-[0.18em] text-gold">
-                Biblioteca editorial
-              </p>
-              <h1 className="text-[2.65rem] font-semibold leading-[1.08] sm:text-[3.35rem] lg:text-[3.75rem]">Artigos</h1>
-              <p className="mt-7 max-w-3xl text-lg leading-8 text-white/80 sm:text-xl sm:leading-9">
-                Conteúdos sobre saúde metabólica, composição corporal, saúde hormonal e acompanhamento médico.
-              </p>
-            </div>
-            <div className="rounded-[24px] border border-white/12 bg-white/[0.07] p-5 shadow-[0_24px_70px_rgba(0,0,0,0.22)] backdrop-blur">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Temas conectados aos atendimentos</p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {heroTopics.map((item) => (
-                  <span key={item} className="rounded-full border border-white/15 bg-white/[0.08] px-3 py-2 text-xs font-semibold text-white/85">
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
+          <div className="relative max-w-4xl">
+            <p className="mb-4 inline-flex rounded-full border border-gold/35 bg-white/[0.08] px-3 py-1 text-sm font-semibold uppercase tracking-[0.18em] text-gold">
+              Biblioteca editorial
+            </p>
+            <h1 className="text-[2.65rem] font-semibold leading-[1.08] sm:text-[3.35rem] lg:text-[3.75rem]">Artigos educativos</h1>
+            <p className="mt-7 max-w-3xl text-lg leading-8 text-white/80 sm:text-xl sm:leading-9">
+              Informações sobre saúde metabólica, saúde hormonal, prevenção e acompanhamento médico individualizado em Petrópolis.
+            </p>
           </div>
         </Container>
       </section>

@@ -36,8 +36,8 @@ export const articles: Article[] = [
   {
     slug: "testosterona-petropolis",
     path: "/testosterona-petropolis",
-    title: "Testosterona em Petrópolis: Quando o Homem Deve se Preocupar com os Níveis Hormonais?",
-    metaTitle: "Testosterona em Petrópolis | Dr. Pedro Machado",
+    title: "Quando o Homem Deve se Preocupar com os Níveis Hormonais?",
+    metaTitle: "Quando Investigar a Testosterona | Dr. Pedro Machado",
     description:
       "Cansaço, queda de libido ou perda de força? Entenda quando investigar a testosterona e agende avaliação com o Dr. Pedro Machado em Petrópolis.",
     excerpt:

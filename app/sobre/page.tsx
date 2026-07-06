@@ -57,9 +57,6 @@ export default function AboutPage() {
           <AboutPhotoComposition />
         </div>
       </Section>
-      <Section className="bg-white">
-        <AboutDoctorCard />
-      </Section>
       <Section className="bg-bluegray">
         <AboutPhilosophy />
       </Section>
@@ -102,10 +99,7 @@ function AboutPhotoComposition() {
         />
         <div className="absolute bottom-5 left-5 right-5 rounded-[18px] border border-white/55 bg-white/90 p-4 shadow-soft backdrop-blur">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Atendimento em Petrópolis</p>
-          <div className="mt-3 grid gap-2 text-sm font-semibold text-deep sm:grid-cols-2">
-            <span>{doctor.professionalId}</span>
-            <span>Avaliação individualizada</span>
-          </div>
+          <p className="mt-3 text-sm font-semibold text-deep">{doctor.professionalId}</p>
         </div>
       </div>
       <div className="absolute -bottom-6 -right-3 hidden w-48 overflow-hidden rounded-[20px] border border-white/80 bg-white p-2 shadow-lift sm:block">
@@ -116,39 +110,6 @@ function AboutPhotoComposition() {
           height={520}
           className="aspect-[4/3] rounded-[14px] object-cover"
         />
-      </div>
-    </div>
-  );
-}
-
-function AboutDoctorCard() {
-  return (
-    <div className="grid items-center gap-10 rounded-[28px] border border-deep/10 bg-white p-6 shadow-soft md:grid-cols-[0.78fr_1.22fr] lg:p-10">
-      <div className="overflow-hidden rounded-[22px] bg-mist">
-        <Image
-          src="/images/dr-pedro-bio-medico.webp"
-          alt="Dr. Pedro Machado em ambiente médico profissional"
-          width={960}
-          height={1200}
-          className="aspect-[4/5] w-full object-cover"
-        />
-      </div>
-      <div>
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Sobre o médico</p>
-        <h2 className="text-3xl font-semibold text-ink sm:text-4xl">{doctor.name}</h2>
-        <p className="mt-3 text-sm font-medium text-petrol">{doctor.professionalId}</p>
-        <div className="mt-5 grid gap-4 text-base leading-8 text-graphite">
-          <p>
-            Dr. Pedro Machado é médico em Petrópolis. Seu atendimento é voltado a adultos e idosos que buscam cuidar da saúde metabólica, melhorar a composição corporal, prevenir doenças crônicas e alcançar mais qualidade de vida com acompanhamento médico individualizado.
-          </p>
-          <p>A avaliação considera histórico, rotina, exames, objetivos e segurança antes da definição de qualquer conduta.</p>
-        </div>
-        <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-          <ButtonLink href={doctor.whatsappUrl}>Falar com a equipe</ButtonLink>
-          <ButtonLink href={doctor.whatsappUrl} variant="secondary">
-            Agendar consulta
-          </ButtonLink>
-        </div>
       </div>
     </div>
   );

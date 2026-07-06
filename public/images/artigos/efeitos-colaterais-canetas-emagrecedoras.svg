@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="980" viewBox="0 0 1400 980" role="img" aria-labelledby="title desc">
+  <title id="title">Avaliação médica sobre efeitos colaterais das canetas emagrecedoras</title>
+  <desc id="desc">Composição editorial com mesa clínica, caneta injetável discreta, exames e elementos de acompanhamento médico.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#F7F3EA"/>
+      <stop offset="0.48" stop-color="#E6ECEC"/>
+      <stop offset="1" stop-color="#DDE8E2"/>
+    </linearGradient>
+    <linearGradient id="deep" x1="0" x2="1">
+      <stop offset="0" stop-color="#02253D"/>
+      <stop offset="1" stop-color="#0F4C5C"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="28" stdDeviation="28" flood-color="#02253D" flood-opacity="0.16"/>
+    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#02253D" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="1400" height="980" fill="url(#bg)"/>
+  <circle cx="1135" cy="175" r="210" fill="#B9935A" opacity="0.12"/>
+  <circle cx="180" cy="810" r="250" fill="#02253D" opacity="0.08"/>
+  <path d="M1040 90c75 82 110 169 104 261-6 93-55 177-147 253" fill="none" stroke="#02253D" stroke-width="2" opacity="0.12"/>
+  <path d="M1090 120c52 62 76 127 72 194-4 73-38 139-103 199" fill="none" stroke="#B9935A" stroke-width="2" opacity="0.22"/>
+
+  <g filter="url(#shadow)">
+    <rect x="145" y="165" width="1110" height="665" rx="42" fill="#FFFFFF" opacity="0.92"/>
+  </g>
+  <rect x="185" y="205" width="1030" height="585" rx="30" fill="#F6F8F7"/>
+
+  <g transform="translate(245 265)" filter="url(#soft)">
+    <rect width="420" height="490" rx="24" fill="#FFFFFF"/>
+    <rect x="36" y="48" width="250" height="18" rx="9" fill="#02253D" opacity="0.82"/>
+    <rect x="36" y="92" width="330" height="12" rx="6" fill="#A8BFA3"/>
+    <rect x="36" y="128" width="290" height="12" rx="6" fill="#DDE8E2"/>
+    <rect x="36" y="164" width="320" height="12" rx="6" fill="#DDE8E2"/>
+    <rect x="36" y="226" width="150" height="150" rx="22" fill="#E6ECEC"/>
+    <path d="M78 300l42 38 88-104" fill="none" stroke="#0F4C5C" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="220" y="232" width="145" height="18" rx="9" fill="#B9935A" opacity="0.72"/>
+    <rect x="220" y="270" width="120" height="12" rx="6" fill="#A8BFA3"/>
+    <rect x="220" y="304" width="132" height="12" rx="6" fill="#DDE8E2"/>
+    <rect x="36" y="420" width="330" height="14" rx="7" fill="#02253D" opacity="0.12"/>
+  </g>
+
+  <g transform="translate(720 305)" filter="url(#soft)">
+    <rect x="0" y="0" width="360" height="360" rx="180" fill="#DDE8E2"/>
+    <circle cx="180" cy="180" r="118" fill="#FFFFFF"/>
+    <path d="M180 86v94l62 38" fill="none" stroke="#02253D" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M98 248c42 48 120 58 174 18" fill="none" stroke="#B9935A" stroke-width="12" stroke-linecap="round"/>
+    <rect x="238" y="238" width="260" height="58" rx="29" transform="rotate(-22 238 238)" fill="url(#deep)"/>
+    <rect x="260" y="244" width="122" height="18" rx="9" transform="rotate(-22 260 244)" fill="#FFFFFF" opacity="0.75"/>
+    <rect x="455" y="151" width="70" height="18" rx="9" transform="rotate(-22 455 151)" fill="#B9935A"/>
+  </g>
+
+  <g transform="translate(775 675)">
+    <rect width="345" height="72" rx="18" fill="#02253D"/>
+    <text x="28" y="30" fill="#B9935A" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="3">ACOMPANHAMENTO</text>
+    <text x="28" y="54" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="18" font-weight="700">avaliação, exames e segurança</text>
+  </g>
+</svg>

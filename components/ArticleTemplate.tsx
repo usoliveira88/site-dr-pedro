@@ -95,7 +95,7 @@ export function ArticleTemplate({ article }: { article: Article }) {
           <div className="mx-auto grid w-full max-w-[1240px] gap-8 px-5 sm:px-6 lg:grid-cols-[0.34fr_1fr] lg:px-8">
             <aside className="section-reveal lg:sticky lg:top-24 lg:self-start">
               <div className="rounded-[22px] border border-deep/10 bg-white p-5 shadow-soft">
-                <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Sumário</p>
+                <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-gold">{article.summaryTitle ?? "Sumário"}</p>
                 <nav className="grid gap-2">
                   {article.sections.map((section) => (
                     <a key={section.id} href={`#${section.id}`} className="rounded-subtle px-3 py-2 text-sm leading-6 text-graphite transition hover:bg-mist hover:text-deep">
@@ -125,14 +125,14 @@ export function ArticleTemplate({ article }: { article: Article }) {
 
               <section id="faq" className="mt-8 rounded-[28px] border border-deep/10 bg-white p-5 shadow-soft sm:p-8 lg:p-10">
                 <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-gold">FAQ</p>
-                <h2 className="text-[1.75rem] font-semibold leading-tight text-ink sm:text-4xl">Perguntas frequentes sobre testosterona</h2>
+                <h2 className="text-[1.75rem] font-semibold leading-tight text-ink sm:text-4xl">{article.faqTitle ?? "Perguntas frequentes sobre testosterona"}</h2>
                 <div className="mt-8">
                   <FAQ items={article.faq} />
                 </div>
               </section>
 
               <section className="mt-8 rounded-[28px] border border-deep/10 bg-pearl p-5 shadow-soft sm:p-8 lg:p-10">
-                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Links internos</p>
+                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Leia também</p>
                 <h2 className="text-[1.65rem] font-semibold leading-tight text-ink sm:text-3xl">Continue lendo no site</h2>
                 <div className="mt-6 grid gap-4 md:grid-cols-3">
                   {article.internalLinks.map((link) => (
@@ -151,14 +151,14 @@ export function ArticleTemplate({ article }: { article: Article }) {
           <div className="section-reveal mx-auto max-w-[1240px] overflow-hidden rounded-[30px] bg-deep p-6 text-white shadow-lift sm:p-8 lg:p-10">
             <div className="grid items-center gap-8 lg:grid-cols-[1fr_0.42fr]">
               <div>
-                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Avaliação médica</p>
-                <h2 className="text-[1.85rem] font-semibold leading-tight sm:text-4xl">Quer investigar sintomas com segurança?</h2>
+                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-gold">{article.finalCta?.eyebrow ?? "Avaliação médica"}</p>
+                <h2 className="text-[1.85rem] font-semibold leading-tight sm:text-4xl">{article.finalCta?.title ?? "Quer investigar sintomas com segurança?"}</h2>
                 <p className="mt-4 max-w-2xl text-base leading-8 text-white/78">
-                  Fale com a equipe para verificar disponibilidade de consulta com o Dr. Pedro Machado em Petrópolis.
+                  {article.finalCta?.text ?? "Fale com a equipe para verificar disponibilidade de consulta com o Dr. Pedro Machado em Petrópolis."}
                 </p>
               </div>
-              <ButtonLink href={doctor.whatsappUrl} className="min-h-14 w-full bg-gold px-7 text-deep hover:bg-white lg:w-auto">
-                Agendar consulta
+              <ButtonLink href={article.finalCta?.href ?? doctor.whatsappUrl} className="min-h-14 w-full bg-gold px-7 text-deep hover:bg-white lg:w-auto">
+                {article.finalCta?.label ?? "Agendar consulta"}
               </ButtonLink>
             </div>
           </div>

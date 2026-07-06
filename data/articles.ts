@@ -30,6 +30,9 @@ export type Article = {
   sections: ArticleSection[];
   faq: { question: string; answer: string }[];
   internalLinks: { label: string; href: string; text: string }[];
+  summaryTitle?: string;
+  faqTitle?: string;
+  finalCta?: { eyebrow: string; title: string; text: string; label: string; href: string };
 };
 
 export const articles: Article[] = [
@@ -420,6 +423,373 @@ export const articles: Article[] = [
       },
       {
         label: "Contato e localização",
+        href: "/contato",
+        text: "Acesse WhatsApp, endereço e mapa para atendimento em Petrópolis."
+      }
+    ]
+  },
+  {
+    slug: "efeitos-colaterais-canetas-emagrecedoras",
+    path: "/artigos/efeitos-colaterais-canetas-emagrecedoras",
+    title: "Os Efeitos Colaterais das Canetas Emagrecedoras",
+    metaTitle: "Efeitos Colaterais das Canetas Emagrecedoras | Dr. Pedro Machado",
+    description:
+      "Entenda possíveis efeitos colaterais das canetas emagrecedoras, como náuseas, efeito sanfona e perda de massa muscular, e quando buscar avaliação médica.",
+    excerpt:
+      "Entenda quais efeitos colaterais podem ocorrer com medicamentos injetáveis para controle de peso, por que o acompanhamento médico é importante e quando procurar avaliação.",
+    category: "Emagrecimento",
+    primaryCategory: "Emagrecimento",
+    categories: ["Emagrecimento", "Sobrepeso", "Obesidade", "Check-up da Saúde"],
+    local: "Petrópolis/RJ",
+    author: doctor.name,
+    crm: "CRM 01198564/RJ",
+    datePublished: "2026-07-06",
+    coverImage: "/images/artigos/efeitos-colaterais-canetas-emagrecedoras.svg",
+    coverAlt: "Avaliação médica sobre efeitos colaterais das canetas emagrecedoras em Petrópolis",
+    summaryTitle: "Neste artigo você verá",
+    faqTitle: "Perguntas frequentes sobre canetas emagrecedoras",
+    finalCta: {
+      eyebrow: "Avaliação médica em Petrópolis",
+      title: "Converse com o Dr. Pedro Machado em Petrópolis",
+      text: "Fale com a equipe para verificar disponibilidade de consulta e entender o próximo passo para uma avaliação médica individualizada.",
+      label: "Chamar no WhatsApp",
+      href: doctor.whatsappUrl
+    },
+    sections: [
+      {
+        id: "introducao",
+        title: "Introdução",
+        blocks: [
+          {
+            type: "paragraph",
+            text:
+              "As chamadas canetas emagrecedoras ganharam muita visibilidade nos últimos anos. Medicamentos injetáveis usados no controle de peso passaram a ser discutidos em conversas de academia, redes sociais, grupos de família e consultórios. Essa popularização trouxe informação, mas também trouxe dúvidas, expectativas exageradas e uso sem acompanhamento adequado."
+          },
+          {
+            type: "paragraph",
+            text:
+              "É importante começar por um ponto de equilíbrio: esses medicamentos não são vilões. Em pacientes bem avaliados, com indicação clínica, prescrição correta e acompanhamento médico, podem fazer parte de uma estratégia de tratamento para sobrepeso, obesidade e saúde metabólica. O problema começa quando a decisão é tomada sem avaliação, sem exames, sem análise de rotina e sem plano para monitorar efeitos colaterais, composição corporal e manutenção do peso."
+          },
+          {
+            type: "paragraph",
+            text:
+              "Neste artigo, você vai entender quais efeitos colaterais podem acontecer, por que náuseas e sintomas gastrointestinais são comuns, como o efeito sanfona pode ocorrer, por que a perda de massa muscular merece atenção e quando procurar avaliação médica em Petrópolis."
+          },
+          {
+            type: "cta",
+            title: "Pensando em usar canetas emagrecedoras ou já teve efeitos colaterais?",
+            text: "A avaliação médica ajuda a entender indicação, riscos, exames e o melhor caminho para seu contexto.",
+            href: doctor.whatsappUrl,
+            label: "Agendar avaliação em Petrópolis"
+          }
+        ]
+      },
+      {
+        id: "o-que-sao",
+        title: "O que são as canetas emagrecedoras?",
+        blocks: [
+          {
+            type: "paragraph",
+            text:
+              "Canetas emagrecedoras é uma forma popular de se referir a medicamentos injetáveis usados em alguns tratamentos para controle de peso. Entre os exemplos mais conhecidos estão substâncias como semaglutida, liraglutida e tirzepatida, que podem atuar em mecanismos relacionados ao apetite, à saciedade, ao esvaziamento gástrico e ao controle metabólico."
+          },
+          {
+            type: "paragraph",
+            text:
+              "Na prática clínica, esses medicamentos não devem ser entendidos como uma solução isolada. O controle de peso envolve histórico, exames laboratoriais, composição corporal, rotina alimentar, sono, estresse, atividade física, medicamentos em uso e fatores metabólicos. Por isso, a decisão de usar ou não uma medicação precisa ser individualizada."
+          },
+          {
+            type: "paragraph",
+            text:
+              "Também é essencial diferenciar indicação médica de uso por impulso. Uma pessoa pode ter visto bons relatos, conhecer alguém que perdeu peso ou encontrar informações na internet, mas isso não substitui avaliação. O que funciona para um paciente pode não ser adequado para outro, especialmente quando há doenças associadas, sintomas digestivos, alterações em exames ou uso de outras medicações."
+          }
+        ]
+      },
+      {
+        id: "efeitos-colaterais",
+        title: "Quais efeitos colaterais podem acontecer?",
+        blocks: [
+          {
+            type: "paragraph",
+            text:
+              "Os efeitos colaterais mais comentados das canetas emagrecedoras costumam envolver o sistema gastrointestinal. Náuseas, vômitos, diarreia, constipação, dor abdominal, refluxo, sensação de estômago cheio e empachamento podem aparecer, principalmente no início do tratamento ou em fases de ajuste."
+          },
+          {
+            type: "list",
+            items: [
+              "náuseas ou enjoo;",
+              "vômitos;",
+              "diarreia;",
+              "constipação intestinal;",
+              "dor ou desconforto abdominal;",
+              "refluxo, empachamento ou digestão mais lenta;",
+              "redução excessiva do apetite;",
+              "risco de desidratação quando há vômitos ou diarreia importantes."
+            ]
+          },
+          {
+            type: "paragraph",
+            text:
+              "Esses sintomas não acontecem da mesma forma em todos os pacientes. Dose, adaptação, histórico clínico, alimentação, hidratação, outras medicações e acompanhamento fazem diferença. Algumas pessoas apresentam sintomas leves e transitórios; outras podem ter efeitos mais intensos e precisar de reavaliação médica."
+          },
+          {
+            type: "cta",
+            title: "Importante: efeitos colaterais não são iguais para todos.",
+            text: "Dose, adaptação, histórico clínico e acompanhamento médico influenciam a tolerância e a segurança do tratamento.",
+            href: doctor.whatsappUrl,
+            label: "Falar com a equipe"
+          }
+        ]
+      },
+      {
+        id: "sintomas-gastrointestinais",
+        title: "Náuseas, vômitos, diarreia e constipação",
+        blocks: [
+          {
+            type: "paragraph",
+            text:
+              "Náuseas, vômitos, diarreia e constipação estão entre os efeitos gastrointestinais mais relatados com medicamentos que atuam em vias relacionadas ao GLP-1. Em muitos casos, eles aparecem no começo do uso ou após mudanças de dose, justamente quando o organismo ainda está se adaptando."
+          },
+          {
+            type: "paragraph",
+            text:
+              "Quando esses sintomas são leves, podem ser acompanhados dentro do plano médico. Mas sintomas intensos, persistentes ou associados a fraqueza, piora do estado geral, dor importante, vômitos repetidos ou sinais de desidratação merecem avaliação. O ponto central é não normalizar sofrimento nem insistir em uma conduta sem reavaliar segurança."
+          },
+          {
+            type: "paragraph",
+            text:
+              "Este artigo não orienta dose, ajuste ou forma de aplicação. Essas decisões devem ser tomadas por médico, considerando quadro clínico, exames e resposta individual. O acompanhamento existe justamente para identificar quando algo precisa ser ajustado ou interrompido."
+          },
+          {
+            type: "cta",
+            title: "Efeitos persistentes ou intensos precisam ser avaliados com segurança.",
+            text: "Se você já usa medicação e sente sintomas importantes, procure orientação médica antes de insistir por conta própria.",
+            href: doctor.whatsappUrl,
+            label: "Falar com a equipe"
+          }
+        ]
+      },
+      {
+        id: "efeito-sanfona",
+        title: "Efeito sanfona: por que o peso pode voltar?",
+        blocks: [
+          {
+            type: "paragraph",
+            text:
+              "Uma dúvida frequente é se a pessoa necessariamente recupera o peso depois de parar a medicação. A resposta exige cuidado: não é correto dizer que todo mundo volta ao peso anterior, mas também não é seguro tratar a medicação como solução definitiva sem estratégia de manutenção."
+          },
+          {
+            type: "paragraph",
+            text:
+              "O peso pode voltar quando a interrupção acontece sem plano, quando hábitos não foram construídos, quando sono, alimentação, treino e rotina continuam desorganizados ou quando fatores metabólicos não foram acompanhados. A medicação pode ajudar em determinados casos, mas não substitui uma estratégia clínica mais ampla."
+          },
+          {
+            type: "paragraph",
+            text:
+              "Por isso, o tratamento precisa olhar para a manutenção desde o começo. A pergunta não deve ser apenas quanto peso foi perdido, mas como essa perda ocorreu, quais marcadores melhoraram, se houve preservação de massa magra, como está a rotina e quais ajustes serão necessários ao longo do tempo."
+          }
+        ]
+      },
+      {
+        id: "massa-muscular",
+        title: "Perda de massa muscular durante o emagrecimento",
+        blocks: [
+          {
+            type: "paragraph",
+            text:
+              "Durante o emagrecimento, especialmente quando a perda de peso é rápida ou mal acompanhada, pode haver redução de gordura e também de massa magra. Isso importa porque massa muscular participa da força, autonomia, gasto energético, saúde metabólica e qualidade de vida."
+          },
+          {
+            type: "paragraph",
+            text:
+              "Acompanhamento médico não deve olhar apenas para o número da balança. Composição corporal, ingestão de proteína, treino de força, exames, disposição, sintomas e ritmo de perda precisam ser considerados. Em alguns casos, perder menos peso, mas preservar melhor a massa magra, pode ser clinicamente mais interessante do que perseguir uma queda rápida e desorganizada."
+          },
+          {
+            type: "paragraph",
+            text:
+              "Essa é uma das razões pelas quais temas como emagrecimento, hipertrofia, saúde metabólica e check-up se conectam. O objetivo não é apenas reduzir peso, mas cuidar do corpo de forma mais segura e sustentável."
+          },
+          {
+            type: "cta",
+            title: "Emagrecer com segurança exige olhar para peso, exames, rotina e composição corporal.",
+            text: "Uma avaliação individualizada ajuda a organizar prioridades e reduzir riscos durante o acompanhamento.",
+            href: doctor.whatsappUrl,
+            label: "Agendar consulta"
+          }
+        ]
+      },
+      {
+        id: "automedicacao",
+        title: "Automedicação e uso sem acompanhamento médico",
+        blocks: [
+          {
+            type: "paragraph",
+            text:
+              "O uso de canetas emagrecedoras sem acompanhamento pode trazer riscos. Além de efeitos colaterais, há possibilidade de dose inadequada, produto irregular, ignorar contraindicações, mascarar doenças e atrasar diagnósticos que precisariam de investigação."
+          },
+          {
+            type: "paragraph",
+            text:
+              "Antes de iniciar qualquer medicação, o médico precisa entender histórico de saúde, exames, medicações em uso, sintomas, rotina e objetivos. Também é importante avaliar se há condições que exigem cuidado maior, como histórico de pancreatite ou sintomas digestivos relevantes, doenças gastrointestinais importantes, diabetes em uso de outras medicações, doença renal, risco de desidratação, gestação ou tentativa de engravidar."
+          },
+          {
+            type: "paragraph",
+            text:
+              "Essa não é uma lista de contraindicações absolutas. É um lembrete de que cada caso precisa ser avaliado. Medicamentos para controle de peso podem ser úteis em contextos específicos, mas segurança depende de indicação, prescrição e monitoramento."
+          }
+        ]
+      },
+      {
+        id: "quem-precisa-cuidado",
+        title: "Quem precisa ter mais cuidado?",
+        blocks: [
+          {
+            type: "paragraph",
+            text:
+              "Alguns pacientes precisam de avaliação ainda mais criteriosa antes de considerar medicamentos injetáveis para controle de peso. Isso inclui pessoas com histórico de pancreatite ou sintomas digestivos relevantes, doenças gastrointestinais importantes, diabetes em uso de outras medicações, doença renal ou maior risco de desidratação."
+          },
+          {
+            type: "paragraph",
+            text:
+              "Gestantes, pessoas tentando engravidar ou pacientes com sintomas intensos durante o uso também devem discutir o caso com médico. O objetivo não é assustar, mas reforçar que segurança depende de contexto clínico. Uma mesma medicação pode ser adequada para um paciente e inadequada para outro."
+          },
+          {
+            type: "paragraph",
+            text:
+              "Por isso, a consulta precisa olhar para riscos e benefícios. A decisão não deve ser baseada apenas no desejo de perder peso, mas no conjunto de saúde, exames, rotina, composição corporal e acompanhamento possível."
+          }
+        ]
+      },
+      {
+        id: "quando-procurar",
+        title: "Quando procurar avaliação médica em Petrópolis?",
+        blocks: [
+          {
+            type: "paragraph",
+            text:
+              "Vale procurar avaliação médica antes de iniciar o uso, mas também quando a pessoa já está usando e apresenta efeitos colaterais, quando parou e recuperou peso, quando percebe perda de massa muscular, quando tem exames alterados ou quando deseja emagrecer com mais segurança."
+          },
+          {
+            type: "list",
+            items: [
+              "antes de iniciar uma medicação para controle de peso;",
+              "se já usa e tem náuseas, vômitos, diarreia ou constipação persistentes;",
+              "se houve reganho de peso após interrupção;",
+              "se houve perda de força ou massa muscular;",
+              "se existem exames alterados ou doenças associadas;",
+              "se o objetivo é emagrecer com avaliação médica e monitoramento."
+            ]
+          },
+          {
+            type: "paragraph",
+            text:
+              "A consulta ajuda a diferenciar o que pode ser esperado, o que precisa de ajuste e o que exige investigação. Também permite organizar uma estratégia que considere saúde metabólica, composição corporal e manutenção do peso."
+          }
+        ]
+      },
+      {
+        id: "atendimento-petropolis",
+        title: "Atendimento com o Dr. Pedro Machado em Petrópolis/RJ",
+        blocks: [
+          {
+            type: "paragraph",
+            text:
+              "O Dr. Pedro Machado, CRM 01198564/RJ, atende em Petrópolis/RJ pacientes que buscam acompanhamento médico para emagrecimento, sobrepeso, obesidade, composição corporal e saúde metabólica. A avaliação considera histórico, rotina, sintomas, exames, objetivos e segurança antes da definição de qualquer conduta."
+          },
+          {
+            type: "paragraph",
+            text:
+              "Se você pensa em usar canetas emagrecedoras, já está usando ou teve efeitos colaterais, o primeiro passo é conversar com a equipe e verificar disponibilidade para uma avaliação individualizada."
+          }
+        ]
+      },
+      {
+        id: "fontes-consultadas",
+        title: "Fontes consultadas",
+        blocks: [
+          {
+            type: "paragraph",
+            text:
+              "Este conteúdo foi elaborado com base em informações gerais de segurança e educação em saúde disponíveis em fontes regulatórias e médicas, incluindo Anvisa, FDA, EMA e bulas profissionais de medicamentos quando aplicável. O texto tem finalidade educativa e não substitui avaliação médica individualizada."
+          },
+          {
+            type: "paragraph",
+            text:
+              "Pontos factuais considerados: efeitos gastrointestinais como náuseas, vômitos, diarreia e constipação são relatados com medicamentos agonistas de GLP-1; esses medicamentos podem atuar em saciedade, apetite e esvaziamento gástrico; e o uso deve respeitar indicação, prescrição e acompanhamento médico."
+          }
+        ]
+      }
+    ],
+    faq: [
+      {
+        question: "Quais são os efeitos colaterais mais comuns das canetas emagrecedoras?",
+        answer:
+          "Os efeitos mais relatados costumam ser gastrointestinais, como náuseas, vômitos, diarreia, constipação, dor abdominal, refluxo e sensação de empachamento. A intensidade varia de pessoa para pessoa."
+      },
+      {
+        question: "Toda pessoa que usa caneta emagrecedora sente náusea?",
+        answer:
+          "Não. Algumas pessoas têm poucos sintomas, enquanto outras apresentam náuseas mais relevantes. Dose, adaptação, histórico clínico e acompanhamento médico influenciam a tolerância."
+      },
+      {
+        question: "Canetas emagrecedoras causam efeito sanfona?",
+        answer:
+          "O reganho de peso pode acontecer quando não há estratégia de manutenção, mas não deve ser tratado como algo inevitável para todos. Rotina, alimentação, sono, treino, composição corporal e acompanhamento influenciam o resultado."
+      },
+      {
+        question: "É possível perder massa muscular usando medicamentos para emagrecer?",
+        answer:
+          "Durante o emagrecimento pode haver perda de gordura e também de massa magra, especialmente quando a perda de peso é rápida ou pouco acompanhada. Por isso, composição corporal, proteína, treino e exames precisam ser considerados."
+      },
+      {
+        question: "Posso usar caneta emagrecedora sem acompanhamento médico?",
+        answer:
+          "Não é recomendado. O uso sem avaliação pode aumentar riscos, mascarar condições clínicas e levar a condutas inadequadas. A indicação deve ser individualizada."
+      },
+      {
+        question: "Quando devo procurar um médico por efeitos colaterais?",
+        answer:
+          "Procure avaliação se os sintomas forem intensos, persistentes, associados a vômitos repetidos, sinais de desidratação, dor importante ou piora do estado geral."
+      },
+      {
+        question: "Esses medicamentos são indicados para qualquer pessoa?",
+        answer:
+          "Não. A indicação depende de avaliação clínica, histórico de saúde, exames, medicações em uso, objetivos e possíveis fatores de risco."
+      },
+      {
+        question: "O acompanhamento médico ajuda a reduzir riscos?",
+        answer:
+          "Sim. O acompanhamento permite avaliar indicação, monitorar efeitos colaterais, acompanhar exames, composição corporal e ajustar a estratégia quando necessário."
+      },
+      {
+        question: "Onde buscar avaliação em Petrópolis?",
+        answer:
+          "O Dr. Pedro Machado, CRM 01198564/RJ, atende em Petrópolis/RJ pacientes que buscam avaliação médica para emagrecimento, sobrepeso, obesidade e saúde metabólica."
+      }
+    ],
+    internalLinks: [
+      {
+        label: "Emagrecimento",
+        href: "/servicos/emagrecimento",
+        text: "Entenda como funciona o acompanhamento médico para emagrecimento individualizado."
+      },
+      {
+        label: "Obesidade",
+        href: "/servicos/obesidade",
+        text: "Veja como a obesidade pode ser acompanhada como condição multifatorial."
+      },
+      {
+        label: "Check-up da Saúde",
+        href: "/servicos/check-up-da-saude",
+        text: "Conheça a avaliação preventiva com exames e leitura do contexto clínico."
+      },
+      {
+        label: "Hipertrofia",
+        href: "/servicos/hipertrofia",
+        text: "Leia sobre composição corporal, massa muscular e acompanhamento médico."
+      },
+      {
+        label: "Contato",
         href: "/contato",
         text: "Acesse WhatsApp, endereço e mapa para atendimento em Petrópolis."
       }

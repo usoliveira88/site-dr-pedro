@@ -116,6 +116,18 @@ img {
   outline-color: #b99a5f;
 }
 
+.article-cta-button,
+.article-cta-button:visited,
+.article-cta-button:hover,
+.article-cta-button:focus-visible,
+.article-cta-button:active {
+  color: #061e40 !important;
+}
+
+.article-cta-button * {
+  color: inherit !important;
+}
+
 @keyframes section-reveal {
   from {
     opacity: 0;

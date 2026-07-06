@@ -444,7 +444,7 @@ export const articles: Article[] = [
     author: doctor.name,
     crm: "CRM 01198564/RJ",
     datePublished: "2026-07-06",
-    coverImage: "/images/artigos/efeitos-colaterais-canetas-emagrecedoras.svg",
+    coverImage: "/images/artigos/canetas-emagrecedoras-2.jpg",
     coverAlt: "Avaliação médica sobre efeitos colaterais das canetas emagrecedoras em Petrópolis",
     summaryTitle: "Neste artigo você verá",
     faqTitle: "Perguntas frequentes sobre canetas emagrecedoras",

@@ -14,6 +14,9 @@ function formatDate(date: string) {
   }).format(new Date(`${date}T12:00:00`));
 }
 
+const articleCtaButtonClass =
+  "article-cta-button bg-gold text-[#061e40] hover:bg-white hover:text-[#061e40] focus-visible:text-[#061e40] active:bg-sand active:text-[#061e40]";
+
 export function ArticleTemplate({ article }: { article: Article }) {
   const readingTime = getArticleReadingTime(article);
   const articleSchema = {
@@ -157,7 +160,7 @@ export function ArticleTemplate({ article }: { article: Article }) {
                   {article.finalCta?.text ?? "Fale com a equipe para verificar disponibilidade de consulta com o Dr. Pedro Machado em Petrópolis."}
                 </p>
               </div>
-              <ButtonLink href={article.finalCta?.href ?? doctor.whatsappUrl} className="min-h-14 w-full bg-gold px-7 text-deep hover:bg-white lg:w-auto">
+              <ButtonLink href={article.finalCta?.href ?? doctor.whatsappUrl} className={`min-h-14 w-full px-7 lg:w-auto ${articleCtaButtonClass}`}>
                 {article.finalCta?.label ?? "Agendar consulta"}
               </ButtonLink>
             </div>
@@ -208,7 +211,7 @@ function ArticleSectionBlock({ section }: { section: ArticleSection }) {
             <div key={index} className="my-4 rounded-[22px] border border-gold/25 bg-deep p-5 text-white shadow-soft sm:p-6">
               <h3 className="text-xl font-semibold">{block.title}</h3>
               <p className="mt-3 text-sm leading-7 text-white/78">{block.text}</p>
-              <ButtonLink href={block.href} className="mt-5 bg-gold text-deep hover:bg-white">
+              <ButtonLink href={block.href} className={`mt-5 ${articleCtaButtonClass}`}>
                 {block.label}
               </ButtonLink>
             </div>

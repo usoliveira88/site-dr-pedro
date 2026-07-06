@@ -11,21 +11,48 @@ export const metadata: Metadata = {
   description: "Conheça a trajetória, a forma de atendimento e os princípios que orientam o cuidado médico do Dr. Pedro Machado em Petrópolis."
 };
 
+const aboutHeroKeywords = ["Escuta clínica", "Exames", "Composição corporal", "Saúde metabólica", "Medicina esportiva", "Petrópolis/RJ"];
+
 export default function AboutPage() {
   return (
     <>
-      <Section className="relative overflow-hidden bg-pearl">
+      <Section className="relative overflow-hidden bg-[linear-gradient(135deg,#f6f8f7_0%,#eef3f1_48%,#f1e8d8_100%)]">
         <div className="pointer-events-none absolute -left-24 top-20 h-72 w-72 rounded-full border border-gold/20" />
-        <div className="pointer-events-none absolute right-0 top-24 h-px w-1/3 bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
-        <div className="grid items-center gap-10 lg:grid-cols-[1fr_1fr]">
-          <div className="max-w-[38rem]">
-            <p className="mb-4 inline-flex rounded-full border border-gold/30 bg-white/80 px-3 py-1 text-sm font-semibold uppercase tracking-[0.18em] text-gold">
-              Sobre
+        <div className="pointer-events-none absolute right-0 top-24 h-px w-1/3 bg-gradient-to-r from-transparent via-gold/45 to-transparent" />
+        <div className="pointer-events-none absolute bottom-0 right-10 h-48 w-48 rounded-full bg-deep/[0.06] blur-3xl" />
+        <div className="grid items-center gap-10 lg:grid-cols-[1.02fr_0.98fr]">
+          <div className="max-w-[43rem]">
+            <p className="section-reveal mb-4 inline-flex rounded-full border border-gold/35 bg-white/80 px-3 py-1 text-sm font-semibold uppercase tracking-[0.18em] text-gold">
+              Sobre o Dr. Pedro
             </p>
-            <h1 className="text-[2.65rem] font-semibold leading-[1.08] text-ink sm:text-[3.35rem] lg:text-[3.75rem]">Confiança, escuta clínica e cuidado individualizado</h1>
-            <p className="mt-7 text-xl leading-9 text-graphite">
-              Um atendimento médico construído com escuta, avaliação clínica e acompanhamento individualizado para decisões mais seguras em saúde, composição corporal e qualidade de vida.
+            <h1 className="section-reveal text-[2.35rem] font-semibold leading-[1.08] text-ink sm:text-[3.15rem] lg:text-[3.65rem]">
+              Cuidado médico com escuta, critério clínico e acompanhamento individualizado
+            </h1>
+            <p className="section-reveal mt-6 text-lg leading-8 text-graphite sm:text-xl sm:leading-9">
+              Dr. Pedro Machado atende em Petrópolis com foco em avaliação clínica, saúde metabólica, composição corporal, medicina esportiva e qualidade de vida. Cada consulta considera histórico, rotina, sintomas, exames e objetivos antes da definição de qualquer conduta.
             </p>
+            <div className="mt-7 flex flex-wrap gap-2.5">
+              {aboutHeroKeywords.map((keyword, index) => (
+                <span
+                  key={keyword}
+                  className="section-reveal rounded-full border border-deep/10 bg-white/80 px-3.5 py-2 text-xs font-semibold text-petrol shadow-[0_10px_26px_rgba(2,37,61,0.06)] transition duration-300 hover:-translate-y-0.5 hover:border-gold/45 hover:bg-white"
+                  style={{ animationDelay: `${index * 70}ms` }}
+                >
+                  {keyword}
+                </span>
+              ))}
+            </div>
+            <div className="section-reveal mt-7 rounded-[20px] border border-deep/10 bg-white/80 p-5 text-base leading-8 text-graphite shadow-[0_18px_50px_rgba(2,37,61,0.08)]">
+              O atendimento não começa por uma fórmula pronta. Começa por entender a pessoa: sua rotina, seus sintomas, seus exames, seus objetivos e o que faz sentido para sua saúde.
+            </div>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <ButtonLink href={doctor.whatsappUrl} className="min-h-14 px-7 text-base">
+                Falar com a equipe
+              </ButtonLink>
+              <ButtonLink href="/servicos" variant="secondary" className="min-h-14 px-7 text-base">
+                Conhecer atendimentos
+              </ButtonLink>
+            </div>
           </div>
           <AboutPhotoComposition />
         </div>
@@ -62,21 +89,33 @@ export default function AboutPage() {
 
 function AboutPhotoComposition() {
   return (
-    <div className="relative">
+    <div className="section-reveal relative">
       <div className="pointer-events-none absolute -right-5 -top-5 h-24 w-24 rounded-full border border-gold/30" />
-      <div className="grid gap-4 md:grid-cols-[1.38fr_0.62fr]">
-        <div className="relative flex min-h-[22rem] items-center justify-center overflow-hidden rounded-[28px] border border-white/80 bg-[radial-gradient(circle_at_24%_18%,rgba(185,147,90,0.18),transparent_28%),linear-gradient(135deg,#ffffff_0%,#eef3f1_48%,#e6ecec_100%)] shadow-soft">
-          <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(2,37,61,0.08),transparent_44%)]" />
-          <div className="absolute left-7 top-7 h-px w-28 bg-gold/55" />
-          <div className="absolute bottom-7 right-7 h-24 w-24 rounded-full border border-deep/10" />
-          <div className="relative flex h-20 w-20 items-center justify-center rounded-full bg-deep text-white shadow-lift ring-8 ring-white/55">
-            <span className="ml-1 h-0 w-0 border-y-[12px] border-l-[18px] border-y-transparent border-l-white" />
+      <div className="relative overflow-hidden rounded-[30px] border border-white/80 bg-white p-3 shadow-[0_28px_80px_rgba(2,37,61,0.14)]">
+        <Image
+          src="/images/dr-pedro-bio-medico.webp"
+          alt="Dr. Pedro Machado em ambiente médico profissional"
+          width={960}
+          height={1200}
+          className="aspect-[4/5] max-h-[34rem] w-full rounded-[24px] object-cover object-[50%_18%]"
+          priority
+        />
+        <div className="absolute bottom-5 left-5 right-5 rounded-[18px] border border-white/55 bg-white/90 p-4 shadow-soft backdrop-blur">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Atendimento em Petrópolis</p>
+          <div className="mt-3 grid gap-2 text-sm font-semibold text-deep sm:grid-cols-2">
+            <span>{doctor.professionalId}</span>
+            <span>Avaliação individualizada</span>
           </div>
         </div>
-        <div className="grid gap-4">
-          <div className="min-h-[10.5rem] rounded-[22px] border border-white/80 bg-[linear-gradient(145deg,#ffffff_0%,#f6f8f7_52%,#e6ecec_100%)] shadow-soft" />
-          <div className="min-h-[10.5rem] rounded-[22px] border border-white/80 bg-[radial-gradient(circle_at_72%_18%,rgba(185,147,90,0.16),transparent_30%),linear-gradient(145deg,#ffffff_0%,#eef3f1_100%)] shadow-soft" />
-        </div>
+      </div>
+      <div className="absolute -bottom-6 -right-3 hidden w-48 overflow-hidden rounded-[20px] border border-white/80 bg-white p-2 shadow-lift sm:block">
+        <Image
+          src="/images/fachada-consultorio.jpg"
+          alt="Fachada do local de atendimento em Petrópolis"
+          width={700}
+          height={520}
+          className="aspect-[4/3] rounded-[14px] object-cover"
+        />
       </div>
     </div>
   );

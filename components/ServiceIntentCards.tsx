@@ -5,23 +5,30 @@ import { useState } from "react";
 
 const intentCards = [
   {
-    id: "peso",
+    id: "emagrecimento-estetico",
     number: "01",
-    title: "Quero perder peso",
-    text: "Para quem busca investigar peso, rotina, composição corporal e saúde metabólica com mais critério.",
-    note: "Emagrecimento, sobrepeso ou obesidade",
+    title: "Quero melhorar minha composição corporal",
+    text: "Para quem busca reduzir gordura, melhorar medidas e alinhar estética corporal com avaliação médica individualizada.",
+    note: "Emagrecimento Estético",
+    links: [{ label: "Emagrecimento Estético", href: "/servicos/emagrecimento" }]
+  },
+  {
+    id: "sobrepeso-obesidade",
+    number: "02",
+    title: "Quero tratar excesso de peso",
+    text: "Para quem busca investigar peso, rotina, exames, saúde metabólica e riscos associados.",
+    note: "Sobrepeso e Obesidade",
     links: [
-      { label: "Emagrecimento", href: "/servicos/emagrecimento" },
       { label: "Sobrepeso", href: "/servicos/sobrepeso" },
       { label: "Obesidade", href: "/servicos/obesidade" }
     ]
   },
   {
     id: "hormonios",
-    number: "02",
+    number: "03",
     title: "Quero investigar hormônios",
-    text: "Para sintomas, dúvidas sobre exames e decisões que precisam de avaliação médica individualizada.",
-    note: "Saúde hormonal masculina e feminina",
+    text: "Para sintomas, dúvidas sobre exames e decisões que exigem avaliação médica individualizada.",
+    note: "Saúde Hormonal Masculina e Feminina",
     links: [
       { label: "Reposição Hormonal Masculina", href: "/servicos/reposicao-hormonal-masculina" },
       { label: "Reposição Hormonal Feminina", href: "/servicos/reposicao-hormonal-feminina" }
@@ -29,35 +36,36 @@ const intentCards = [
   },
   {
     id: "massa",
-    number: "03",
+    number: "04",
     title: "Quero ganhar massa",
     text: "Para quem treina e deseja acompanhar composição corporal, exames, recuperação e evolução com segurança.",
-    note: "Hipertrofia e performance",
+    note: "Hipertrofia e Performance",
     links: [{ label: "Hipertrofia", href: "/servicos/hipertrofia" }]
   },
   {
     id: "prevencao",
-    number: "04",
+    number: "05",
     title: "Quero prevenir problemas",
     text: "Para organizar exames, mapear riscos e tomar decisões preventivas com acompanhamento médico.",
-    note: "Check-up e prevenção",
+    note: "Check-up e Prevenção",
     links: [{ label: "Check-up da Saúde", href: "/servicos/check-up-da-saude" }]
   }
 ];
 
 export function ServiceIntentCards() {
-  const [expandedCard, setExpandedCard] = useState<string>("peso");
+  const [expandedCard, setExpandedCard] = useState<string>("emagrecimento-estetico");
 
   return (
-    <div className="grid gap-4 lg:grid-cols-4">
+    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-6">
       {intentCards.map((card, index) => {
         const isExpanded = expandedCard === card.id;
         const panelId = `intent-card-${card.id}`;
+        const desktopPlacement = index === 3 ? "lg:col-span-2 lg:col-start-2" : "lg:col-span-2";
 
         return (
           <article
             key={card.id}
-            className={`section-reveal group relative overflow-hidden rounded-[24px] border shadow-[0_16px_46px_rgba(2,37,61,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-lift ${
+            className={`section-reveal group relative overflow-hidden rounded-[24px] border shadow-[0_16px_46px_rgba(2,37,61,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-lift ${desktopPlacement} ${
               isExpanded ? "border-gold/45 bg-deep text-white" : "border-deep/10 bg-white text-ink hover:border-gold/35 hover:bg-deep"
             }`}
             style={{ animationDelay: `${index * 80}ms` }}

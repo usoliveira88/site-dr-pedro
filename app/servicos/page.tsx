@@ -3,6 +3,7 @@ import { ButtonLink } from "@/components/ButtonLink";
 import { ServiceCard } from "@/components/Cards";
 import { Section, SectionHeading } from "@/components/Section";
 import { ServiceIntentCards } from "@/components/ServiceIntentCards";
+import { BmiCalculator } from "@/components/services/BmiCalculator";
 import { doctor, services } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -56,6 +57,7 @@ export default function ServicesPage() {
   return (
     <>
       <ServicesHero />
+      <BmiCalculator />
 
       <Section className="bg-white">
         <div className="mb-9 max-w-3xl">

@@ -42,13 +42,13 @@ function getBmiResult(bmi: number): BmiResult {
       classification: "Baixo peso",
       title: "Seu IMC está abaixo da faixa considerada adequada",
       message:
-        "Sua faixa de IMC indica baixo peso para adultos. Esse dado precisa ser interpretado com cuidado, porque o IMC não mostra composição corporal, massa muscular, exames, rotina alimentar ou histórico de saúde.",
-      attentionTitle: "Pode fazer sentido avaliar com mais critério",
-      items: ["composição corporal", "massa muscular", "rotina alimentar", "exames preventivos", "energia e disposição", "sono e recuperação"],
+        "Esse resultado pode indicar necessidade de olhar com mais atenção para composição corporal, massa muscular, rotina alimentar, exames, sintomas e possíveis fatores clínicos associados. O IMC não fecha diagnóstico sozinho, mas pode ser um ponto de partida para entender melhor sua saúde.",
+      attentionTitle: "Pontos que podem ser avaliados com acompanhamento médico",
+      items: ["composição corporal", "massa muscular", "exames laboratoriais", "rotina alimentar", "disposição e sintomas associados", "saúde metabólica", "histórico clínico"],
       complement:
-        "Quando há dificuldade para ganhar peso ou massa muscular, uma avaliação médica pode ajudar a entender o contexto e orientar estratégias mais seguras.",
-      primary: { label: "Conhecer acompanhamento para hipertrofia", href: "/servicos/hipertrofia" },
-      secondary: { label: "Falar com a equipe", href: whatsappUrl }
+        "Agendar uma consulta com o Dr. Pedro Machado pode ajudar a investigar se esse resultado tem relação com baixa massa muscular, rotina alimentar, alterações em exames ou outros fatores clínicos que precisam de acompanhamento.",
+      primary: { label: "Agendar avaliação com o Dr. Pedro", href: whatsappUrl },
+      secondary: { label: "Conhecer Check-up da Saúde", href: "/servicos/check-up-da-saude" }
     };
   }
 
@@ -69,7 +69,7 @@ function getBmiResult(bmi: number): BmiResult {
         "rotina alimentar, sono e treino"
       ],
       complement:
-        "Se o seu objetivo é melhorar composição corporal, ganhar massa muscular, investigar exames ou prevenir alterações futuras, uma avaliação médica pode ajudar a definir estratégias mais seguras e individualizadas.",
+        "Se o seu objetivo é melhorar composição corporal, ganhar massa muscular, investigar exames ou prevenir alterações futuras, uma avaliação médica com o Dr. Pedro Machado pode ajudar a definir estratégias mais seguras e individualizadas.",
       primary: { label: "Conhecer acompanhamento para hipertrofia", href: "/servicos/hipertrofia" },
       secondary: { label: "Agendar check-up da saúde", href: "/servicos/check-up-da-saude" }
     };
@@ -80,13 +80,13 @@ function getBmiResult(bmi: number): BmiResult {
       classification: "Sobrepeso",
       title: "Seu IMC está na faixa de sobrepeso",
       message:
-        "Sua faixa de IMC indica sobrepeso para adultos. Isso não define sozinho seu estado de saúde, mas pode ser um sinal para olhar com mais atenção para composição corporal, rotina, exames e saúde metabólica.",
-      attentionTitle: "Pontos que podem ajudar a orientar a avaliação",
-      items: ["histórico de peso", "circunferência abdominal", "exames metabólicos", "pressão arterial", "sono e estresse", "rotina alimentar", "atividade física"],
+        "Sua faixa de IMC indica sobrepeso para adultos. Isso não define sozinho seu estado de saúde, mas pode ser um sinal para avaliar composição corporal, circunferência abdominal, exames, rotina, sono, alimentação e saúde metabólica.",
+      attentionTitle: "Condições que podem estar relacionadas ao excesso de peso",
+      items: ["pressão alta", "resistência à insulina", "diabetes tipo 2", "colesterol e triglicerídeos alterados", "gordura no fígado", "apneia do sono", "dores articulares", "maior risco cardiovascular"],
       complement:
-        "Uma avaliação médica pode ajudar a diferenciar excesso de gordura, massa muscular, retenção e fatores metabólicos antes de qualquer conduta.",
-      primary: { label: "Conhecer acompanhamento para sobrepeso", href: "/servicos/sobrepeso" },
-      secondary: { label: "Agendar check-up da saúde", href: "/servicos/check-up-da-saude" }
+        "Agendar uma consulta com o Dr. Pedro Machado pode ajudar a entender se o sobrepeso está associado a alterações metabólicas, perda de massa muscular, rotina alimentar, medicamentos em uso ou outros fatores que precisam de acompanhamento individualizado.",
+      primary: { label: "Agendar avaliação com o Dr. Pedro", href: whatsappUrl },
+      secondary: { label: "Conhecer acompanhamento para sobrepeso", href: "/servicos/sobrepeso" }
     };
   }
 
@@ -95,13 +95,13 @@ function getBmiResult(bmi: number): BmiResult {
       classification: "Obesidade grau I",
       title: "Seu IMC está na faixa de obesidade grau I",
       message:
-        "Essa faixa de IMC merece avaliação individualizada. O resultado não deve ser visto de forma isolada, porque saúde metabólica, exames, histórico, rotina e composição corporal mudam a interpretação clínica.",
-      attentionTitle: "Na consulta, pode ser importante avaliar",
-      items: ["saúde metabólica", "glicemia e colesterol", "pressão arterial", "histórico familiar", "sono e apetite", "medicações em uso", "composição corporal"],
+        "Sua faixa de IMC indica obesidade grau I para adultos. Esse resultado merece atenção porque o excesso de peso pode estar associado a alterações metabólicas e cardiovasculares, especialmente quando há histórico familiar, exames alterados, aumento de circunferência abdominal ou sintomas associados.",
+      attentionTitle: "Condições que podem estar relacionadas à obesidade",
+      items: ["pressão alta", "diabetes tipo 2", "resistência à insulina", "colesterol e triglicerídeos alterados", "gordura no fígado", "apneia do sono", "dores articulares", "maior risco cardiovascular"],
       complement:
-        "O acompanhamento médico pode ajudar a entender riscos, possibilidades e estratégias seguras para cuidado contínuo, sem promessas de resultado.",
-      primary: { label: "Conhecer acompanhamento para obesidade", href: "/servicos/obesidade" },
-      secondary: { label: "Falar com a equipe", href: whatsappUrl }
+        "Uma consulta com o Dr. Pedro Machado pode ajudar a avaliar exames, composição corporal, histórico, rotina, sintomas e riscos individuais antes da definição de qualquer conduta. O objetivo é entender o cenário de forma segura e personalizada.",
+      primary: { label: "Agendar avaliação com o Dr. Pedro", href: whatsappUrl },
+      secondary: { label: "Conhecer acompanhamento para obesidade", href: "/servicos/obesidade" }
     };
   }
 
@@ -110,13 +110,13 @@ function getBmiResult(bmi: number): BmiResult {
       classification: "Obesidade grau II",
       title: "Seu IMC está na faixa de obesidade grau II",
       message:
-        "Essa faixa de IMC pede uma leitura clínica mais cuidadosa. O IMC é apenas o ponto de partida e precisa ser associado a sintomas, exames, histórico de saúde, rotina e fatores metabólicos.",
-      attentionTitle: "Aspectos que podem precisar de investigação",
-      items: ["risco cardiometabólico", "pressão arterial", "glicemia", "colesterol", "sono", "composição corporal", "tentativas anteriores de controle de peso"],
+        "Sua faixa de IMC indica obesidade grau II para adultos. Nessa faixa, pode ser ainda mais importante avaliar fatores metabólicos, cardiovasculares, articulares e respiratórios associados ao excesso de peso.",
+      attentionTitle: "Condições que merecem atenção nessa faixa de IMC",
+      items: ["pressão alta", "diabetes tipo 2", "resistência à insulina", "colesterol e triglicerídeos alterados", "gordura no fígado", "apneia do sono", "dores articulares", "sobrecarga cardiovascular"],
       complement:
-        "Uma avaliação médica individualizada pode organizar prioridades e orientar próximos passos com mais segurança.",
-      primary: { label: "Conhecer acompanhamento para obesidade", href: "/servicos/obesidade" },
-      secondary: { label: "Falar com a equipe", href: whatsappUrl }
+        "Agendar uma consulta com o Dr. Pedro Machado pode ajudar a mapear riscos, revisar exames, entender a composição corporal e construir um plano de acompanhamento compatível com sua realidade clínica.",
+      primary: { label: "Agendar avaliação com o Dr. Pedro", href: whatsappUrl },
+      secondary: { label: "Conhecer acompanhamento para obesidade", href: "/servicos/obesidade" }
     };
   }
 
@@ -124,13 +124,13 @@ function getBmiResult(bmi: number): BmiResult {
     classification: "Obesidade grau III",
     title: "Seu IMC está na faixa de obesidade grau III",
     message:
-      "Essa faixa de IMC deve ser avaliada com atenção médica. O resultado não define tudo sozinho, mas pode indicar necessidade de uma investigação clínica estruturada e acompanhamento contínuo.",
-    attentionTitle: "Pontos importantes para uma avaliação individualizada",
-    items: ["saúde metabólica", "pressão arterial", "glicemia e colesterol", "sono", "histórico clínico", "medicações em uso", "risco cardiovascular"],
+      "Sua faixa de IMC indica obesidade grau III para adultos. Esse resultado exige atenção médica criteriosa, pois pode estar associado a maior risco de alterações metabólicas, cardiovasculares, respiratórias e articulares.",
+    attentionTitle: "Condições que precisam ser avaliadas com cuidado",
+    items: ["pressão alta", "diabetes tipo 2", "resistência à insulina", "colesterol e triglicerídeos alterados", "gordura no fígado", "apneia do sono", "dores articulares", "maior risco cardiovascular", "impacto na qualidade de vida"],
     complement:
-      "O acompanhamento médico pode ajudar a entender o contexto, avaliar riscos e definir estratégias possíveis com segurança.",
-    primary: { label: "Conhecer acompanhamento para obesidade", href: "/servicos/obesidade" },
-    secondary: { label: "Falar com a equipe", href: whatsappUrl }
+      "Agendar uma consulta com o Dr. Pedro Machado pode ajudar a avaliar exames, sintomas, histórico, rotina, composição corporal e fatores de risco, para que qualquer conduta seja definida com segurança e acompanhamento individualizado.",
+    primary: { label: "Agendar avaliação com o Dr. Pedro", href: whatsappUrl },
+    secondary: { label: "Conhecer acompanhamento para obesidade", href: "/servicos/obesidade" }
   };
 }
 

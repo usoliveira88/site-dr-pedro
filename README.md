@@ -15,6 +15,18 @@ Depois abra:
 http://localhost:3000
 ```
 
+## Envio da página Anamnese
+
+A rota `/anamnese` envia as respostas do formulário por e-mail usando Resend. Configure estas variáveis de ambiente na Vercel:
+
+```text
+RESEND_API_KEY=seu_token_resend
+EMAIL_FROM=Nome do remetente <email@seudominio.com.br>
+EMAIL_TO=contato@doutorpedromachado.com.br
+```
+
+`EMAIL_FROM` precisa ser um remetente autorizado/verificado no Resend. Não coloque tokens, senhas ou credenciais diretamente no código.
+
 ## Campos pendentes de edição humana
 
 Os dados abaixo estão propositalmente como placeholders para evitar publicação de informações não validadas:

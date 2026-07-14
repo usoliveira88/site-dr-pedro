@@ -99,3 +99,18 @@ Você também pode ver o link no painel da Vercel em:
 
 https://vercel.com/dashboard
 
+## 6. Variáveis de ambiente para a página Anamnese
+
+A página `/anamnese` envia as respostas por e-mail usando a API do Resend. Configure estas variáveis no painel da Vercel antes de usar o formulário em produção:
+
+```text
+RESEND_API_KEY=seu_token_resend
+EMAIL_FROM=Nome do remetente <email@seudominio.com.br>
+EMAIL_TO=contato@doutorpedromachado.com.br
+```
+
+Importante:
+
+- `EMAIL_FROM` precisa ser um remetente autorizado/verificado no Resend.
+- `EMAIL_TO` deve receber `contato@doutorpedromachado.com.br`.
+- Não coloque senhas, tokens ou credenciais diretamente no código.

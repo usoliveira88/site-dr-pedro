@@ -6,7 +6,7 @@ import { articles, getArticleReadingTime } from "@/data/articles";
 export const metadata: Metadata = {
   title: "Artigos | Dr. Pedro Machado",
   description:
-    "Conteúdos sobre saúde metabólica, composição corporal, saúde hormonal, check-up e acompanhamento médico com o Dr. Pedro Machado em Petrópolis.",
+    "Conteúdos sobre emagrecimento estético, sobrepeso e obesidade, saúde hormonal, composição corporal, check-up e acompanhamento médico com o Dr. Pedro Machado em Petrópolis.",
   alternates: {
     canonical: "/artigos"
   }
@@ -40,7 +40,7 @@ export default function ArticlesPage() {
             </p>
             <h1 className="text-[2.65rem] font-semibold leading-[1.08] sm:text-[3.35rem] lg:text-[3.75rem]">Artigos educativos</h1>
             <p className="mt-7 max-w-3xl text-lg leading-8 text-white/80 sm:text-xl sm:leading-9">
-              Informações sobre saúde metabólica, saúde hormonal, prevenção e acompanhamento médico individualizado em Petrópolis.
+              Informações sobre emagrecimento estético, sobrepeso e obesidade, saúde hormonal, composição corporal, check-up e acompanhamento médico em Petrópolis.
             </p>
           </div>
         </Container>

@@ -22,7 +22,7 @@ A rota `/anamnese` envia as respostas do formulário por e-mail usando Resend. C
 ```text
 RESEND_API_KEY=seu_token_resend
 EMAIL_FROM=Nome do remetente <email@seudominio.com.br>
-EMAIL_TO=contato@doutorpedromachado.com.br
+EMAIL_TO=agendaeleveclinic@gmail.com
 ```
 
 `EMAIL_FROM` precisa ser um remetente autorizado/verificado no Resend. Não coloque tokens, senhas ou credenciais diretamente no código.

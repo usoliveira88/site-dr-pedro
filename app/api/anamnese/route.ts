@@ -85,7 +85,7 @@ export async function POST(request: Request) {
 
     const resendApiKey = process.env.RESEND_API_KEY;
     const emailFrom = process.env.EMAIL_FROM;
-    const emailTo = process.env.EMAIL_TO || "contato@doutorpedromachado.com.br";
+    const emailTo = process.env.EMAIL_TO || "agendaeleveclinic@gmail.com";
 
     if (!resendApiKey || !emailFrom) {
       return NextResponse.json({ error: "Envio indisponível." }, { status: 500 });

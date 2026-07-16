@@ -437,9 +437,9 @@ export const articles: Article[] = [
       "Entenda possíveis efeitos colaterais das canetas emagrecedoras, como náuseas, efeito sanfona e perda de massa muscular, e quando buscar avaliação médica.",
     excerpt:
       "Entenda quais efeitos colaterais podem ocorrer com medicamentos injetáveis para controle de peso, por que o acompanhamento médico é importante e quando procurar avaliação.",
-    category: "Emagrecimento",
-    primaryCategory: "Emagrecimento",
-    categories: ["Emagrecimento", "Sobrepeso", "Obesidade", "Check-up da Saúde"],
+    category: "Emagrecimento Estético",
+    primaryCategory: "Emagrecimento Estético",
+    categories: ["Emagrecimento Estético", "Sobrepeso e Obesidade", "Check-up da Saúde"],
     local: "Petrópolis/RJ",
     author: doctor.name,
     crm: "CRM 01198564/RJ",
@@ -769,14 +769,14 @@ export const articles: Article[] = [
     ],
     internalLinks: [
       {
-        label: "Emagrecimento",
+        label: "Emagrecimento Estético",
         href: "/servicos/emagrecimento",
-        text: "Entenda como funciona o acompanhamento médico para emagrecimento individualizado."
+        text: "Entenda como funciona o acompanhamento médico para emagrecimento estético individualizado."
       },
       {
-        label: "Obesidade",
-        href: "/servicos/obesidade",
-        text: "Veja como a obesidade pode ser acompanhada como condição multifatorial."
+        label: "Sobrepeso e Obesidade",
+        href: "/servicos/sobrepeso-e-obesidade",
+        text: "Entenda como o acompanhamento médico pode ajudar na avaliação do excesso de peso, saúde metabólica, exames, rotina e riscos associados."
       },
       {
         label: "Check-up da Saúde",

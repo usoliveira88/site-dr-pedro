@@ -20,9 +20,8 @@ export type ArticleCardData = {
 
 export const articleCategories = [
   "Todos",
-  "Emagrecimento",
-  "Sobrepeso",
-  "Obesidade",
+  "Emagrecimento Estético",
+  "Sobrepeso e Obesidade",
   "Hipertrofia",
   "Reposição Hormonal Masculina",
   "Reposição Hormonal Feminina",

@@ -30,6 +30,7 @@ export const navItems = [
   { href: "/", label: "Home" },
   { href: "/sobre", label: "Sobre" },
   { href: "/servicos", label: "Atendimentos" },
+  { href: "/anamnese", label: "Anamnese" },
   { href: "/conteudos", label: "Conteúdos" },
   { href: "/contato", label: "Contato" }
 ];
@@ -80,13 +81,13 @@ export const homeMethodPillars = [
 export const homeServiceHighlights = [
   {
     slug: "emagrecimento",
-    title: "Emagrecimento",
-    text: "Para investigar por que perder peso tem sido difícil e orientar um caminho clínico compatível com sua rotina."
+    title: "Emagrecimento Estético",
+    text: "Para reduzir gordura, melhorar medidas e composição corporal com avaliação médica e critério clínico."
   },
   {
-    slug: "obesidade",
-    title: "Obesidade",
-    text: "Cuidado médico contínuo para uma condição multifatorial, com atenção a riscos, exames e contexto individual."
+    slug: "sobrepeso-e-obesidade",
+    title: "Sobrepeso e Obesidade",
+    text: "Investigação do excesso de peso, saúde metabólica, exames, rotina e riscos associados com acompanhamento individualizado."
   },
   {
     slug: "reposicao-hormonal-masculina",
@@ -113,66 +114,45 @@ export const homeServiceHighlights = [
 export const services: Service[] = [
   {
     slug: "emagrecimento",
-    title: "Emagrecimento com acompanhamento médico individualizado",
-    shortTitle: "Emagrecimento",
+    title: "Emagrecimento estético com acompanhamento médico individualizado",
+    shortTitle: "Emagrecimento Estético",
     description:
-      "Avaliação clínica para entender fatores relacionados à dificuldade de perder peso e construir um plano compatível com saúde, rotina e objetivos.",
+      "Para quem busca reduzir gordura, melhorar medidas e composição corporal com avaliação médica individualizada, sem promessas de resultado e com foco em segurança.",
     indicatedFor: [
-      "Pessoas que tentam emagrecer e têm dificuldade de manter constância.",
-      "Pacientes com fome excessiva ou recuperação frequente de peso.",
-      "Quem deseja acompanhamento médico para perda de gordura com segurança."
+      "Pessoas que desejam reduzir gordura e melhorar medidas com critério clínico.",
+      "Pacientes que buscam melhorar composição corporal preservando massa muscular.",
+      "Quem deseja alinhar estética corporal, rotina, exames e segurança médica."
     ],
     evaluatedItems: [
-      "Histórico de peso, exames laboratoriais e composição corporal.",
-      "Rotina alimentar, sono, estresse e atividade física.",
-      "Medicamentos em uso, fatores metabólicos e contexto clínico."
+      "Composição corporal, percentual de gordura e preservação de massa muscular.",
+      "Rotina alimentar, sono, treino, estresse e objetivos estéticos realistas.",
+      "Exames laboratoriais, histórico clínico e segurança antes de qualquer conduta."
     ],
     realisticExpectations:
-      "O acompanhamento busca evolução progressiva, melhora de hábitos e monitoramento de marcadores de saúde, sem promessa de resultado.",
-    videoPlaceholder: "Por que emagrecer não é apenas comer menos?",
-    seoTerms: ["emagrecimento médico", "médico para emagrecer", "tratamento para perda de peso"]
+      "O acompanhamento busca orientar a redução de gordura e a melhora da composição corporal com segurança médica, metas realistas e sem promessa de resultado.",
+    videoPlaceholder: "Por que emagrecimento estético também exige avaliação clínica?",
+    seoTerms: ["emagrecimento estético em Petrópolis", "composição corporal", "redução de gordura", "preservação de massa muscular", "avaliação médica para emagrecimento estético", "emagrecimento com segurança"]
   },
   {
-    slug: "sobrepeso",
-    title: "Sobrepeso com acompanhamento médico individualizado",
-    shortTitle: "Sobrepeso",
+    slug: "sobrepeso-e-obesidade",
+    title: "Sobrepeso e obesidade com acompanhamento médico individualizado",
+    shortTitle: "Sobrepeso e Obesidade",
     description:
-      "Acompanhamento médico para sobrepeso em Petrópolis, com avaliação clínica, composição corporal, saúde metabólica, controle de peso e foco em prevenção.",
+      "Para pessoas que desejam investigar excesso de peso, rotina, exames, composição corporal, saúde metabólica e riscos associados com acompanhamento médico individualizado.",
     indicatedFor: [
-      "Pacientes acima do peso ou com aumento de gordura abdominal.",
-      "Pessoas com histórico familiar de diabetes, hipertensão ou colesterol alto.",
-      "Quem percebe piora recente da disposição ou mudança de composição corporal."
+      "Pessoas com sobrepeso em Petrópolis ou obesidade em Petrópolis que desejam avaliação médica individualizada.",
+      "Pacientes com excesso de peso, gordura abdominal, efeito sanfona ou dificuldade de controle ao longo do tempo.",
+      "Quem apresenta pressão alta, alterações de glicemia, colesterol, gordura no fígado, apneia do sono ou dores articulares associadas ao peso."
     ],
     evaluatedItems: [
-      "IMC, circunferência abdominal, pressão arterial e exames metabólicos.",
-      "Colesterol, glicemia, sono, hábitos e histórico familiar.",
-      "Fatores de risco e rotina atual do paciente."
+      "IMC, circunferência abdominal, composição corporal, pressão arterial e exames metabólicos.",
+      "Glicemia, colesterol, triglicerídeos, gordura no fígado, sono, rotina e histórico familiar.",
+      "Risco cardiovascular, diabetes tipo 2, medicamentos em uso, tentativas anteriores e possibilidades de acompanhamento contínuo."
     ],
     realisticExpectations:
-      "O acompanhamento do sobrepeso busca orientar decisões mais seguras, melhorar hábitos, monitorar fatores de risco e construir um plano compatível com a realidade do paciente, sem promessas de resultado.",
-    videoPlaceholder: "Por que tratar o sobrepeso cedo pode mudar sua saúde futura?",
-    seoTerms: ["acompanhamento médico para sobrepeso em Petrópolis", "médico para sobrepeso em Petrópolis", "tratamento do sobrepeso", "saúde metabólica", "controle de peso", "prevenção da obesidade", "avaliação médica para sobrepeso", "composição corporal", "emagrecimento saudável em Petrópolis"]
-  },
-  {
-    slug: "obesidade",
-    title: "Tratamento médico da obesidade em Petrópolis com acompanhamento contínuo",
-    shortTitle: "Obesidade",
-    description:
-      "Acompanhamento médico para obesidade em Petrópolis, com avaliação clínica, saúde metabólica, controle de peso e tratamento individualizado sem promessas de resultado.",
-    indicatedFor: [
-      "Pacientes com IMC elevado ou gordura abdominal importante.",
-      "Pessoas com efeito sanfona, resistência à insulina ou hipertensão.",
-      "Quem apresenta apneia do sono, dores articulares ou riscos associados ao peso."
-    ],
-    evaluatedItems: [
-      "Comorbidades, histórico de tentativas anteriores e exames.",
-      "Sono, medicamentos, perfil metabólico e composição corporal.",
-      "Riscos cardiovasculares e fatores emocionais relevantes."
-    ],
-    realisticExpectations:
-      "O cuidado busca compreender fatores associados à obesidade, reduzir riscos clínicos e orientar um tratamento individualizado, sem prometer resultado ou simplificar uma condição multifatorial.",
-    videoPlaceholder: "Obesidade não é falta de força de vontade.",
-    seoTerms: ["tratamento da obesidade em Petrópolis", "médico para obesidade em Petrópolis", "acompanhamento médico para obesidade", "saúde metabólica", "controle de peso", "tratamento individualizado da obesidade"]
+      "O acompanhamento busca compreender fatores associados ao excesso de peso, orientar decisões mais seguras, monitorar riscos metabólicos e construir um plano compatível com a realidade do paciente, sem promessas de resultado.",
+    videoPlaceholder: "Por que sobrepeso e obesidade precisam de avaliação individualizada?",
+    seoTerms: ["sobrepeso em Petrópolis", "obesidade em Petrópolis", "acompanhamento médico para sobrepeso", "acompanhamento médico para obesidade", "tratamento da obesidade em Petrópolis", "saúde metabólica", "controle de peso", "excesso de peso"]
   },
   {
     slug: "reposicao-hormonal-masculina",
@@ -263,19 +243,36 @@ export const services: Service[] = [
 export const serviceEvidenceStats: Record<string, { value: string; text: string; source: string }[]> = {
   emagrecimento: [
     {
-      value: "Mais de 60%",
-      text: "Mais de 60% dos adultos brasileiros estão com excesso de peso, segundo dados recentes do Vigitel.",
+      value: "Composição corporal",
+      text: "O peso na balança não diferencia gordura, massa muscular e retenção hídrica. Por isso, a composição corporal precisa ser avaliada com contexto.",
+      source: "Fonte: avaliação clínica individualizada"
+    },
+    {
+      value: "Massa muscular",
+      text: "Estratégias de redução de gordura precisam considerar preservação de massa muscular, treino, alimentação, sono e recuperação.",
+      source: "Fonte: avaliação médica individualizada"
+    },
+    {
+      value: "Segurança",
+      text: "Exames, histórico clínico e rotina ajudam a orientar o emagrecimento estético com mais critério e menos decisões padronizadas.",
+      source: "Fonte: avaliação clínica individualizada"
+    }
+  ],
+  "sobrepeso-e-obesidade": [
+    {
+      value: "62,6%",
+      text: "Em 2024, 62,6% dos adultos brasileiros estavam com excesso de peso.",
       source: "Fonte: Vigitel/Ministério da Saúde"
     },
     {
-      value: "Mais de 80%",
-      text: "Em estudos de manutenção de peso, mais de 80% do peso perdido pode ser recuperado em até 5 anos.",
-      source: "Fonte: Revisão científica sobre manutenção de peso"
+      value: "25,7%",
+      text: "A obesidade atingiu 25,7% dos adultos brasileiros em 2024.",
+      source: "Fonte: Vigitel/Ministério da Saúde"
     },
     {
-      value: "Contexto individual",
-      text: "O emagrecimento pode envolver rotina, sono, estresse, composição corporal, exames, medicações e saúde metabólica.",
-      source: "Fonte: avaliação clínica individualizada"
+      value: "Saúde metabólica",
+      text: "O excesso de peso pode estar associado a pressão alta, diabetes tipo 2, colesterol alterado, gordura no fígado e risco cardiovascular.",
+      source: "Fonte: avaliação médica individualizada"
     }
   ],
   obesidade: [

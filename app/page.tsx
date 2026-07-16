@@ -1,3 +1,4 @@
+import { AnamnesePopup } from "@/components/AnamnesePopup";
 import { FAQ } from "@/components/FAQ";
 import { GoogleReviews } from "@/components/GoogleReviews";
 import {
@@ -16,6 +17,7 @@ import { processSteps, generalFaq } from "@/data/site";
 export default function Home() {
   return (
     <>
+      <AnamnesePopup />
       <HomeHero />
       <Section className="bg-white">
         <HomeClinicalBridge />

@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { AnamnesePopup } from "@/components/AnamnesePopup";
 import { ButtonLink } from "@/components/ButtonLink";
-import { ServiceCard } from "@/components/Cards";
 import { Section, SectionHeading } from "@/components/Section";
 import { ServiceIntentCards } from "@/components/ServiceIntentCards";
 import { BmiCalculator } from "@/components/services/BmiCalculator";
-import { doctor, services } from "@/data/site";
+import { doctor } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Atendimentos | Dr. Pedro Machado em Petrópolis",
   description:
-    "Conheça os acompanhamentos médicos do Dr. Pedro Machado em Petrópolis: emagrecimento, sobrepeso, obesidade, saúde hormonal, hipertrofia e check-up da saúde."
+    "Conheça os acompanhamentos médicos do Dr. Pedro Machado em Petrópolis: emagrecimento estético, sobrepeso e obesidade, saúde hormonal, hipertrofia e check-up da saúde."
 };
 
 const heroBadges = [
@@ -53,9 +54,41 @@ const evaluationSigns = [
   "Vontade de prevenir problemas e entender melhor seus exames."
 ];
 
+const serviceGroups = [
+  {
+    title: "Emagrecimento Estético",
+    text: "Para quem busca reduzir gordura, melhorar medidas e alinhar estética corporal com avaliação médica individualizada.",
+    links: [{ label: "Entender acompanhamento", href: "/servicos/emagrecimento" }]
+  },
+  {
+    title: "Sobrepeso e Obesidade",
+    text: "Investigação do excesso de peso, saúde metabólica, exames, rotina e riscos associados com acompanhamento individualizado.",
+    links: [{ label: "Entender acompanhamento", href: "/servicos/sobrepeso-e-obesidade" }]
+  },
+  {
+    title: "Saúde Hormonal Masculina e Feminina",
+    text: "Para sintomas, dúvidas sobre exames e decisões hormonais que exigem avaliação médica individualizada.",
+    links: [
+      { label: "Masculina", href: "/servicos/reposicao-hormonal-masculina" },
+      { label: "Feminina", href: "/servicos/reposicao-hormonal-feminina" }
+    ]
+  },
+  {
+    title: "Hipertrofia e Performance",
+    text: "Para quem treina e deseja acompanhar composição corporal, exames, recuperação e evolução com segurança.",
+    links: [{ label: "Entender acompanhamento", href: "/servicos/hipertrofia" }]
+  },
+  {
+    title: "Check-up e Prevenção",
+    text: "Para organizar exames, mapear riscos e tomar decisões preventivas com acompanhamento médico.",
+    links: [{ label: "Entender acompanhamento", href: "/servicos/check-up-da-saude" }]
+  }
+];
+
 export default function ServicesPage() {
   return (
     <>
+      <AnamnesePopup />
       <ServicesHero />
       <BmiCalculator />
 
@@ -76,7 +109,7 @@ export default function ServicesPage() {
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Avaliação médica</p>
             <h2 className="text-[1.85rem] font-semibold leading-tight sm:text-4xl">O atendimento considera mais do que um objetivo isolado</h2>
             <p className="mt-5 max-w-2xl text-base leading-8 text-white/80">
-              Emagrecimento, saúde hormonal, hipertrofia e prevenção podem envolver fatores diferentes em cada pessoa. A avaliação ajuda a organizar prioridades antes de qualquer conduta.
+              Emagrecimento estético, sobrepeso e obesidade, saúde hormonal, hipertrofia e prevenção podem envolver fatores diferentes em cada pessoa. A avaliação ajuda a organizar prioridades antes de qualquer conduta.
             </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
@@ -113,9 +146,9 @@ export default function ServicesPage() {
           title="Páginas de atendimento"
           text="Cada página aprofunda um tipo de acompanhamento e mostra quando ele pode fazer sentido, o que pode ser avaliado e como funciona o cuidado."
         />
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <ServiceCard key={service.slug} service={service} />
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-6">
+          {serviceGroups.map((service, index) => (
+            <ServiceGroupCard key={service.title} service={service} className={index === 3 ? "lg:col-span-2 lg:col-start-2" : "lg:col-span-2"} />
           ))}
         </div>
       </Section>
@@ -139,7 +172,7 @@ function ServicesHero() {
             Encontre o acompanhamento médico mais adequado para seu objetivo
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-8 text-white/80 sm:text-lg">
-            Emagrecimento, saúde hormonal, hipertrofia e prevenção com avaliação clínica individualizada, conduzida a partir do seu histórico, sintomas, exames e rotina.
+            Emagrecimento estético, sobrepeso e obesidade, saúde hormonal, hipertrofia e prevenção com avaliação clínica individualizada, conduzida a partir do seu histórico, sintomas, exames e rotina.
           </p>
           <div className="mt-7 flex flex-wrap gap-2.5">
             {heroBadges.map((badge) => (
@@ -187,6 +220,41 @@ function ServicesHero() {
         </div>
       </div>
     </section>
+  );
+}
+
+function ServiceGroupCard({
+  service,
+  className
+}: {
+  service: {
+    title: string;
+    text: string;
+    links: { label: string; href: string }[];
+  };
+  className?: string;
+}) {
+  return (
+    <article
+      className={`hover-ink-card group flex h-full flex-col rounded-subtle border border-deep/10 bg-white p-6 shadow-[0_10px_32px_rgba(2,37,61,0.07)] transition duration-300 hover:-translate-y-1 hover:shadow-lift ${
+        className ?? ""
+      }`}
+    >
+      <span className="mb-5 h-px w-12 bg-gold transition duration-300 group-hover:w-20" />
+      <h3 className="text-xl font-semibold text-ink transition group-hover:text-white">{service.title}</h3>
+      <p className="hover-ink-muted mt-4 flex-1 text-sm leading-7 text-graphite">{service.text}</p>
+      <div className="mt-6 flex flex-wrap gap-2">
+        {service.links.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="focus-ring inline-flex min-h-11 items-center justify-center rounded-subtle border border-deep/10 bg-pearl px-4 py-2 text-sm font-semibold text-deep transition duration-300 hover:-translate-y-0.5 hover:border-gold hover:bg-sand group-hover:border-white/20 group-hover:bg-white group-hover:text-deep"
+          >
+            {link.label}
+          </Link>
+        ))}
+      </div>
+    </article>
   );
 }
 

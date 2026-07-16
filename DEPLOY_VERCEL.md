@@ -106,11 +106,11 @@ A página `/anamnese` envia as respostas por e-mail usando a API do Resend. Conf
 ```text
 RESEND_API_KEY=seu_token_resend
 EMAIL_FROM=Nome do remetente <email@seudominio.com.br>
-EMAIL_TO=contato@doutorpedromachado.com.br
+EMAIL_TO=agendaeleveclinic@gmail.com
 ```
 
 Importante:
 
 - `EMAIL_FROM` precisa ser um remetente autorizado/verificado no Resend.
-- `EMAIL_TO` deve receber `contato@doutorpedromachado.com.br`.
+- `EMAIL_TO` deve receber `agendaeleveclinic@gmail.com`.
 - Não coloque senhas, tokens ou credenciais diretamente no código.

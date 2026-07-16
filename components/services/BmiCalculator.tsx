@@ -91,7 +91,7 @@ function getBmiResult(bmi: number): CalculatorResult {
       complement:
         "Agendar uma consulta com o Dr. Pedro Machado pode ajudar a entender se o sobrepeso está associado a alterações metabólicas, perda de massa muscular, rotina alimentar, medicamentos em uso ou outros fatores que precisam de acompanhamento individualizado.",
       primary: { label: "Agendar avaliação com o Dr. Pedro", href: whatsappUrl },
-      secondary: { label: "Conhecer acompanhamento para sobrepeso", href: "/servicos/sobrepeso" }
+      secondary: { label: "Conhecer acompanhamento para sobrepeso e obesidade", href: "/servicos/sobrepeso-e-obesidade" }
     };
   }
 
@@ -106,7 +106,7 @@ function getBmiResult(bmi: number): CalculatorResult {
       complement:
         "Uma consulta com o Dr. Pedro Machado pode ajudar a avaliar exames, composição corporal, histórico, rotina, sintomas e riscos individuais antes da definição de qualquer conduta. O objetivo é entender o cenário de forma segura e personalizada.",
       primary: { label: "Agendar avaliação com o Dr. Pedro", href: whatsappUrl },
-      secondary: { label: "Conhecer acompanhamento para obesidade", href: "/servicos/obesidade" }
+      secondary: { label: "Conhecer acompanhamento para sobrepeso e obesidade", href: "/servicos/sobrepeso-e-obesidade" }
     };
   }
 
@@ -121,7 +121,7 @@ function getBmiResult(bmi: number): CalculatorResult {
       complement:
         "Agendar uma consulta com o Dr. Pedro Machado pode ajudar a mapear riscos, revisar exames, entender a composição corporal e construir um plano de acompanhamento compatível com sua realidade clínica.",
       primary: { label: "Agendar avaliação com o Dr. Pedro", href: whatsappUrl },
-      secondary: { label: "Conhecer acompanhamento para obesidade", href: "/servicos/obesidade" }
+      secondary: { label: "Conhecer acompanhamento para sobrepeso e obesidade", href: "/servicos/sobrepeso-e-obesidade" }
     };
   }
 
@@ -135,7 +135,7 @@ function getBmiResult(bmi: number): CalculatorResult {
     complement:
       "Agendar uma consulta com o Dr. Pedro Machado pode ajudar a avaliar exames, sintomas, histórico, rotina, composição corporal e fatores de risco, para que qualquer conduta seja definida com segurança e acompanhamento individualizado.",
     primary: { label: "Agendar avaliação com o Dr. Pedro", href: whatsappUrl },
-    secondary: { label: "Conhecer acompanhamento para obesidade", href: "/servicos/obesidade" }
+    secondary: { label: "Conhecer acompanhamento para sobrepeso e obesidade", href: "/servicos/sobrepeso-e-obesidade" }
   };
 }
 
@@ -167,7 +167,7 @@ function getWaistHipResult(sex: Sex, ratio: number): CalculatorResult {
     complement:
       "Agendar uma consulta com o Dr. Pedro Machado pode ajudar a entender se esse resultado está associado a alterações metabólicas, rotina, alimentação, sono, composição corporal ou outros fatores que merecem acompanhamento individualizado.",
     primary: { label: "Agendar avaliação com o Dr. Pedro", href: whatsappUrl },
-    secondary: { label: "Conhecer acompanhamento para sobrepeso", href: "/servicos/sobrepeso" }
+    secondary: { label: "Conhecer acompanhamento para sobrepeso e obesidade", href: "/servicos/sobrepeso-e-obesidade" }
   };
 }
 

@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: service.shortTitle,
+    title: `${service.shortTitle} | Dr. Pedro Machado`,
     description: service.description
   };
 }
@@ -41,6 +41,10 @@ export default async function ServicePage({ params }: PageProps) {
 
   if (service.slug === "emagrecimento") {
     return <WeightLossLanding service={service} />;
+  }
+
+  if (service.slug === "sobrepeso-e-obesidade") {
+    return <OverweightObesityLanding service={service} />;
   }
 
   if (service.slug === "obesidade") {
@@ -194,33 +198,33 @@ function ServiceEvidenceSection({ slug }: { slug: string }) {
 }
 
 function WeightLossLanding({ service }: { service: Service }) {
-  const trustItems = [doctor.professionalId, "Atendimento em Petrópolis", "Acompanhamento individualizado", "Foco em saúde metabólica"];
+  const trustItems = [doctor.professionalId, "Atendimento em Petrópolis", "Acompanhamento individualizado", "Composição corporal com segurança"];
   const difficultyItems = [
-    "Fome fora de hora",
-    "Efeito sanfona",
-    "Baixa disposição",
-    "Dificuldade de manter constância",
-    "Alterações metabólicas",
+    "Redução de gordura",
+    "Melhora de medidas",
+    "Preservação de massa muscular",
+    "Rotina alimentar e treino",
+    "Exames e segurança",
     "Necessidade de avaliação criteriosa"
   ];
   const indicatedCards = [
     {
-      title: "Dificuldade para emagrecer",
-      text: "Para pessoas que já tentaram mudanças anteriores, mas têm dificuldade de manter constância e evolução."
+      title: "Redução de gordura com critério",
+      text: "Para pessoas que buscam melhorar medidas e composição corporal com acompanhamento individualizado."
     },
     {
-      title: "Fome excessiva ou efeito sanfona",
-      text: "Para quem enfrenta oscilação frequente de peso, fome aumentada ou dificuldade de sustentar hábitos."
+      title: "Preservação de massa muscular",
+      text: "Para quem deseja reduzir gordura sem perder de vista força, treino, recuperação e segurança clínica."
     },
     {
       title: "Busca por segurança médica",
-      text: "Para quem deseja perder gordura com acompanhamento individualizado e mais critério clínico."
+      text: "Para quem deseja alinhar estética corporal, exames, rotina e metas realistas sem promessas de resultado."
     }
   ];
   const evaluationCards = [
     {
       title: "Histórico e composição corporal",
-      text: "Peso, exames laboratoriais, composição corporal e sinais relacionados ao metabolismo."
+      text: "Percentual de gordura, massa muscular, medidas, exames laboratoriais e histórico clínico."
     },
     {
       title: "Rotina e hábitos",
@@ -228,7 +232,7 @@ function WeightLossLanding({ service }: { service: Service }) {
     },
     {
       title: "Contexto clínico",
-      text: "Medicações em uso, fatores metabólicos, histórico de saúde e individualidade clínica."
+      text: "Medicações em uso, segurança médica, histórico de saúde e individualidade clínica."
     }
   ];
   const mapsUrl =
@@ -265,13 +269,13 @@ function WeightLossLanding({ service }: { service: Service }) {
         <div className="mx-auto grid w-full max-w-[1240px] items-center gap-9 px-5 py-12 sm:px-6 sm:py-16 lg:grid-cols-[0.98fr_0.82fr] lg:px-8 lg:py-20">
           <div className="section-reveal">
             <p className="mb-5 inline-flex rounded-full border border-gold/30 bg-white/10 px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-gold backdrop-blur sm:px-4">
-              Emagrecimento médico em Petrópolis
+              Emagrecimento estético em Petrópolis
             </p>
             <h1 className="max-w-3xl text-[2.15rem] font-semibold leading-[1.08] tracking-normal sm:text-5xl lg:text-[3.45rem]">
               {service.title}
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-white/78 sm:text-lg">
-              Avaliação clínica para entender fatores relacionados à dificuldade de perder peso e construir um plano compatível com saúde, rotina e objetivos.
+              Avaliação clínica para orientar redução de gordura, melhora de medidas e composição corporal com segurança, rotina possível e metas realistas.
             </p>
             <div className="mt-7 flex flex-wrap gap-2.5">
               {trustItems.map((item) => (
@@ -322,7 +326,7 @@ function WeightLossLanding({ service }: { service: Service }) {
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">Avaliação clínica</p>
             <h2 className="mt-4 text-[1.75rem] font-semibold leading-tight text-ink sm:text-4xl">Por que emagrecer pode estar sendo tão difícil?</h2>
             <p className="mt-5 text-base leading-7 text-graphite sm:leading-8">
-              A dificuldade para perder peso pode envolver rotina, alimentação, sono, estresse, composição corporal, fatores metabólicos e tentativas anteriores sem acompanhamento individualizado.
+              O emagrecimento estético exige mais do que olhar para o peso. Rotina, treino, alimentação, sono, composição corporal, exames e preservação de massa muscular ajudam a orientar decisões mais seguras.
             </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
@@ -432,7 +436,7 @@ function WeightLossLanding({ service }: { service: Service }) {
       </Section>
 
       <Section className="bg-white">
-        <SectionHeading eyebrow="FAQ" title="Dúvidas frequentes sobre emagrecimento" />
+        <SectionHeading eyebrow="FAQ" title="Dúvidas frequentes sobre emagrecimento estético" />
         <FAQ items={faqItems} />
       </Section>
 
@@ -490,6 +494,259 @@ function WeightLossLanding({ service }: { service: Service }) {
                   className="h-48 w-full rounded-[18px] border-0 sm:h-56 lg:h-full"
                   allowFullScreen
                 />
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+    </>
+  );
+}
+
+function OverweightObesityLanding({ service }: { service: Service }) {
+  const trustItems = [doctor.professionalId, "Sobrepeso e obesidade em Petrópolis", "Acompanhamento médico individualizado", "Foco em saúde metabólica"];
+  const contextItems = [
+    "Excesso de peso",
+    "Gordura abdominal",
+    "Pressão alta",
+    "Diabetes tipo 2",
+    "Colesterol e triglicerídeos",
+    "Apneia do sono"
+  ];
+  const indicatedCards = [
+    {
+      title: "Sobrepeso ou ganho de peso progressivo",
+      text: "Para pessoas que desejam investigar excesso de peso, gordura abdominal, rotina e fatores de risco antes que o quadro avance."
+    },
+    {
+      title: "Obesidade e riscos associados",
+      text: "Para quem apresenta IMC elevado, resistência à insulina, pressão alta, gordura no fígado, apneia do sono ou dores articulares."
+    },
+    {
+      title: "Busca por cuidado contínuo",
+      text: "Para quem deseja acompanhamento médico para sobrepeso ou obesidade com escuta, exames, segurança e decisões individualizadas."
+    }
+  ];
+  const evaluationCards = [
+    {
+      title: "Saúde metabólica",
+      text: "Glicemia, colesterol, triglicerídeos, pressão arterial, gordura no fígado e risco cardiovascular."
+    },
+    {
+      title: "Composição corporal e rotina",
+      text: "IMC, circunferência abdominal, gordura corporal, sono, alimentação, treino, estresse e histórico de peso."
+    },
+    {
+      title: "Estratégias de acompanhamento",
+      text: "Ajustes de rotina, avaliação de exames, monitoramento contínuo e, quando indicado, terapias medicamentosas com critério médico."
+    }
+  ];
+  const faqItems = [
+    {
+      question: "Qual a diferença entre sobrepeso e obesidade?",
+      answer:
+        "São classificações diferentes de acordo com critérios clínicos, mas ambas podem exigir atenção ao contexto de saúde, composição corporal, exames, rotina e fatores de risco."
+    },
+    {
+      question: "O acompanhamento médico para sobrepeso e obesidade é só sobre perder peso?",
+      answer:
+        "Não. O cuidado considera saúde metabólica, pressão arterial, glicemia, colesterol, sono, composição corporal, histórico, rotina e riscos associados ao excesso de peso."
+    },
+    {
+      question: "O tratamento da obesidade em Petrópolis pode envolver medicação?",
+      answer:
+        "Quando há indicação clínica, terapias medicamentosas podem ser consideradas dentro de critérios médicos, avaliação de riscos e acompanhamento contínuo. A decisão deve ser individualizada."
+    },
+    {
+      question: "O acompanhamento garante perda de peso?",
+      answer:
+        "Não. A comunicação deve ser ética e sem promessa de resultado. A evolução depende de avaliação individual, adesão, contexto clínico e acompanhamento."
+    },
+    {
+      question: "Há atendimento para sobrepeso e obesidade em Petrópolis?",
+      answer:
+        `Sim. O atendimento presencial acontece em Petrópolis, no endereço ${doctor.location}. A disponibilidade deve ser confirmada com a equipe no agendamento.`
+    }
+  ];
+  const mapsUrl =
+    "https://www.google.com/maps?q=R.%20Paulino%20Afonso%2C%20108%2C%20Centro%2C%20Petr%C3%B3polis%2C%20RJ%2C%2025680-195&output=embed";
+
+  return (
+    <>
+      <section className="relative isolate overflow-hidden bg-deep text-white">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_12%,rgba(185,147,90,0.22),transparent_28%),radial-gradient(circle_at_8%_82%,rgba(168,191,163,0.14),transparent_34%),linear-gradient(135deg,#02253D_0%,#0F4C5C_52%,#1F2A2D_100%)]" />
+        <div className="mx-auto grid w-full max-w-[1240px] items-center gap-9 px-5 py-12 sm:px-6 sm:py-16 lg:grid-cols-[0.98fr_0.82fr] lg:px-8 lg:py-20">
+          <div className="section-reveal">
+            <p className="mb-5 inline-flex rounded-full border border-gold/30 bg-white/10 px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-gold backdrop-blur sm:px-4">
+              Sobrepeso e obesidade em Petrópolis
+            </p>
+            <h1 className="max-w-3xl text-[2.15rem] font-semibold leading-[1.08] tracking-normal sm:text-5xl lg:text-[3.45rem]">
+              {service.title}
+            </h1>
+            <p className="mt-6 max-w-2xl text-base leading-8 text-white/78 sm:text-lg">{service.description}</p>
+            <div className="mt-7 flex flex-wrap gap-2.5">
+              {trustItems.map((item) => (
+                <span key={item} className="rounded-full border border-white/14 bg-white/[0.08] px-3 py-2 text-xs font-semibold text-white/86">
+                  {item}
+                </span>
+              ))}
+            </div>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <ButtonLink href={doctor.whatsappUrl} variant="secondary" className="w-full bg-white sm:w-auto">
+                Agendar consulta
+              </ButtonLink>
+              <ButtonLink href={doctor.whatsappUrl} variant="ghost" className="w-full border border-white/22 bg-white/10 text-white hover:bg-white hover:text-deep sm:w-auto">
+                Falar com a equipe
+              </ButtonLink>
+            </div>
+          </div>
+          <div className="section-reveal relative mx-auto w-full max-w-[30rem] lg:mr-0">
+            <div className="overflow-hidden rounded-[28px] border border-white/18 bg-white/10 p-3 shadow-[0_26px_90px_rgba(0,0,0,0.28)] backdrop-blur">
+              <Image
+                src="/images/hero-dr-pedro-machado.webp"
+                alt="Dr. Pedro Machado em ambiente médico profissional"
+                width={1600}
+                height={1429}
+                className="aspect-[1.08/1] w-full rounded-[22px] object-cover object-[42%_42%]"
+                priority
+              />
+              <div className="mt-3 grid grid-cols-2 gap-3 text-sm text-white/82">
+                <div className="rounded-[16px] border border-white/12 bg-white/[0.08] p-4">
+                  <span className="block text-xs font-semibold uppercase tracking-[0.14em] text-gold">Avaliação</span>
+                  <span className="mt-1 block">Exames, rotina e riscos</span>
+                </div>
+                <div className="rounded-[16px] border border-white/12 bg-white/[0.08] p-4">
+                  <span className="block text-xs font-semibold uppercase tracking-[0.14em] text-gold">Cuidado</span>
+                  <span className="mt-1 block">Acompanhamento contínuo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Section className="bg-linen">
+        <div className="grid items-center gap-8 rounded-[28px] border border-deep/10 bg-white p-5 shadow-soft sm:p-8 lg:grid-cols-[0.9fr_1.1fr] lg:p-10">
+          <div className="relative overflow-hidden rounded-[24px] bg-mist p-6 shadow-[inset_0_0_0_1px_rgba(2,37,61,0.08)] sm:p-8">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">Condição multifatorial</p>
+            <h2 className="mt-4 text-[1.75rem] font-semibold leading-tight text-ink sm:text-4xl">Excesso de peso merece uma avaliação mais ampla</h2>
+            <p className="mt-5 text-base leading-7 text-graphite sm:leading-8">
+              Sobrepeso e obesidade podem envolver saúde metabólica, rotina, sono, histórico familiar, composição corporal, uso de medicamentos e tentativas anteriores de controle de peso.
+            </p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {contextItems.map((item, index) => (
+              <div key={item} className="section-reveal hover-ink-card group rounded-subtle border border-deep/10 bg-pearl p-4 shadow-[0_10px_32px_rgba(2,37,61,0.07)] transition duration-300 hover:-translate-y-1 hover:shadow-lift" style={{ animationDelay: `${index * 70}ms` }}>
+                <span className="hover-ink-number inline-flex h-8 w-8 items-center justify-center rounded-full bg-sage/25 text-xs font-semibold text-petrol">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <p className="mt-4 text-sm font-semibold leading-6 text-ink">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      <ServiceEvidenceSection slug={service.slug} />
+
+      <Section className="bg-bluegray">
+        <div className="grid gap-10 lg:grid-cols-2">
+          <div>
+            <SectionHeading eyebrow="Indicação" title="Para quem é indicado" />
+            <ul className="grid gap-4">
+              {indicatedCards.map((item, index) => (
+                <li key={item.title} className="section-reveal hover-ink-card group relative overflow-hidden rounded-[18px] border border-deep/10 bg-white p-5 shadow-[0_16px_40px_rgba(2,37,61,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-lift sm:p-7" style={{ animationDelay: `${index * 80}ms` }}>
+                  <span className="absolute inset-x-5 top-0 h-px bg-gradient-to-r from-gold via-gold/45 to-transparent sm:inset-x-7" />
+                  <span className="hover-ink-number inline-flex h-8 min-w-8 items-center justify-center rounded-full bg-mist px-2 text-xs font-semibold text-petrol">0{index + 1}</span>
+                  <h3 className="mt-5 text-xl font-semibold leading-snug text-ink transition group-hover:text-white">{item.title}</h3>
+                  <p className="hover-ink-muted mt-3 text-[0.98rem] leading-7 text-graphite">{item.text}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <SectionHeading eyebrow="Avaliação" title="O que pode ser avaliado" />
+            <ul className="grid gap-4">
+              {evaluationCards.map((item, index) => (
+                <li key={item.title} className="section-reveal hover-ink-card group relative overflow-hidden rounded-[18px] border border-deep/10 bg-white p-5 shadow-[0_16px_40px_rgba(2,37,61,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-lift sm:p-7" style={{ animationDelay: `${index * 80}ms` }}>
+                  <span className="absolute inset-x-5 top-0 h-px bg-gradient-to-r from-gold via-gold/45 to-transparent sm:inset-x-7" />
+                  <span className="hover-ink-number inline-flex h-8 min-w-8 items-center justify-center rounded-full bg-sage/25 px-2 text-xs font-semibold text-petrol">0{index + 1}</span>
+                  <h3 className="mt-5 text-xl font-semibold leading-snug text-ink transition group-hover:text-white">{item.title}</h3>
+                  <p className="hover-ink-muted mt-3 text-[0.98rem] leading-7 text-graphite">{item.text}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </Section>
+
+      <Section className="bg-deep">
+        <div className="mb-8 max-w-3xl sm:mb-10">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Processo</p>
+          <h2 className="text-[1.75rem] font-semibold leading-tight text-white sm:text-4xl">Como funciona o acompanhamento</h2>
+          <p className="mt-4 text-base leading-7 text-white sm:text-lg sm:leading-8">
+            O acompanhamento médico para sobrepeso e obesidade organiza avaliação, exames, rotina e reavaliações para orientar decisões com mais segurança.
+          </p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-4">
+          {processSteps.map((step, index) => (
+            <div key={step.title} className="section-reveal rounded-subtle border border-white/12 bg-white/[0.075] p-5 shadow-[0_18px_44px_rgba(0,0,0,0.12)] transition duration-300 hover:-translate-y-1 hover:border-gold/35 hover:bg-white/[0.1] sm:p-6" style={{ animationDelay: `${index * 80}ms` }}>
+              <span className="text-sm font-semibold text-gold">0{index + 1}</span>
+              <h3 className="mt-4 text-lg font-semibold text-white">{step.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-white">{step.text}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section className="bg-white">
+        <div className="grid items-center gap-6 rounded-[28px] border border-deep/10 bg-linen p-5 shadow-soft sm:p-8 lg:grid-cols-[1fr_0.58fr] lg:p-10">
+          <div>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Expectativas realistas</p>
+            <h2 className="text-[1.75rem] font-semibold leading-tight text-ink sm:text-4xl">O que esperar do acompanhamento</h2>
+            <p className="mt-5 max-w-3xl text-base leading-7 text-graphite sm:leading-8">{service.realisticExpectations}</p>
+          </div>
+          <div className="rounded-[22px] border border-deep/10 bg-white p-5 shadow-[0_14px_38px_rgba(2,37,61,0.08)]">
+            <p className="text-sm font-semibold text-petrol">O foco é cuidado contínuo, não julgamento.</p>
+            <p className="mt-3 text-sm leading-7 text-graphite">A conduta considera saúde metabólica, exames, rotina, histórico e possibilidades terapêuticas seguras para cada paciente.</p>
+            <div className="mt-5">
+              <ButtonLink href={doctor.whatsappUrl} className="w-full sm:w-auto">Agendar consulta</ButtonLink>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section className="bg-white">
+        <SectionHeading eyebrow="FAQ" title="Dúvidas frequentes sobre sobrepeso e obesidade" />
+        <FAQ items={faqItems} />
+      </Section>
+
+      <Section className="bg-white pt-0">
+        <div className="section-reveal relative overflow-hidden rounded-[30px] bg-deep p-5 text-white shadow-lift sm:p-8 lg:p-10">
+          <div className="relative grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            <div>
+              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Agendamento</p>
+              <h2 className="max-w-2xl text-[1.9rem] font-semibold leading-tight sm:text-4xl lg:text-[2.65rem]">Agende sua avaliação médica em Petrópolis</h2>
+              <p className="mt-5 max-w-2xl text-base leading-7 text-white sm:text-lg sm:leading-8">Fale com a equipe para verificar disponibilidade de consulta e receber orientação sobre o próximo passo do seu acompanhamento.</p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <ButtonLink href={doctor.whatsappUrl} variant="secondary" className="min-h-14 w-full bg-white px-7 text-base shadow-[0_18px_42px_rgba(0,0,0,0.22)] hover:bg-gold hover:text-deep sm:w-auto">
+                  Agendar consulta
+                </ButtonLink>
+                <ButtonLink href="#localizacao-sobrepeso-e-obesidade" variant="ghost" className="min-h-14 w-full border border-white/24 bg-white/10 px-7 text-base text-white hover:bg-white hover:text-deep sm:w-auto">
+                  Ver localização
+                </ButtonLink>
+              </div>
+            </div>
+            <div id="localizacao-sobrepeso-e-obesidade" className="overflow-hidden rounded-[26px] border border-white/14 bg-white/[0.08] p-3 shadow-[0_24px_80px_rgba(0,0,0,0.24)]">
+              <Image src="/images/fachada-consultorio.jpg" alt="Fachada do local de atendimento" width={1400} height={875} className="aspect-[16/9] w-full rounded-[20px] object-cover" />
+              <div className="mt-3 grid gap-3 lg:grid-cols-[0.92fr_1.08fr]">
+                <div className="rounded-[18px] border border-white/12 bg-white/[0.08] p-4 text-sm leading-6 text-white">
+                  <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-gold">Localização</p>
+                  <p>{doctor.location}</p>
+                  <p className="mt-3">{doctor.phone}</p>
+                  <p className="mt-1">{doctor.instagram}</p>
+                </div>
+                <iframe title="Mapa da clínica em Petrópolis" src={mapsUrl} loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="h-48 w-full rounded-[18px] border-0 sm:h-56 lg:h-full" allowFullScreen />
               </div>
             </div>
           </div>

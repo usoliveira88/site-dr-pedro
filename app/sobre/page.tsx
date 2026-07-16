@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { AnamnesePopup } from "@/components/AnamnesePopup";
 import { ButtonLink } from "@/components/ButtonLink";
 import { CTASection } from "@/components/CTASection";
 import { Section } from "@/components/Section";
@@ -16,6 +17,7 @@ const aboutHeroKeywords = ["Escuta clínica", "Exames", "Composição corporal",
 export default function AboutPage() {
   return (
     <>
+      <AnamnesePopup />
       <Section className="relative overflow-hidden bg-[linear-gradient(135deg,#f6f8f7_0%,#eef3f1_48%,#f1e8d8_100%)]">
         <div className="pointer-events-none absolute -left-24 top-20 h-72 w-72 rounded-full border border-gold/20" />
         <div className="pointer-events-none absolute right-0 top-24 h-px w-1/3 bg-gradient-to-r from-transparent via-gold/45 to-transparent" />

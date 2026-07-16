@@ -18,10 +18,7 @@ const intentCards = [
     title: "Quero tratar excesso de peso",
     text: "Para quem busca investigar peso, rotina, exames, saúde metabólica e riscos associados.",
     note: "Sobrepeso e Obesidade",
-    links: [
-      { label: "Sobrepeso", href: "/servicos/sobrepeso" },
-      { label: "Obesidade", href: "/servicos/obesidade" }
-    ]
+    links: [{ label: "Sobrepeso e Obesidade", href: "/servicos/sobrepeso-e-obesidade" }]
   },
   {
     id: "hormonios",

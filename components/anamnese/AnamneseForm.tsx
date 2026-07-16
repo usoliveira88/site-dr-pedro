@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { AnamneseHealthIndicators, type HealthIndicatorsPayload } from "@/components/anamnese/AnamneseHealthIndicators";
 
 const whatsappUrl = "https://wa.me/552422459374";
 
@@ -128,6 +129,7 @@ export function AnamneseForm() {
   const [whatsapp, setWhatsapp] = useState("");
   const [website, setWebsite] = useState("");
   const [answers, setAnswers] = useState<Answers>({});
+  const [healthIndicators, setHealthIndicators] = useState<HealthIndicatorsPayload>({});
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [error, setError] = useState("");
 
@@ -166,6 +168,7 @@ export function AnamneseForm() {
           whatsapp,
           website,
           answers,
+          healthIndicators,
           origin: window.location.href
         })
       });
@@ -215,7 +218,7 @@ export function AnamneseForm() {
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Avaliação inicial</p>
           <h2 className="text-[1.85rem] font-semibold leading-tight text-deep sm:text-4xl">Conte um pouco sobre você</h2>
           <p className="mt-4 max-w-3xl text-base leading-8 text-graphite">
-            As respostas ajudam a equipe a entender seu momento e orientar o contato inicial. Todos os campos abaixo são obrigatórios.
+            As respostas ajudam a equipe a entender seu momento e orientar o contato inicial. Nome, WhatsApp e perguntas principais são obrigatórios; os indicadores iniciais são opcionais.
           </p>
         </div>
 
@@ -257,8 +260,10 @@ export function AnamneseForm() {
             </label>
           </section>
 
+          <AnamneseHealthIndicators onChange={setHealthIndicators} />
+
           {formSections.map((section) => (
-            <section key={section.title} className="grid gap-5">
+            <section key={section.title} id={section.title === "Objetivos e rotina" ? "questionario-anamnese" : undefined} className="grid gap-5 scroll-mt-24">
               <div className="border-t border-deep/10 pt-7">
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">{section.title}</p>
               </div>

@@ -4,7 +4,6 @@ import { AnamnesePopup } from "@/components/AnamnesePopup";
 import { ButtonLink } from "@/components/ButtonLink";
 import { Section, SectionHeading } from "@/components/Section";
 import { ServiceIntentCards } from "@/components/ServiceIntentCards";
-import { BmiCalculator } from "@/components/services/BmiCalculator";
 import { doctor } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -90,7 +89,6 @@ export default function ServicesPage() {
     <>
       <AnamnesePopup />
       <ServicesHero />
-      <BmiCalculator />
 
       <Section className="bg-white">
         <div className="mb-9 max-w-3xl">

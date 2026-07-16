@@ -61,6 +61,43 @@ function isRateLimited(key: string) {
   return current.count > maxRequests;
 }
 
+function buildHealthIndicators(payload: unknown) {
+  const indicators = payload && typeof payload === "object" ? (payload as Record<string, unknown>) : {};
+  const bmi = indicators.bmi && typeof indicators.bmi === "object" ? (indicators.bmi as Record<string, unknown>) : null;
+  const waistHipRatio =
+    indicators.waistHipRatio && typeof indicators.waistHipRatio === "object" ? (indicators.waistHipRatio as Record<string, unknown>) : null;
+
+  const bmiRows = bmi
+    ? [
+        ["Peso informado", clean(bmi.weight)],
+        ["Altura informada", clean(bmi.height)],
+        ["IMC calculado", clean(bmi.value)],
+        ["Classificação do IMC", clean(bmi.classification)]
+      ].filter(([, value]) => Boolean(value))
+    : [];
+
+  const waistHipRows = waistHipRatio
+    ? [
+        ["Sexo informado", clean(waistHipRatio.sex)],
+        ["Cintura informada", clean(waistHipRatio.waist)],
+        ["Quadril informado", clean(waistHipRatio.hip)],
+        ["Relação cintura-quadril calculada", clean(waistHipRatio.value)],
+        ["Classificação da RCQ", clean(waistHipRatio.classification)]
+      ].filter(([, value]) => Boolean(value))
+    : [];
+
+  return { bmiRows, waistHipRows, hasIndicators: bmiRows.length > 0 || waistHipRows.length > 0 };
+}
+
+function buildIndicatorRows(rows: string[][]) {
+  return rows
+    .map(
+      ([label, value]) =>
+        `<tr><td style="padding:10px;border:1px solid #d8e0df;font-weight:700;color:#02253D;">${escapeHtml(label)}</td><td style="padding:10px;border:1px solid #d8e0df;color:#1F2A2D;">${escapeHtml(value)}</td></tr>`
+    )
+    .join("");
+}
+
 export async function POST(request: Request) {
   try {
     const payload = await request.json();
@@ -69,6 +106,7 @@ export async function POST(request: Request) {
     const website = clean(payload.website);
     const origin = clean(payload.origin);
     const answers = payload.answers && typeof payload.answers === "object" ? payload.answers : {};
+    const healthIndicators = buildHealthIndicators(payload.healthIndicators);
 
     if (website) {
       return NextResponse.json({ ok: true });
@@ -100,6 +138,21 @@ export async function POST(request: Request) {
         return `<tr><td style="padding:10px;border:1px solid #d8e0df;font-weight:700;color:#02253D;">${question}</td><td style="padding:10px;border:1px solid #d8e0df;color:#1F2A2D;">${answer}</td></tr>`;
       })
       .join("");
+    const healthIndicatorsHtml = healthIndicators.hasIndicators
+      ? `
+        <h2 style="color:#02253D;">Indicadores iniciais informados</h2>
+        ${
+          healthIndicators.bmiRows.length
+            ? `<h3 style="color:#02253D;">IMC</h3><table style="border-collapse:collapse;width:100%;max-width:900px;">${buildIndicatorRows(healthIndicators.bmiRows)}</table>`
+            : ""
+        }
+        ${
+          healthIndicators.waistHipRows.length
+            ? `<h3 style="color:#02253D;">Relação cintura-quadril</h3><table style="border-collapse:collapse;width:100%;max-width:900px;">${buildIndicatorRows(healthIndicators.waistHipRows)}</table>`
+            : ""
+        }
+      `
+      : `<h2 style="color:#02253D;">Indicadores iniciais informados</h2><p>Indicadores iniciais não informados.</p>`;
 
     const html = `
       <div style="font-family:Arial,sans-serif;color:#1F2A2D;line-height:1.5;">
@@ -111,6 +164,7 @@ export async function POST(request: Request) {
         <p><strong>Data/hora do envio:</strong> ${escapeHtml(sentAt)}</p>
         ${origin ? `<p><strong>URL de origem:</strong> ${escapeHtml(origin)}</p>` : ""}
         ${userAgent ? `<p><strong>User agent:</strong> ${escapeHtml(userAgent)}</p>` : ""}
+        ${healthIndicatorsHtml}
         <h2 style="color:#02253D;">Respostas</h2>
         <table style="border-collapse:collapse;width:100%;max-width:900px;">${rows}</table>
       </div>
@@ -126,6 +180,14 @@ export async function POST(request: Request) {
       `Data/hora do envio: ${sentAt}`,
       origin ? `URL de origem: ${origin}` : "",
       userAgent ? `User agent: ${userAgent}` : "",
+      "",
+      "Indicadores iniciais informados:",
+      ...(healthIndicators.hasIndicators
+        ? [
+            ...healthIndicators.bmiRows.map(([label, value]) => `${label}: ${value}`),
+            ...healthIndicators.waistHipRows.map(([label, value]) => `${label}: ${value}`)
+          ]
+        : ["Indicadores iniciais não informados."]),
       "",
       "Respostas:",
       ...requiredAnswerIds.map((id) => `${questionLabels[id]}: ${clean(answers[id])}`)

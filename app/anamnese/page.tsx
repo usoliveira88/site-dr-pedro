@@ -48,7 +48,7 @@ export default function AnamnesePage() {
                 <p>As respostas não substituem consulta médica, mas ajudam a organizar o contato inicial com mais clareza e cuidado.</p>
               </div>
               <div className="mt-6 rounded-[18px] border border-gold/30 bg-sand/35 p-4 text-sm font-semibold leading-6 text-deep">
-                Tempo estimado: poucos minutos. Todos os campos são obrigatórios.
+                Tempo estimado: poucos minutos. Nome, WhatsApp e perguntas principais são obrigatórios; os indicadores iniciais são opcionais.
               </div>
             </div>
           </div>

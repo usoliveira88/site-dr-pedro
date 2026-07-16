@@ -83,13 +83,15 @@ export function AnamnesePopup() {
         <button
           type="button"
           onClick={closePopup}
-          className="focus-ring absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full border border-deep/10 bg-white text-xl leading-none text-deep shadow-[0_10px_26px_rgba(2,37,61,0.08)] transition duration-300 hover:-translate-y-0.5 hover:border-gold hover:bg-sand"
+          className="focus-ring absolute right-4 top-4 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-deep/10 bg-white p-0 text-deep shadow-[0_10px_26px_rgba(2,37,61,0.08)] transition duration-300 hover:-translate-y-0.5 hover:border-gold hover:bg-sand"
         >
           <span className="sr-only">Fechar avaliação inicial</span>
-          <span aria-hidden="true">×</span>
+          <span aria-hidden="true" className="pointer-events-none block text-2xl leading-none">
+            ×
+          </span>
         </button>
 
-        <div className="relative pr-10">
+        <div className="relative pr-12">
           <p className="mb-4 inline-flex rounded-full border border-gold/35 bg-white/75 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-gold">
             Avaliação inicial
           </p>

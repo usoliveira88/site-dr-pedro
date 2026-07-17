@@ -32,8 +32,8 @@ const heroSteps = [
   },
   {
     number: "03",
-    title: "Escolha o caminho",
-    text: "Acesse a página do acompanhamento mais adequado."
+    title: "Entenda suas possibilidades",
+    text: "Conheça o acompanhamento relacionado ao seu objetivo ou comece pela avaliação inicial gratuita."
   }
 ];
 
@@ -90,7 +90,7 @@ export default function ServicesPage() {
       <AnamnesePopup />
       <ServicesHero />
 
-      <Section className="bg-white">
+      <Section id="acompanhamentos" className="bg-white scroll-mt-24">
         <div className="mb-9 max-w-3xl">
           <SectionHeading
             eyebrow="Acompanhamentos médicos"
@@ -141,8 +141,8 @@ export default function ServicesPage() {
       <Section className="bg-bluegray/50">
         <SectionHeading
           eyebrow="Acompanhamentos"
-          title="Páginas de atendimento"
-          text="Cada página aprofunda um tipo de acompanhamento e mostra quando ele pode fazer sentido, o que pode ser avaliado e como funciona o cuidado."
+          title="Conheça os acompanhamentos do Dr. Pedro"
+          text="Escolha o tema que mais se aproxima do que você vive hoje e veja o que pode ser investigado durante a avaliação."
         />
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-6">
           {serviceGroups.map((service, index) => (
@@ -167,10 +167,10 @@ function ServicesHero() {
         <div className="relative z-10">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-gold sm:text-sm">Atendimentos médicos em Petrópolis</p>
           <h1 className="max-w-5xl text-[2.25rem] font-semibold leading-[1.05] tracking-normal sm:text-5xl lg:text-[4.35rem]">
-            Encontre o acompanhamento médico mais adequado para seu objetivo
+            O que você quer mudar na sua saúde hoje?
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-8 text-white/80 sm:text-lg">
-            Emagrecimento estético, sobrepeso e obesidade, saúde hormonal, hipertrofia e prevenção com avaliação clínica individualizada, conduzida a partir do seu histórico, sintomas, exames e rotina.
+            Peso, hormônios, composição corporal ou prevenção: escolha o objetivo que mais se aproxima do seu momento e entenda qual acompanhamento pode fazer sentido.
           </p>
           <div className="mt-7 flex flex-wrap gap-2.5">
             {heroBadges.map((badge) => (
@@ -180,11 +180,11 @@ function ServicesHero() {
             ))}
           </div>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href={doctor.whatsappUrl} className="min-h-14 px-7 text-base">
-              Agendar consulta
+            <ButtonLink href="/anamnese" className="min-h-14 px-7 text-base">
+              Começar avaliação gratuita
             </ButtonLink>
-            <ButtonLink href={doctor.whatsappUrl} variant="ghost" className="min-h-14 border border-white/20 bg-white/[0.08] px-7 text-base text-white hover:bg-white hover:text-deep">
-              Falar com a equipe
+            <ButtonLink href="#acompanhamentos" variant="ghost" className="min-h-14 border border-white/20 bg-white/[0.08] px-7 text-base text-white hover:bg-white hover:text-deep">
+              Ver acompanhamentos
             </ButtonLink>
           </div>
         </div>
@@ -246,7 +246,7 @@ function ServiceGroupCard({
           <Link
             key={link.href}
             href={link.href}
-            className="focus-ring inline-flex min-h-11 items-center justify-center rounded-subtle border border-deep/10 bg-pearl px-4 py-2 text-sm font-semibold text-deep transition duration-300 hover:-translate-y-0.5 hover:border-gold hover:bg-sand group-hover:border-white/20 group-hover:bg-white group-hover:text-deep"
+            className="hover-ink-action focus-ring inline-flex min-h-11 items-center justify-center rounded-subtle border border-deep/10 bg-pearl px-4 py-2 text-sm font-semibold text-deep transition duration-300 hover:-translate-y-0.5 hover:border-gold hover:bg-sand group-hover:border-white/20 group-hover:bg-white group-hover:text-deep"
           >
             {link.label}
           </Link>

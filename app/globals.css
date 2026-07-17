@@ -96,6 +96,12 @@ img {
   background: rgba(255, 255, 255, 0.10) !important;
 }
 
+/* Keep light action buttons readable when their parent card turns dark. */
+.hover-ink-card:hover .hover-ink-action,
+.hover-ink-card:hover .hover-ink-action :is(span, svg) {
+  color: #02253d !important;
+}
+
 .about-philosophy-card {
   opacity: 0;
   transform: translateY(18px);

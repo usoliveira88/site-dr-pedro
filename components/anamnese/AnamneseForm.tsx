@@ -70,7 +70,7 @@ const questions: Question[] = [
   },
   {
     id: "interesseContato",
-    title: "Se existisse um plano personalizado para ajudar você a melhorar sua saúde de forma definitiva, gostaria de conversar com nossa equipe?",
+    title: "Se uma avaliação individualizada ajudasse a organizar seus próximos passos, você gostaria de conversar com nossa equipe?",
     group: "Próximo passo",
     options: ["Sim, quero agendar uma avaliação.", "Sim, quero receber mais informações pelo WhatsApp.", "Talvez, dependendo da proposta.", "Não neste momento."]
   }

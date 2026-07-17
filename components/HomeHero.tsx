@@ -13,19 +13,19 @@ export function HomeHero() {
       <Container className="grid items-center gap-8 py-8 sm:py-10 lg:min-h-[calc(100vh-4.25rem)] lg:grid-cols-[0.94fr_0.86fr] lg:gap-9 lg:py-14">
         <div className="section-reveal max-w-[37rem]">
           <p className="mb-4 inline-flex max-w-full rounded-full border border-gold/30 bg-white/78 px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-deep shadow-[0_10px_28px_rgba(2,37,61,0.07)] backdrop-blur sm:px-4 sm:text-[0.7rem] sm:tracking-[0.18em]">
-            Avaliação clínica individualizada
+            Emagrecimento, saúde hormonal e composição corporal em Petrópolis
           </p>
           <h1 className="max-w-[37rem] text-[1.82rem] font-semibold leading-[1.14] tracking-normal text-ink sm:text-[2.5rem] lg:text-[2.9rem]">
-            Acompanhamento Médico para Emagrecimento, Saúde Hormonal e Qualidade de Vida
+            Entenda o que pode estar dificultando seus resultados
           </h1>
           <p className="mt-5 max-w-[34rem] text-[1.03rem] leading-8 text-graphite sm:text-lg">
-            Uma avaliação individualizada para entender seu corpo, sua rotina e suas necessidades antes de qualquer conduta.
+            Peso que não responde, cansaço, alterações hormonais ou dificuldade para ganhar massa podem ter causas diferentes. O primeiro passo é entender seu corpo, seus exames e sua rotina.
           </p>
           <p className="mt-4 text-sm font-medium text-petrol">{doctor.professionalId}</p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href={doctor.whatsappUrl} className="w-full sm:w-auto">Agendar consulta</ButtonLink>
+            <ButtonLink href="/anamnese" className="w-full sm:w-auto">Fazer avaliação inicial gratuita</ButtonLink>
             <ButtonLink href="/servicos" variant="secondary" className="w-full sm:w-auto">
-              Conhecer atendimentos
+              Conhecer os acompanhamentos
             </ButtonLink>
           </div>
           <div className="mt-7 grid max-w-[34rem] gap-3 border-l border-gold/50 pl-5 text-sm leading-6 text-graphite sm:mt-8 sm:grid-cols-3 sm:border-l-0 sm:pl-0">

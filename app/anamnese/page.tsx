@@ -17,12 +17,12 @@ export default function AnamnesePage() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(185,147,90,0.18),transparent_26rem),radial-gradient(circle_at_88%_18%,rgba(2,37,61,0.10),transparent_30rem)]" />
         <div className="relative mx-auto grid max-w-[1240px] gap-10 px-5 py-12 sm:px-6 sm:py-16 lg:grid-cols-[1fr_0.78fr] lg:items-center lg:px-8 lg:py-20">
           <div className="section-reveal">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Anamnese inicial</p>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Avaliação inicial gratuita</p>
             <h1 className="max-w-4xl text-[2.25rem] font-semibold leading-[1.05] text-deep sm:text-5xl lg:text-[4.2rem]">
-              Dê o primeiro passo para cuidar melhor da sua saúde
+              Descubra quais sinais da sua saúde merecem mais atenção
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-graphite sm:text-lg sm:leading-9">
-              Responda algumas perguntas rápidas sobre seus objetivos, rotina e hábitos. As informações ajudam a equipe do Dr. Pedro Machado a entender melhor seu momento antes do contato inicial.
+              Em poucos minutos, você informa seus objetivos, avalia hábitos e calcula indicadores iniciais para ajudar a equipe do Dr. Pedro a compreender melhor o seu momento.
             </p>
             <div className="mt-7 flex flex-wrap gap-2.5">
               {trustItems.map((item) => (
@@ -35,7 +35,7 @@ export default function AnamnesePage() {
               href="#formulario"
               className="focus-ring mt-8 inline-flex min-h-14 items-center justify-center rounded-subtle bg-deep px-7 text-base font-semibold text-white shadow-soft transition duration-300 hover:-translate-y-0.5 hover:bg-[#06324f] hover:shadow-lift"
             >
-              Preencher avaliação inicial
+              Começar minha avaliação gratuita
             </a>
           </div>
 

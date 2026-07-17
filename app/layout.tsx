@@ -5,6 +5,8 @@ import { Header } from "@/components/Header";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { doctor } from "@/data/site";
 
+const siteUrl = "https://doutorpedromachado.com.br";
+
 export const metadata: Metadata = {
   title: {
     default: "Dr. Pedro Machado | Site institucional",
@@ -12,7 +14,7 @@ export const metadata: Metadata = {
   },
   description:
     "Dr. Pedro Machado, médico em Petrópolis. Acompanhamento médico para emagrecimento, saúde hormonal, composição corporal e prevenção.",
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL(siteUrl),
   openGraph: {
     title: "Dr. Pedro Machado",
     description:
@@ -30,7 +32,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     telephone: doctor.phone,
     address: doctor.location,
     sameAs: [`https://www.instagram.com/${doctor.instagram.replace("@", "")}/`],
-    url: "https://example.com"
+    url: siteUrl
   };
 
   return (

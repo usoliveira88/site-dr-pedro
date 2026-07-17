@@ -91,7 +91,7 @@ export function AnamnesePopup() {
           </span>
         </button>
 
-        <div className="relative pr-12">
+        <div className="relative px-8 text-center sm:px-12">
           <p className="mb-4 inline-flex rounded-full border border-gold/35 bg-white/75 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-gold">
             Avaliação inicial
           </p>
@@ -99,27 +99,27 @@ export function AnamnesePopup() {
             Entenda como o Dr. Pedro pode ajudar você
           </h2>
           <p className="mt-4 text-base leading-7 text-graphite sm:text-[1.05rem] sm:leading-8">
-            Responda algumas perguntas rápidas sobre seus objetivos, rotina e hábitos. A equipe do Dr. Pedro Machado analisará suas respostas para orientar o próximo passo do acompanhamento.
+            Descubra se o seu corpo está dando sinais de que precisa de mais atenção. A avaliação inicial gratuita reúne perguntas rápidas, cálculo de IMC e relação cintura-quadril para ajudar a equipe do Dr. Pedro Machado a entender seus objetivos e orientar o próximo passo do acompanhamento.
           </p>
         </div>
 
         <div className="relative mt-5 grid gap-2 sm:grid-cols-2">
           {supportItems.map((item) => (
-            <div key={item} className="rounded-[14px] border border-deep/10 bg-white/80 px-4 py-3 text-sm font-semibold text-petrol shadow-[0_10px_24px_rgba(2,37,61,0.05)]">
+            <div key={item} className="rounded-[14px] border border-deep/10 bg-white/80 px-4 py-3 text-center text-sm font-semibold text-petrol shadow-[0_10px_24px_rgba(2,37,61,0.05)]">
               <span className="mr-2 text-gold">•</span>
               {item}
             </div>
           ))}
         </div>
 
-        <div className="relative mt-7 flex flex-col gap-3 sm:flex-row">
+        <div className="relative mt-7 flex flex-col justify-center gap-3 text-center sm:flex-row">
           <Link
             ref={primaryLinkRef}
             href="/anamnese"
             onClick={closePopup}
             className="focus-ring inline-flex min-h-14 flex-1 items-center justify-center rounded-subtle bg-deep px-6 text-center text-base font-semibold text-white shadow-soft transition duration-300 hover:-translate-y-0.5 hover:bg-[#06324f] hover:shadow-lift active:translate-y-0"
           >
-            Começar avaliação inicial
+            Começar avaliação gratuita
           </Link>
           <button
             type="button"

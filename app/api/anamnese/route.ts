@@ -23,7 +23,7 @@ const questionLabels: Record<string, string> = {
   situacaoFrequente: "Qual dessas situações acontece com mais frequência?",
   satisfacaoSaudeCorpo: "O quanto você está satisfeito com sua saúde e seu corpo hoje?",
   tentativasAnteriores: "Você já tentou mudar seus hábitos ou emagrecer antes?",
-  interesseContato: "Se existisse um plano personalizado para ajudar você a melhorar sua saúde de forma definitiva, gostaria de conversar com nossa equipe?"
+  interesseContato: "Se uma avaliação individualizada ajudasse a organizar seus próximos passos, você gostaria de conversar com nossa equipe?"
 };
 
 const rateLimit = new Map<string, { count: number; resetAt: number }>();

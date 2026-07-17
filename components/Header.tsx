@@ -12,7 +12,7 @@ export function Header() {
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-petrol/12 bg-linen/94 shadow-[0_8px_28px_rgba(15,76,92,0.07)] backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-petrol/12 bg-linen shadow-[0_8px_28px_rgba(15,76,92,0.07)]">
       <Container className="flex min-h-16 items-center justify-between gap-4 lg:min-h-[4.25rem] lg:gap-6">
         <Link href="/" className="focus-ring flex items-center gap-3" aria-label="Ir para a página inicial">
           <Image

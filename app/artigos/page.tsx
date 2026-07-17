@@ -48,17 +48,12 @@ export default function ArticlesPage() {
 
       <section className="bg-linen py-12 sm:py-16 lg:py-20">
         <Container>
-          <div className="mb-8 grid gap-5 lg:grid-cols-[0.75fr_1fr] lg:items-end">
-            <div className="max-w-3xl">
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Categorias</p>
-              <h2 className="text-[1.75rem] font-semibold leading-tight text-ink sm:text-4xl">Encontre conteúdos por tema</h2>
-              <p className="mt-4 text-base leading-8 text-graphite">
-                Use os filtros para navegar pelos artigos publicados e conectar cada conteúdo aos principais acompanhamentos do site.
-              </p>
-            </div>
-            <div className="rounded-[22px] border border-deep/10 bg-white p-5 text-sm leading-7 text-graphite shadow-[0_16px_46px_rgba(2,37,61,0.07)]">
-              Os filtros funcionam na própria página e ajudam a localizar conteúdos por assunto, sem busca ou etapas extras.
-            </div>
+          <div className="mb-8 max-w-3xl">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Categorias</p>
+            <h2 className="text-[1.75rem] font-semibold leading-tight text-ink sm:text-4xl">Encontre conteúdos por tema</h2>
+            <p className="mt-4 text-base leading-8 text-graphite">
+              Use os filtros para navegar pelos artigos publicados e conectar cada conteúdo aos principais acompanhamentos do site.
+            </p>
           </div>
           <ArticlesFilter articles={articleCards} />
         </Container>

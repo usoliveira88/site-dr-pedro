@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { WaistHipForm, type WaistHipFormResult } from "@/components/calculators/WaistHipForm";
 import { CalculatorResultSummary } from "@/components/calculators/CalculatorResultSummary";
+import { HealthAttentionList } from "@/components/calculators/HealthAttentionList";
 import { OtherCalculators } from "@/components/calculators/OtherCalculators";
 import { readCalculatorResult, saveCalculatorResult } from "@/components/calculators/calculatorSession";
 import { ButtonLink } from "@/components/ButtonLink";
@@ -75,6 +76,26 @@ export function WaistHipResultClient() {
 
   const { input, result } = data;
   const isFavorable = result.status === "menor-risco";
+  const attentionItems = isFavorable
+    ? [
+        "Composição corporal",
+        "Percentual de gordura",
+        "Massa muscular",
+        "Exames metabólicos",
+        "Saúde cardiovascular",
+        "Rotina alimentar",
+        "Nível de atividade física"
+      ]
+    : [
+        "Pressão alta",
+        "Resistência à insulina",
+        "Diabetes tipo 2",
+        "Colesterol alterado",
+        "Triglicerídeos elevados",
+        "Gordura no fígado",
+        "Apneia do sono",
+        "Maior risco cardiovascular"
+      ];
 
   return (
     <div className="space-y-8">
@@ -86,16 +107,7 @@ export function WaistHipResultClient() {
           description="Indicador inicial calculado a partir das medidas informadas."
         />
         <div className="rounded-[24px] border border-deep/10 bg-white p-5 shadow-soft sm:p-7">
-          <h2 className="text-2xl font-semibold text-deep">
-            {isFavorable
-              ? "Sua medida está em uma faixa mais favorável"
-              : "Sua medida pode indicar maior atenção à gordura abdominal"}
-          </h2>
-          <p className="mt-3 text-sm leading-7 text-graphite">
-            {isFavorable
-              ? "Esse resultado é positivo, mas não avalia sozinho composição corporal, exames, sono, alimentação, rotina de treino ou saúde metabólica."
-              : "Uma relação cintura-quadril elevada pode estar associada a maior acúmulo de gordura abdominal, que pode se relacionar com pressão alta, resistência à insulina, diabetes tipo 2, alterações de colesterol, gordura no fígado, apneia do sono e maior risco cardiovascular."}
-          </p>
+          <h2 className="text-2xl font-semibold text-deep">Dados usados no cálculo</h2>
           <dl className="mt-5 grid grid-cols-3 gap-3 text-sm">
             <div className="rounded-subtle bg-mist p-3">
               <dt className="text-graphite">Sexo</dt>
@@ -116,6 +128,26 @@ export function WaistHipResultClient() {
       <p className="text-base leading-7 text-graphite">
         A relação cintura-quadril é um indicador inicial relacionado à distribuição de gordura corporal, especialmente na região abdominal. Ela não substitui avaliação médica e depende da medição correta.
       </p>
+
+      <HealthAttentionList
+        title={
+          isFavorable
+            ? "Sua medida está em uma faixa mais favorável, mas ainda há pontos que podem ser avaliados"
+            : "Pontos de atenção associados à gordura abdominal"
+        }
+        introduction={
+          isFavorable
+            ? "A relação cintura-quadril é apenas um indicador inicial. Uma avaliação médica pode ajudar a interpretar esse resultado junto com outros dados."
+            : "A relação cintura-quadril elevada pode indicar maior acúmulo de gordura abdominal. Esse padrão pode estar associado a alterações metabólicas e cardiovasculares que merecem investigação."
+        }
+        items={attentionItems}
+        closing={
+          isFavorable
+            ? "O resultado é positivo, mas vale olhar com cuidado para composição corporal, exames, hábitos e saúde metabólica."
+            : "Esse resultado não confirma uma condição, mas é um sinal importante para olhar com mais cuidado para seus exames, hábitos e saúde metabólica."
+        }
+        tone={isFavorable ? "positive" : "attention"}
+      />
 
       <div className="flex flex-col gap-3 sm:flex-row">
         <ButtonLink href="https://wa.me/552422459374" className="w-full sm:w-auto">Quero entender meu resultado</ButtonLink>

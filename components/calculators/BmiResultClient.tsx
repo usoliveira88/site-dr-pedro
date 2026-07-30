@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { BmiForm, type BmiFormResult } from "@/components/calculators/BmiForm";
 import { CalculatorResultSummary } from "@/components/calculators/CalculatorResultSummary";
+import { HealthAttentionList } from "@/components/calculators/HealthAttentionList";
 import { OtherCalculators } from "@/components/calculators/OtherCalculators";
 import { readCalculatorResult, saveCalculatorResult } from "@/components/calculators/calculatorSession";
 import { ButtonLink } from "@/components/ButtonLink";
@@ -71,15 +72,50 @@ export function BmiResultClient() {
   const isAdequate = result.status === "peso-adequado";
   const isLowWeight = result.status === "baixo-peso";
   const attentionTitle = isAdequate
-    ? "Seu resultado está em uma faixa adequada"
+    ? "Mesmo com IMC adequado, ele não mostra tudo"
     : isLowWeight
-      ? "Seu resultado merece atenção"
-      : "Seu resultado pode indicar pontos de atenção";
-  const attentionText = isAdequate
-    ? "Esse é um bom sinal inicial, mas ainda pode fazer sentido avaliar composição corporal, exames, rotina de treino, percentual de gordura, saúde hormonal e objetivos específicos."
+      ? "Pontos que merecem atenção"
+      : "Pontos de atenção que merecem investigação";
+  const attentionIntroduction = isAdequate
+    ? "Seu resultado está em uma faixa adequada, mas o IMC não avalia sozinho a qualidade da composição corporal ou outros marcadores de saúde."
     : isLowWeight
-      ? "O IMC abaixo da faixa adequada pode ter diferentes causas e deve ser interpretado junto com histórico, alimentação, exames, sintomas e composição corporal."
-      : "O excesso de peso pode estar associado a alterações como pressão alta, resistência à insulina, diabetes tipo 2, colesterol e triglicerídeos alterados, gordura no fígado, apneia do sono, dores articulares e maior risco cardiovascular. A interpretação depende do contexto clínico.";
+      ? "O IMC abaixo da faixa adequada deve ser interpretado junto com sintomas, exames, rotina alimentar e composição corporal."
+      : "O excesso de peso pode estar associado a alterações importantes de saúde. Isso não significa que você tenha alguma dessas condições, mas indica que vale investigar com acompanhamento médico.";
+  const attentionItems = isAdequate
+    ? [
+        "Composição corporal",
+        "Percentual de gordura",
+        "Massa muscular",
+        "Saúde hormonal",
+        "Exames metabólicos",
+        "Rotina de treino e alimentação",
+        "Sono e disposição"
+      ]
+    : isLowWeight
+      ? [
+          "Alimentação insuficiente",
+          "Perda de peso não intencional",
+          "Baixa massa muscular",
+          "Alterações hormonais",
+          "Deficiências nutricionais",
+          "Sintomas associados",
+          "Histórico clínico"
+        ]
+      : [
+          "Pressão alta",
+          "Resistência à insulina",
+          "Diabetes tipo 2",
+          "Colesterol e triglicerídeos alterados",
+          "Gordura no fígado",
+          "Apneia do sono",
+          "Dores articulares",
+          "Maior risco cardiovascular"
+        ];
+  const attentionClosing = isAdequate
+    ? "Uma avaliação médica pode ajudar a interpretar composição corporal, exames, rotina e objetivos específicos."
+    : isLowWeight
+      ? "Vale olhar com cuidado para o histórico, os sintomas e os fatores que podem estar relacionados a esse resultado."
+      : "Se esse foi o seu resultado, talvez seja o momento de entender melhor seus exames, rotina, composição corporal e saúde metabólica.";
 
   return (
     <div className="space-y-8">
@@ -91,8 +127,7 @@ export function BmiResultClient() {
           description="Indicador inicial calculado a partir do peso e da altura informados."
         />
         <div className="rounded-[24px] border border-deep/10 bg-white p-5 shadow-soft sm:p-7">
-          <h2 className="text-2xl font-semibold text-deep">{attentionTitle}</h2>
-          <p className="mt-3 text-sm leading-7 text-graphite">{attentionText}</p>
+          <h2 className="text-2xl font-semibold text-deep">Dados usados no cálculo</h2>
           <dl className="mt-5 grid grid-cols-2 gap-3 text-sm">
             <div className="rounded-subtle bg-mist p-3">
               <dt className="text-graphite">Peso informado</dt>
@@ -109,6 +144,14 @@ export function BmiResultClient() {
       <p className="text-base leading-7 text-graphite">
         O IMC ajuda a observar a relação entre peso e altura, mas não mostra composição corporal, massa muscular, percentual de gordura, exames, rotina, sono ou saúde metabólica.
       </p>
+
+      <HealthAttentionList
+        title={attentionTitle}
+        introduction={attentionIntroduction}
+        items={attentionItems}
+        closing={attentionClosing}
+        tone={isAdequate ? "positive" : "attention"}
+      />
 
       <div className="flex flex-col gap-3 sm:flex-row">
         <ButtonLink href="https://wa.me/552422459374" className="w-full sm:w-auto">Quero entender meu resultado</ButtonLink>

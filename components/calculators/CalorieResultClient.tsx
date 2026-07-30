@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { CalorieForm, type CalorieFormResult } from "@/components/calculators/CalorieForm";
 import { CalculatorResultSummary } from "@/components/calculators/CalculatorResultSummary";
+import { HealthAttentionList } from "@/components/calculators/HealthAttentionList";
 import { OtherCalculators } from "@/components/calculators/OtherCalculators";
 import { readCalculatorResult, saveCalculatorResult } from "@/components/calculators/calculatorSession";
 import { ButtonLink } from "@/components/ButtonLink";
@@ -33,14 +34,15 @@ function recalculate(input: CalorieInput): ValidCalorieResult | null {
 }
 
 const attentionItems = [
-  "objetivo de emagrecimento",
-  "histórico de efeito sanfona",
-  "preservação de massa muscular",
-  "rotina de treino",
-  "sono",
-  "exames",
-  "saúde metabólica",
-  "uso de medicamentos"
+  "Objetivo atual",
+  "Histórico de efeito sanfona",
+  "Preservação de massa muscular",
+  "Rotina de treino",
+  "Sono e recuperação",
+  "Exames metabólicos",
+  "Saúde hormonal",
+  "Uso de medicamentos",
+  "Fome, saciedade e adesão ao plano"
 ];
 
 export function CalorieResultClient() {
@@ -114,19 +116,12 @@ export function CalorieResultClient() {
         Esse número é uma estimativa inicial do gasto energético diário. Ele deve ser interpretado como ponto de partida e junto de uma avaliação médica individualizada.
       </p>
 
-      <section className="rounded-[24px] border border-deep/10 bg-white p-6 shadow-soft sm:p-8">
-        <h2 className="text-2xl font-semibold text-deep">O que esse resultado pode ajudar a observar</h2>
-        <p className="mt-3 leading-7 text-graphite">
-          A estimativa calórica pode ajudar a entender o ponto de partida, mas objetivos como emagrecimento, ganho de massa muscular, preservação de massa muscular, melhora de performance ou controle metabólico dependem de exames, composição corporal, rotina, sono, treino e histórico clínico.
-        </p>
-        <ul className="mt-5 grid gap-2 sm:grid-cols-2">
-          {attentionItems.map((item) => (
-            <li key={item} className="rounded-subtle bg-mist px-4 py-3 text-sm font-medium text-petrol">
-              <span className="mr-2 text-gold" aria-hidden="true">•</span>{item}
-            </li>
-          ))}
-        </ul>
-      </section>
+      <HealthAttentionList
+        title="Antes de pensar em calorias, é preciso olhar o contexto"
+        introduction="A estimativa calórica é apenas um ponto de partida. Para emagrecer, ganhar massa muscular ou melhorar a composição corporal com segurança, outros fatores precisam ser avaliados."
+        items={attentionItems}
+        closing="Seguir um número de calorias sem considerar esses fatores pode dificultar a manutenção dos resultados e aumentar o risco de estratégias inadequadas."
+      />
 
       <div className="flex flex-col gap-3 sm:flex-row">
         <ButtonLink href="https://wa.me/552422459374" className="w-full sm:w-auto">Quero avaliar minha estratégia</ButtonLink>

@@ -586,7 +586,12 @@ export const articles: Article[] = [
           {
             type: "paragraph",
             text:
-              "Por isso, o tratamento precisa olhar para a manutenção desde o começo. A pergunta não deve ser apenas quanto peso foi perdido, mas como essa perda ocorreu, quais marcadores melhoraram, se houve preservação de massa magra, como está a rotina e quais ajustes serão necessários ao longo do tempo."
+              "Outro ponto importante é que a perda de peso pode acionar mecanismos compensatórios do próprio organismo. No tratamento da obesidade, estudos indicam que, a cada quilo perdido, a fome pode aumentar em aproximadamente 100 kcal por dia. Paralelamente, o corpo também pode reduzir o gasto energético. Essa combinação — mais fome e menor gasto — ajuda a explicar por que a manutenção do peso exige acompanhamento, ajustes de rotina e estratégia de longo prazo."
+          },
+          {
+            type: "paragraph",
+            text:
+              "Por isso, o tratamento precisa olhar para a manutenção desde o começo. A pergunta não deve ser apenas quanto peso foi perdido, mas como essa perda ocorreu, quais marcadores melhoraram, se houve preservação de massa muscular, como está a rotina e quais ajustes serão necessários ao longo do tempo."
           }
         ]
       },
@@ -597,12 +602,12 @@ export const articles: Article[] = [
           {
             type: "paragraph",
             text:
-              "Durante o emagrecimento, especialmente quando a perda de peso é rápida ou mal acompanhada, pode haver redução de gordura e também de massa magra. Isso importa porque massa muscular participa da força, autonomia, gasto energético, saúde metabólica e qualidade de vida."
+              "Durante o emagrecimento, especialmente quando a perda de peso é rápida ou mal acompanhada, pode haver redução de gordura e também de massa muscular. Isso importa porque a massa muscular participa da força, autonomia, gasto energético, saúde metabólica e qualidade de vida."
           },
           {
             type: "paragraph",
             text:
-              "Acompanhamento médico não deve olhar apenas para o número da balança. Composição corporal, ingestão de proteína, treino de força, exames, disposição, sintomas e ritmo de perda precisam ser considerados. Em alguns casos, perder menos peso, mas preservar melhor a massa magra, pode ser clinicamente mais interessante do que perseguir uma queda rápida e desorganizada."
+              "Acompanhamento médico não deve olhar apenas para o número da balança. Composição corporal, ingestão de proteína, treino de força, exames, disposição, sintomas e ritmo de perda precisam ser considerados. Em alguns casos, perder menos peso, mas preservar melhor a massa muscular, pode ser clinicamente mais interessante do que perseguir uma queda rápida e desorganizada."
           },
           {
             type: "paragraph",
@@ -651,7 +656,7 @@ export const articles: Article[] = [
           {
             type: "paragraph",
             text:
-              "Gestantes, pessoas tentando engravidar ou pacientes com sintomas intensos durante o uso também devem discutir o caso com médico. O objetivo não é assustar, mas reforçar que segurança depende de contexto clínico. Uma mesma medicação pode ser adequada para um paciente e inadequada para outro."
+              "Gestantes não devem utilizar medicamentos dessa classe para emagrecimento. Mulheres que estão tentando engravidar ou que pretendem engravidar também precisam informar esse plano ao médico antes de iniciar ou manter o tratamento, pois o uso pode ser contraindicado nesse contexto. Pacientes com sintomas intensos durante o uso também devem discutir o caso com médico. O objetivo não é assustar, mas reforçar que segurança depende de contexto clínico. Uma mesma medicação pode ser adequada para um paciente e inadequada para outro."
           },
           {
             type: "paragraph",
@@ -716,6 +721,11 @@ export const articles: Article[] = [
             type: "paragraph",
             text:
               "Pontos factuais considerados: efeitos gastrointestinais como náuseas, vômitos, diarreia e constipação são relatados com medicamentos agonistas de GLP-1; esses medicamentos podem atuar em saciedade, apetite e esvaziamento gástrico; e o uso deve respeitar indicação, prescrição e acompanhamento médico."
+          },
+          {
+            type: "paragraph",
+            text:
+              "Referência adicional: Polidori D, Sanghvi A, Seeley RJ, Hall KD. How Strongly Does Appetite Counter Weight Loss? Quantification of the Feedback Control of Human Energy Intake. Obesity. 2016;24:2289-2295."
           }
         ]
       }
@@ -739,7 +749,7 @@ export const articles: Article[] = [
       {
         question: "É possível perder massa muscular usando medicamentos para emagrecer?",
         answer:
-          "Durante o emagrecimento pode haver perda de gordura e também de massa magra, especialmente quando a perda de peso é rápida ou pouco acompanhada. Por isso, composição corporal, proteína, treino e exames precisam ser considerados."
+          "Durante o emagrecimento pode haver perda de gordura e também de massa muscular, especialmente quando a perda de peso é rápida ou pouco acompanhada. Por isso, composição corporal, proteína, treino de força e exames precisam ser considerados."
       },
       {
         question: "Posso usar caneta emagrecedora sem acompanhamento médico?",

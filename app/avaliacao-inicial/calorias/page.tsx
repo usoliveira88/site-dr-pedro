@@ -1,0 +1,33 @@
+import type { Metadata } from "next";
+import { CalorieResultClient } from "@/components/calculators/CalorieResultClient";
+import { MedicalDisclaimer } from "@/components/calculators/MedicalDisclaimer";
+import { Container } from "@/components/Container";
+import { Section } from "@/components/Section";
+
+export const metadata: Metadata = {
+  title: "Calculadora de Calorias Estimadas",
+  description: "Calcule uma estimativa inicial de taxa metabólica basal e gasto energético diário."
+};
+
+export default function CalorieResultPage() {
+  return (
+    <>
+      <section className="bg-deep py-14 text-white sm:py-20">
+        <Container>
+          <p className="mb-4 inline-flex rounded-full border border-gold/35 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+            Estimativa calórica inicial
+          </p>
+          <h1 className="max-w-3xl text-[2.1rem] font-semibold leading-tight sm:text-5xl">
+            Sua estimativa calórica é um ponto de partida
+          </h1>
+        </Container>
+      </section>
+      <Section className="bg-pearl">
+        <div className="mx-auto max-w-6xl space-y-8">
+          <CalorieResultClient />
+          <MedicalDisclaimer />
+        </div>
+      </Section>
+    </>
+  );
+}

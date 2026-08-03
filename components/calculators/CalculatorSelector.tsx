@@ -5,6 +5,7 @@ export type CalculatorType = "bmi" | "waistHip" | "calories";
 type CalculatorSelectorProps = {
   onSelectCalculator: (type: CalculatorType) => void;
   compact?: boolean;
+  copyVariant?: "default" | "popup";
 };
 
 const calculators: Array<{
@@ -29,7 +30,17 @@ const calculators: Array<{
   }
 ];
 
-export function CalculatorSelector({ onSelectCalculator, compact = false }: CalculatorSelectorProps) {
+const popupTexts: Record<CalculatorType, string> = {
+  bmi: "Descubra se o seu peso atual pode estar associado a riscos para sua saúde.",
+  waistHip: "Sua cintura é um indicativo direto da sua saúde. Descubra se você está em perigo.",
+  calories: "Saiba quantas calorias você pode comer sem engordar."
+};
+
+export function CalculatorSelector({
+  onSelectCalculator,
+  compact = false,
+  copyVariant = "default"
+}: CalculatorSelectorProps) {
   return (
     <div className={`grid ${compact ? "gap-3" : "gap-4 md:grid-cols-3"}`} role="list" aria-label="Calculadoras disponíveis">
       {calculators.map((calculator) => (
@@ -41,7 +52,9 @@ export function CalculatorSelector({ onSelectCalculator, compact = false }: Calc
           }`}
         >
           <h3 className="text-lg font-semibold leading-tight text-deep">{calculator.title}</h3>
-          <p className="mt-2 flex-1 text-sm leading-6 text-graphite">{calculator.text}</p>
+          <p className="mt-2 flex-1 text-sm leading-6 text-graphite">
+            {copyVariant === "popup" ? popupTexts[calculator.type] : calculator.text}
+          </p>
           <button
             type="button"
             onClick={() => onSelectCalculator(calculator.type)}

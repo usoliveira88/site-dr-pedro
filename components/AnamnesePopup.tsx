@@ -197,7 +197,7 @@ export function AnamnesePopup() {
         </div>
 
         <div className="relative mt-5">
-          {!selected ? <CalculatorSelector onSelectCalculator={setSelected} compact /> : null}
+          {!selected ? <CalculatorSelector onSelectCalculator={setSelected} compact copyVariant="popup" /> : null}
           {selected === "bmi" ? <BmiForm onResult={handleBmiResult} compact /> : null}
           {selected === "waistHip" ? <WaistHipForm onResult={handleWaistHipResult} compact /> : null}
           {selected === "calories" ? <CalorieForm onResult={handleCalorieResult} compact /> : null}

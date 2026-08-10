@@ -4,6 +4,7 @@ import { AnamnesePopup } from "@/components/AnamnesePopup";
 import { ButtonLink } from "@/components/ButtonLink";
 import { Section, SectionHeading } from "@/components/Section";
 import { ServiceIntentCards } from "@/components/ServiceIntentCards";
+import { TrackedWhatsAppLink } from "@/components/TrackedWhatsAppLink";
 import { doctor } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -274,14 +275,15 @@ function ServicesFinalCTA() {
             Fale com a equipe para verificar disponibilidade, esclarecer dúvidas e dar o próximo passo com orientação médica.
           </p>
         </div>
-        <a
+        <TrackedWhatsAppLink
           href={doctor.whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="focus-ring inline-flex min-h-14 w-full items-center justify-center rounded-subtle border border-deep bg-deep px-8 text-base font-semibold text-white shadow-soft transition duration-300 hover:-translate-y-0.5 hover:bg-[#06324f] hover:shadow-lift active:translate-y-0 active:bg-deep sm:w-auto"
+          trackingLocation="services_final_cta"
         >
           Agendar consulta
-        </a>
+        </TrackedWhatsAppLink>
       </div>
     </div>
   );

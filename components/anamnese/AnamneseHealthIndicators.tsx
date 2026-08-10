@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { TrackedWhatsAppLink } from "@/components/TrackedWhatsAppLink";
 import {
   calculateBmi,
   calculateWaistHipRatio,
@@ -341,14 +342,15 @@ function ResultSummary({
         >
           Continuar preenchendo anamnese
         </button>
-        <a
+        <TrackedWhatsAppLink
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="focus-ring inline-flex min-h-11 items-center justify-center rounded-subtle border border-deep/15 bg-white px-4 text-sm font-semibold text-deep transition duration-300 hover:border-gold hover:bg-sand"
+          trackingLocation="anamnese_indicators"
         >
           Falar com a equipe
-        </a>
+        </TrackedWhatsAppLink>
       </div>
     </div>
   );

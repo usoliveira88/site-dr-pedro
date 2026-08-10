@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { ClockIcon, InstagramIcon, MapPinIcon, WhatsAppIcon } from "@/components/Icons";
 import { Section } from "@/components/Section";
+import { TrackedWhatsAppLink } from "@/components/TrackedWhatsAppLink";
 import { doctor } from "@/data/site";
 
 const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(doctor.location)}&output=embed`;
@@ -107,24 +108,26 @@ export default function ContactPage() {
           </div>
           <aside className="section-reveal rounded-[28px] border border-white/14 bg-white/[0.08] p-5 shadow-[0_24px_70px_rgba(0,0,0,0.18)] backdrop-blur sm:p-6">
             <div className="rounded-[22px] border border-white/14 bg-white/[0.08] p-5">
-              <a
+              <TrackedWhatsAppLink
                 href={doctor.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Falar com a equipe pelo WhatsApp"
                 className="focus-ring mb-5 flex h-16 w-16 items-center justify-center rounded-[18px] bg-white p-2 shadow-[0_14px_34px_rgba(0,0,0,0.18)] ring-1 ring-white/70 transition duration-300 hover:-translate-y-0.5 hover:scale-[1.03] hover:shadow-[0_18px_42px_rgba(0,0,0,0.24)] active:translate-y-0 active:scale-[0.99]"
+                trackingLocation="contact_direct"
               >
                 <Image src="/images/whatsapp-icon.png" alt="" width={256} height={256} className="h-full w-full rounded-[14px] object-cover" />
-              </a>
+              </TrackedWhatsAppLink>
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">Canal direto</p>
-              <a
+              <TrackedWhatsAppLink
                 href={doctor.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="focus-ring mt-3 inline-flex rounded-subtle text-2xl font-semibold text-white transition duration-300 hover:text-gold"
+                trackingLocation="contact_direct"
               >
                 {doctor.whatsapp}
-              </a>
+              </TrackedWhatsAppLink>
               <p className="mt-4 text-sm leading-7 text-white/72">
                 Use o WhatsApp para iniciar o agendamento, confirmar disponibilidade e receber informações iniciais da equipe.
               </p>
@@ -144,9 +147,9 @@ export default function ContactPage() {
 
             <div className="mt-7 grid gap-4">
               <ContactInfo title="WhatsApp / telefone" icon={<WhatsAppIcon className="h-5 w-5" />}>
-                <a href={doctor.whatsappUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-petrol transition hover:text-deep">
+                <TrackedWhatsAppLink href={doctor.whatsappUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-petrol transition hover:text-deep" trackingLocation="contact_info">
                   {doctor.whatsapp}
-                </a>
+                </TrackedWhatsAppLink>
               </ContactInfo>
               <ContactInfo title="Endereço" icon={<MapPinIcon className="h-5 w-5" />}>
                 {doctor.location}
@@ -305,9 +308,9 @@ function ContactAction({
 
   if (isExternal) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>
+      <TrackedWhatsAppLink href={href} target="_blank" rel="noopener noreferrer" className={classes} trackingLocation="contact_cta">
         {children}
-      </a>
+      </TrackedWhatsAppLink>
     );
   }
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TrackedWhatsAppLink } from "@/components/TrackedWhatsAppLink";
 
 type ButtonLinkProps = {
   href: string;
@@ -19,9 +20,9 @@ export function ButtonLink({ href, children, variant = "primary", className = ""
 
   if (isExternal) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>
+      <TrackedWhatsAppLink href={href} target="_blank" rel="noopener noreferrer" className={classes} trackingLocation="button_link">
         {children}
-      </a>
+      </TrackedWhatsAppLink>
     );
   }
 

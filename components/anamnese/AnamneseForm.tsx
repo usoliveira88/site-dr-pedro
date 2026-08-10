@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { AnamneseHealthIndicators, type HealthIndicatorsPayload } from "@/components/anamnese/AnamneseHealthIndicators";
+import { TrackedWhatsAppLink } from "@/components/TrackedWhatsAppLink";
 
 const whatsappUrl = "https://wa.me/552422459374";
 
@@ -198,14 +199,15 @@ export function AnamneseForm() {
             <p>Nossa equipe analisará suas respostas e entrará em contato para explicar como funciona o acompanhamento e verificar se ele faz sentido para o seu caso.</p>
             <p>Clique abaixo para falar diretamente com nossa secretária e agendar sua consulta.</p>
           </div>
-          <a
+          <TrackedWhatsAppLink
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="focus-ring mt-8 inline-flex min-h-14 w-full items-center justify-center rounded-subtle bg-deep px-7 text-center text-base font-semibold text-white shadow-soft transition duration-300 hover:-translate-y-0.5 hover:bg-[#06324f] hover:shadow-lift sm:w-auto"
+            trackingLocation="anamnese_success"
           >
             Quero falar com a secretária pelo WhatsApp
-          </a>
+          </TrackedWhatsAppLink>
         </div>
       </section>
     );
@@ -292,9 +294,9 @@ export function AnamneseForm() {
               >
                 {status === "sending" ? "Enviando respostas..." : "Enviar avaliação inicial"}
               </button>
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="focus-ring inline-flex min-h-14 w-full items-center justify-center rounded-subtle border border-deep/20 bg-white px-7 text-base font-semibold text-deep transition duration-300 hover:border-gold hover:bg-sand sm:w-auto">
+              <TrackedWhatsAppLink href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="focus-ring inline-flex min-h-14 w-full items-center justify-center rounded-subtle border border-deep/20 bg-white px-7 text-base font-semibold text-deep transition duration-300 hover:border-gold hover:bg-sand sm:w-auto" trackingLocation="anamnese_form">
                 Falar pelo WhatsApp
-              </a>
+              </TrackedWhatsAppLink>
             </div>
           </div>
         </div>

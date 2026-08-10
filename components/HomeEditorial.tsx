@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ButtonLink } from "@/components/ButtonLink";
 import { InstagramIcon, MapPinIcon, WhatsAppIcon } from "@/components/Icons";
+import { TrackedWhatsAppLink } from "@/components/TrackedWhatsAppLink";
 import { doctor, homeMethodPillars, homeNeedCards, homeServiceHighlights } from "@/data/site";
 
 export function HomeClinicalBridge() {
@@ -184,12 +185,12 @@ export function HomeLocationFeature() {
             </span>
             <p className="pt-1">{doctor.location}</p>
           </div>
-          <a href={doctor.whatsappUrl} target="_blank" rel="noopener noreferrer" className="group flex gap-3 rounded-subtle border border-deep/10 bg-pearl p-4 font-semibold text-petrol transition hover:-translate-y-0.5 hover:border-gold/45 hover:bg-white hover:shadow-soft">
+          <TrackedWhatsAppLink href={doctor.whatsappUrl} target="_blank" rel="noopener noreferrer" className="group flex gap-3 rounded-subtle border border-deep/10 bg-pearl p-4 font-semibold text-petrol transition hover:-translate-y-0.5 hover:border-gold/45 hover:bg-white hover:shadow-soft" trackingLocation="home_contact">
             <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-deep text-white">
               <WhatsAppIcon className="h-5 w-5" />
             </span>
             <span className="pt-1">{doctor.whatsapp}</span>
-          </a>
+          </TrackedWhatsAppLink>
           <div className="flex gap-3 rounded-subtle border border-deep/10 bg-pearl p-4">
             <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-mist text-deep">
               <InstagramIcon className="h-5 w-5" />

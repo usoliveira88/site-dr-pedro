@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
 import { ClockIcon, InstagramIcon, MapPinIcon, WhatsAppIcon } from "@/components/Icons";
+import { TrackedWhatsAppLink } from "@/components/TrackedWhatsAppLink";
 import { doctor } from "@/data/site";
 
 export function LocationSection() {
@@ -22,12 +23,12 @@ export function LocationSection() {
           <div className="mt-6 grid gap-4 text-[0.96rem] leading-7 text-graphite">
             <InfoLine icon={<MapPinIcon className="h-5 w-5" />} text={doctor.location} />
             <InfoLine icon={<ClockIcon className="h-5 w-5" />} text={doctor.hours} />
-            <a href={doctor.whatsappUrl} target="_blank" rel="noopener noreferrer" className="group flex gap-3 rounded-subtle border border-deep/10 bg-pearl p-4 font-semibold text-petrol transition hover:-translate-y-0.5 hover:border-gold/45 hover:bg-white hover:shadow-soft">
+            <TrackedWhatsAppLink href={doctor.whatsappUrl} target="_blank" rel="noopener noreferrer" className="group flex gap-3 rounded-subtle border border-deep/10 bg-pearl p-4 font-semibold text-petrol transition hover:-translate-y-0.5 hover:border-gold/45 hover:bg-white hover:shadow-soft" trackingLocation="location_section">
               <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-deep text-white transition group-hover:bg-petrol">
                 <WhatsAppIcon className="h-5 w-5" />
               </span>
               <span className="pt-1">{doctor.whatsapp}</span>
-            </a>
+            </TrackedWhatsAppLink>
             <InfoLine icon={<InstagramIcon className="h-5 w-5" />} text={`Instagram: ${doctor.instagram}`} />
           </div>
         </div>

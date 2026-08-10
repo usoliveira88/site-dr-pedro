@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { TrackedWhatsAppLink } from "@/components/TrackedWhatsAppLink";
 
 type Cta = {
   label: string;
@@ -179,9 +180,9 @@ function CtaLink({ cta, variant = "primary" }: { cta: Cta; variant?: "primary" |
 
   if (cta.href.startsWith("http")) {
     return (
-      <a href={cta.href} target="_blank" rel="noopener noreferrer" className={classes}>
+      <TrackedWhatsAppLink href={cta.href} target="_blank" rel="noopener noreferrer" className={classes} trackingLocation="bmi_calculator">
         {cta.label}
-      </a>
+      </TrackedWhatsAppLink>
     );
   }
 

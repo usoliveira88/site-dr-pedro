@@ -20,7 +20,7 @@ export function ButtonLink({ href, children, variant = "primary", className = ""
 
   if (isExternal) {
     return (
-      <TrackedWhatsAppLink href={href} target="_blank" rel="noopener noreferrer" className={classes} trackingLocation="button_link">
+      <TrackedWhatsAppLink href={href} target="_blank" rel="noopener noreferrer" className={classes}>
         {children}
       </TrackedWhatsAppLink>
     );

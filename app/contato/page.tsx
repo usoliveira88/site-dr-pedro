@@ -114,7 +114,6 @@ export default function ContactPage() {
                 rel="noopener noreferrer"
                 aria-label="Falar com a equipe pelo WhatsApp"
                 className="focus-ring mb-5 flex h-16 w-16 items-center justify-center rounded-[18px] bg-white p-2 shadow-[0_14px_34px_rgba(0,0,0,0.18)] ring-1 ring-white/70 transition duration-300 hover:-translate-y-0.5 hover:scale-[1.03] hover:shadow-[0_18px_42px_rgba(0,0,0,0.24)] active:translate-y-0 active:scale-[0.99]"
-                trackingLocation="contact_direct"
               >
                 <Image src="/images/whatsapp-icon.png" alt="" width={256} height={256} className="h-full w-full rounded-[14px] object-cover" />
               </TrackedWhatsAppLink>
@@ -124,7 +123,6 @@ export default function ContactPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="focus-ring mt-3 inline-flex rounded-subtle text-2xl font-semibold text-white transition duration-300 hover:text-gold"
-                trackingLocation="contact_direct"
               >
                 {doctor.whatsapp}
               </TrackedWhatsAppLink>
@@ -147,7 +145,7 @@ export default function ContactPage() {
 
             <div className="mt-7 grid gap-4">
               <ContactInfo title="WhatsApp / telefone" icon={<WhatsAppIcon className="h-5 w-5" />}>
-                <TrackedWhatsAppLink href={doctor.whatsappUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-petrol transition hover:text-deep" trackingLocation="contact_info">
+                <TrackedWhatsAppLink href={doctor.whatsappUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-petrol transition hover:text-deep">
                   {doctor.whatsapp}
                 </TrackedWhatsAppLink>
               </ContactInfo>
@@ -308,7 +306,7 @@ function ContactAction({
 
   if (isExternal) {
     return (
-      <TrackedWhatsAppLink href={href} target="_blank" rel="noopener noreferrer" className={classes} trackingLocation="contact_cta">
+      <TrackedWhatsAppLink href={href} target="_blank" rel="noopener noreferrer" className={classes}>
         {children}
       </TrackedWhatsAppLink>
     );

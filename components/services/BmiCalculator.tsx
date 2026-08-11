@@ -180,7 +180,7 @@ function CtaLink({ cta, variant = "primary" }: { cta: Cta; variant?: "primary" |
 
   if (cta.href.startsWith("http")) {
     return (
-      <TrackedWhatsAppLink href={cta.href} target="_blank" rel="noopener noreferrer" className={classes} trackingLocation="bmi_calculator">
+      <TrackedWhatsAppLink href={cta.href} target="_blank" rel="noopener noreferrer" className={classes}>
         {cta.label}
       </TrackedWhatsAppLink>
     );

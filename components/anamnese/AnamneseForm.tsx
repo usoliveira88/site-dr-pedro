@@ -204,7 +204,6 @@ export function AnamneseForm() {
             target="_blank"
             rel="noopener noreferrer"
             className="focus-ring mt-8 inline-flex min-h-14 w-full items-center justify-center rounded-subtle bg-deep px-7 text-center text-base font-semibold text-white shadow-soft transition duration-300 hover:-translate-y-0.5 hover:bg-[#06324f] hover:shadow-lift sm:w-auto"
-            trackingLocation="anamnese_success"
           >
             Quero falar com a secretária pelo WhatsApp
           </TrackedWhatsAppLink>
@@ -294,7 +293,7 @@ export function AnamneseForm() {
               >
                 {status === "sending" ? "Enviando respostas..." : "Enviar avaliação inicial"}
               </button>
-              <TrackedWhatsAppLink href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="focus-ring inline-flex min-h-14 w-full items-center justify-center rounded-subtle border border-deep/20 bg-white px-7 text-base font-semibold text-deep transition duration-300 hover:border-gold hover:bg-sand sm:w-auto" trackingLocation="anamnese_form">
+              <TrackedWhatsAppLink href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="focus-ring inline-flex min-h-14 w-full items-center justify-center rounded-subtle border border-deep/20 bg-white px-7 text-base font-semibold text-deep transition duration-300 hover:border-gold hover:bg-sand sm:w-auto">
                 Falar pelo WhatsApp
               </TrackedWhatsAppLink>
             </div>

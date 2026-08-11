@@ -35,7 +35,7 @@ export function Footer() {
         <div>
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Contato</p>
           <div className="grid gap-3 text-sm leading-6 text-white/82">
-            <TrackedWhatsAppLink href={doctor.whatsappUrl} target="_blank" rel="noopener noreferrer" className="transition hover:text-white" trackingLocation="footer">
+            <TrackedWhatsAppLink href={doctor.whatsappUrl} target="_blank" rel="noopener noreferrer" className="transition hover:text-white">
               {doctor.phone}
             </TrackedWhatsAppLink>
             <p>{doctor.instagram}</p>

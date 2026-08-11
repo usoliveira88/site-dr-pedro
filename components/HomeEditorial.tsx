@@ -185,7 +185,7 @@ export function HomeLocationFeature() {
             </span>
             <p className="pt-1">{doctor.location}</p>
           </div>
-          <TrackedWhatsAppLink href={doctor.whatsappUrl} target="_blank" rel="noopener noreferrer" className="group flex gap-3 rounded-subtle border border-deep/10 bg-pearl p-4 font-semibold text-petrol transition hover:-translate-y-0.5 hover:border-gold/45 hover:bg-white hover:shadow-soft" trackingLocation="home_contact">
+          <TrackedWhatsAppLink href={doctor.whatsappUrl} target="_blank" rel="noopener noreferrer" className="group flex gap-3 rounded-subtle border border-deep/10 bg-pearl p-4 font-semibold text-petrol transition hover:-translate-y-0.5 hover:border-gold/45 hover:bg-white hover:shadow-soft">
             <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-deep text-white">
               <WhatsAppIcon className="h-5 w-5" />
             </span>

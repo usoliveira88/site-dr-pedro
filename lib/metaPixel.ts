@@ -1,16 +1,10 @@
 export type MetaEventParams = Partial<
-  Record<"page" | "button" | "calculator" | "location" | "content_name", string>
+  Record<"content_name" | "source", string>
 >;
 
-export type MetaCustomEventName =
-  | "WhatsAppClick"
-  | "CalculatorStart"
-  | "CalculatorResult"
-  | "AnamneseStart"
-  | "AnamneseSubmit"
-  | "ResultCtaClick";
+export type MetaCustomEventName = "SiteInteraction";
 
-type MetaStandardEventName = "PageView" | "Lead";
+type MetaStandardEventName = "PageView" | "Contact" | "Lead";
 type Fbq = (command: "track" | "trackCustom", eventName: string, params?: MetaEventParams) => void;
 
 declare global {
@@ -19,7 +13,7 @@ declare global {
   }
 }
 
-const allowedParamKeys = ["page", "button", "calculator", "location", "content_name"] as const;
+const allowedParamKeys = ["content_name", "source"] as const;
 
 function getSafeParams(params?: MetaEventParams): MetaEventParams | undefined {
   if (!params) return undefined;
@@ -69,4 +63,3 @@ export function trackCustomEvent(eventName: MetaCustomEventName, params?: MetaEv
 export function trackLead(params?: MetaEventParams): void {
   trackMetaEvent("Lead", params);
 }
-

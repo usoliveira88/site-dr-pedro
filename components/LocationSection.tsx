@@ -23,7 +23,7 @@ export function LocationSection() {
           <div className="mt-6 grid gap-4 text-[0.96rem] leading-7 text-graphite">
             <InfoLine icon={<MapPinIcon className="h-5 w-5" />} text={doctor.location} />
             <InfoLine icon={<ClockIcon className="h-5 w-5" />} text={doctor.hours} />
-            <TrackedWhatsAppLink href={doctor.whatsappUrl} target="_blank" rel="noopener noreferrer" className="group flex gap-3 rounded-subtle border border-deep/10 bg-pearl p-4 font-semibold text-petrol transition hover:-translate-y-0.5 hover:border-gold/45 hover:bg-white hover:shadow-soft" trackingLocation="location_section">
+            <TrackedWhatsAppLink href={doctor.whatsappUrl} target="_blank" rel="noopener noreferrer" className="group flex gap-3 rounded-subtle border border-deep/10 bg-pearl p-4 font-semibold text-petrol transition hover:-translate-y-0.5 hover:border-gold/45 hover:bg-white hover:shadow-soft">
               <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-deep text-white transition group-hover:bg-petrol">
                 <WhatsAppIcon className="h-5 w-5" />
               </span>

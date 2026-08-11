@@ -280,7 +280,6 @@ function ServicesFinalCTA() {
           target="_blank"
           rel="noopener noreferrer"
           className="focus-ring inline-flex min-h-14 w-full items-center justify-center rounded-subtle border border-deep bg-deep px-8 text-base font-semibold text-white shadow-soft transition duration-300 hover:-translate-y-0.5 hover:bg-[#06324f] hover:shadow-lift active:translate-y-0 active:bg-deep sm:w-auto"
-          trackingLocation="services_final_cta"
         >
           Agendar consulta
         </TrackedWhatsAppLink>

@@ -148,8 +148,7 @@ export function HomeServiceEditorial() {
 }
 
 export function HomeLocationFeature() {
-  const mapsUrl =
-    "https://www.google.com/maps?q=R.%20Paulino%20Afonso%2C%20108%2C%20Centro%2C%20Petr%C3%B3polis%2C%20RJ%2C%2025680-195&output=embed";
+  const mapsUrl = `https://www.google.com/maps?q=${encodeURIComponent(doctor.location)}&output=embed`;
 
   return (
     <div className="grid gap-6 lg:grid-cols-[0.94fr_1.06fr]">

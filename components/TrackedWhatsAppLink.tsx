@@ -1,7 +1,7 @@
 "use client";
 
 import type { AnchorHTMLAttributes, MouseEvent, ReactNode } from "react";
-import { trackMetaEvent } from "@/lib/metaPixel";
+import { trackContact } from "@/lib/metaPixel";
 
 const whatsappNumber = "552422459374";
 
@@ -21,14 +21,14 @@ export function TrackedWhatsAppLink({
   ...anchorProps
 }: TrackedWhatsAppLinkProps) {
   function handleClick(event: MouseEvent<HTMLAnchorElement>): void {
+    if (isTrackedWhatsAppUrl(href)) {
+      trackContact({
+        content_name: "website_contact",
+        source: "website"
+      });
+    }
+
     onClick?.(event);
-
-    if (!isTrackedWhatsAppUrl(href)) return;
-
-    trackMetaEvent("Contact", {
-      content_name: "website_contact",
-      source: "website"
-    });
   }
 
   return (

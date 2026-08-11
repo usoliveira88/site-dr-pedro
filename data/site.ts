@@ -20,9 +20,9 @@ export const doctor = {
     "Dr. Pedro Machado é médico em Petrópolis. Seu atendimento é voltado a adultos e idosos que buscam cuidar da saúde metabólica, melhorar a composição corporal, prevenir doenças crônicas e alcançar mais vitalidade com acompanhamento médico individualizado.\n\nSua atuação inclui emagrecimento saudável, controle e tratamento da obesidade, saúde metabólica, performance, hipertrofia e estratégias clínicas voltadas à melhora da qualidade de vida. O acompanhamento considera histórico, rotina, exames, objetivos e segurança antes da definição de qualquer conduta.\n\nQuando há indicação clínica, o Dr. Pedro também realiza acompanhamento hormonal individualizado e prescrição de terapias medicamentosas modernas para controle de peso e tratamento da obesidade, incluindo medicações injetáveis conhecidas popularmente como “canetas emagrecedoras”. Todo o processo deve ser conduzido com avaliação médica, critérios de segurança e acompanhamento contínuo.",
   phone: "(24) 2245-9374",
   whatsapp: "(24) 2245-9374",
-  whatsappUrl: "https://wa.me/552422459374",
+  whatsappUrl: "https://wa.me/552422459374?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20a%20consulta%20com%20o%20Dr.%20Pedro.",
   instagram: "@drpedromachado_",
-  location: "R. Paulino Afonso, 108, Centro, Petrópolis, RJ, 25680-195",
+  location: "Rua Ingelheim, 181 - Quarteirão Ingelheim, Petrópolis, RJ - CEP 25675-540",
   hours: "Horários disponíveis devem ser confirmados com a equipe no momento do agendamento."
 };
 

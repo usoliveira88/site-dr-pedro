@@ -2,6 +2,11 @@ export type MetaEventParams = Partial<
   Record<"content_name" | "source", string>
 >;
 
+export type MetaContactParams = {
+  content_name?: "website_contact";
+  source?: "website";
+};
+
 export type MetaCustomEventName = "SiteInteraction";
 
 type MetaStandardEventName = "PageView" | "Contact" | "Lead";
@@ -35,31 +40,53 @@ function dispatchMetaEvent(
   command: "track" | "trackCustom",
   eventName: MetaStandardEventName | MetaCustomEventName,
   params?: MetaEventParams
-): void {
-  if (typeof window === "undefined" || typeof window.fbq !== "function") return;
+): boolean {
+  if (typeof window === "undefined" || typeof window.fbq !== "function") return false;
 
   try {
     const safeParams = getSafeParams(params);
 
     if (safeParams) {
       window.fbq(command, eventName, safeParams);
-      return;
+      return true;
     }
 
     window.fbq(command, eventName);
+    return true;
   } catch {
     // Tracking must never interrupt the user experience.
+    return false;
   }
 }
 
-export function trackMetaEvent(eventName: MetaStandardEventName, params?: MetaEventParams): void {
-  dispatchMetaEvent("track", eventName, params);
+export function trackMetaEvent(eventName: MetaStandardEventName, params?: MetaEventParams): boolean {
+  return dispatchMetaEvent("track", eventName, params);
 }
 
-export function trackCustomEvent(eventName: MetaCustomEventName, params?: MetaEventParams): void {
-  dispatchMetaEvent("trackCustom", eventName, params);
+export function trackCustomEvent(eventName: MetaCustomEventName, params?: MetaEventParams): boolean {
+  return dispatchMetaEvent("trackCustom", eventName, params);
 }
 
 export function trackLead(params?: MetaEventParams): void {
   trackMetaEvent("Lead", params);
+}
+
+export function trackContact(params: MetaContactParams = {}): void {
+  const contactParams: MetaEventParams = {
+    content_name: params.content_name ?? "website_contact",
+    source: params.source ?? "website"
+  };
+
+  if (trackMetaEvent("Contact", contactParams) || typeof window === "undefined") return;
+
+  let attempts = 0;
+  const retry = () => {
+    attempts += 1;
+
+    if (trackMetaEvent("Contact", contactParams) || attempts >= 4) return;
+
+    window.setTimeout(retry, 200);
+  };
+
+  window.setTimeout(retry, 200);
 }

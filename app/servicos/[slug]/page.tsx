@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { AnamnesePopup } from "@/components/AnamnesePopup";
 import { ButtonLink } from "@/components/ButtonLink";
 import { CTASection } from "@/components/CTASection";
 import { FAQ } from "@/components/FAQ";
@@ -44,7 +45,12 @@ export default async function ServicePage({ params }: PageProps) {
   }
 
   if (service.slug === "sobrepeso-e-obesidade") {
-    return <OverweightObesityLanding service={service} />;
+    return (
+      <>
+        <AnamnesePopup />
+        <OverweightObesityLanding service={service} />
+      </>
+    );
   }
 
   if (service.slug === "obesidade") {
@@ -60,11 +66,21 @@ export default async function ServicePage({ params }: PageProps) {
   }
 
   if (service.slug === "reposicao-hormonal-masculina") {
-    return <MaleHormoneLanding service={service} />;
+    return (
+      <>
+        <AnamnesePopup />
+        <MaleHormoneLanding service={service} />
+      </>
+    );
   }
 
   if (service.slug === "reposicao-hormonal-feminina") {
-    return <FemaleHormoneLanding service={service} />;
+    return (
+      <>
+        <AnamnesePopup />
+        <FemaleHormoneLanding service={service} />
+      </>
+    );
   }
 
   if (service.slug === "check-up-da-saude") {
@@ -235,8 +251,7 @@ function WeightLossLanding({ service }: { service: Service }) {
       text: "Medicações em uso, segurança médica, histórico de saúde e individualidade clínica."
     }
   ];
-  const mapsUrl =
-    "https://www.google.com/maps?q=R.%20Paulino%20Afonso%2C%20108%2C%20Centro%2C%20Petr%C3%B3polis%2C%20RJ%2C%2025680-195&output=embed";
+  const mapsUrl = `https://www.google.com/maps?q=${encodeURIComponent(doctor.location)}&output=embed`;
   const faqItems = [
     {
       question: "Como funciona o acompanhamento médico para emagrecimento?",
@@ -568,8 +583,7 @@ function OverweightObesityLanding({ service }: { service: Service }) {
         `Sim. O atendimento presencial acontece em Petrópolis, no endereço ${doctor.location}. A disponibilidade deve ser confirmada com a equipe no agendamento.`
     }
   ];
-  const mapsUrl =
-    "https://www.google.com/maps?q=R.%20Paulino%20Afonso%2C%20108%2C%20Centro%2C%20Petr%C3%B3polis%2C%20RJ%2C%2025680-195&output=embed";
+  const mapsUrl = `https://www.google.com/maps?q=${encodeURIComponent(doctor.location)}&output=embed`;
 
   return (
     <>
@@ -794,8 +808,7 @@ function ObesityLanding({ service }: { service: Service }) {
       text: "Condutas individualizadas e, quando indicado, avaliação de terapias medicamentosas com acompanhamento contínuo."
     }
   ];
-  const mapsUrl =
-    "https://www.google.com/maps?q=R.%20Paulino%20Afonso%2C%20108%2C%20Centro%2C%20Petr%C3%B3polis%2C%20RJ%2C%2025680-195&output=embed";
+  const mapsUrl = `https://www.google.com/maps?q=${encodeURIComponent(doctor.location)}&output=embed`;
   const faqItems = [
     {
       question: "Como funciona o acompanhamento médico para obesidade?",
@@ -1125,8 +1138,7 @@ function OverweightLanding({ service }: { service: Service }) {
       text: "O acompanhamento permite revisar evolução, dificuldades e respostas ao plano proposto."
     }
   ];
-  const mapsUrl =
-    "https://www.google.com/maps?q=R.%20Paulino%20Afonso%2C%20108%2C%20Centro%2C%20Petr%C3%B3polis%2C%20RJ%2C%2025680-195&output=embed";
+  const mapsUrl = `https://www.google.com/maps?q=${encodeURIComponent(doctor.location)}&output=embed`;
   const faqItems = [
     {
       question: "Sobrepeso precisa de acompanhamento médico?",
@@ -1471,8 +1483,7 @@ function HypertrophyLanding({ service }: { service: Service }) {
       text: "O acompanhamento permite revisar evolução, dificuldades, resposta clínica e necessidade de ajustes."
     }
   ];
-  const mapsUrl =
-    "https://www.google.com/maps?q=R.%20Paulino%20Afonso%2C%20108%2C%20Centro%2C%20Petr%C3%B3polis%2C%20RJ%2C%2025680-195&output=embed";
+  const mapsUrl = `https://www.google.com/maps?q=${encodeURIComponent(doctor.location)}&output=embed`;
   const faqItems = [
     {
       question: "A hipertrofia pode ser acompanhada por médico?",
@@ -1817,8 +1828,7 @@ function MaleHormoneLanding({ service }: { service: Service }) {
       text: "O acompanhamento permite monitorar resposta clínica, exames, segurança e necessidade de ajustes ao longo do tempo."
     }
   ];
-  const mapsUrl =
-    "https://www.google.com/maps?q=R.%20Paulino%20Afonso%2C%20108%2C%20Centro%2C%20Petr%C3%B3polis%2C%20RJ%2C%2025680-195&output=embed";
+  const mapsUrl = `https://www.google.com/maps?q=${encodeURIComponent(doctor.location)}&output=embed`;
   const faqItems = [
     {
       question: "Como saber se preciso investigar meus hormônios?",
@@ -2163,8 +2173,7 @@ function FemaleHormoneLanding({ service }: { service: Service }) {
       text: "O acompanhamento permite monitorar resposta clínica, exames, segurança e necessidade de ajustes ao longo do tempo."
     }
   ];
-  const mapsUrl =
-    "https://www.google.com/maps?q=R.%20Paulino%20Afonso%2C%20108%2C%20Centro%2C%20Petr%C3%B3polis%2C%20RJ%2C%2025680-195&output=embed";
+  const mapsUrl = `https://www.google.com/maps?q=${encodeURIComponent(doctor.location)}&output=embed`;
   const faqItems = [
     {
       question: "Como saber se preciso investigar minha saúde hormonal?",
@@ -2509,8 +2518,7 @@ function CheckupLanding({ service }: { service: Service }) {
       text: "O acompanhamento ajuda a monitorar exames, revisar condutas e organizar medidas preventivas com segurança."
     }
   ];
-  const mapsUrl =
-    "https://www.google.com/maps?q=R.%20Paulino%20Afonso%2C%20108%2C%20Centro%2C%20Petr%C3%B3polis%2C%20RJ%2C%2025680-195&output=embed";
+  const mapsUrl = `https://www.google.com/maps?q=${encodeURIComponent(doctor.location)}&output=embed`;
   const faqItems = [
     {
       question: "Quando devo fazer um check-up médico?",

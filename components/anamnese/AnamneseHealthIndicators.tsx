@@ -33,7 +33,7 @@ type Props = {
   onChange: (value: HealthIndicatorsPayload) => void;
 };
 
-const whatsappUrl = "https://wa.me/552422459374";
+const whatsappUrl = "https://wa.me/552422459374?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20a%20consulta%20com%20o%20Dr.%20Pedro.";
 
 function getBmiContextText(classification: string) {
   if (classification === "Peso adequado") {

@@ -4,7 +4,7 @@ import { Container } from "@/components/Container";
 import { articles, getArticleReadingTime } from "@/data/articles";
 
 export const metadata: Metadata = {
-  title: "Artigos | Dr. Pedro Machado",
+  title: { absolute: "Artigos | Dr. Pedro Machado" },
   description:
     "Conteúdos sobre emagrecimento estético, sobrepeso e obesidade, saúde hormonal, composição corporal, check-up e acompanhamento médico com o Dr. Pedro Machado em Petrópolis.",
   alternates: {

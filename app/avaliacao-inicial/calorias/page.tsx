@@ -6,7 +6,8 @@ import { Section } from "@/components/Section";
 
 export const metadata: Metadata = {
   title: "Calculadora de Calorias Estimadas",
-  description: "Calcule uma estimativa inicial de taxa metabólica basal e gasto energético diário."
+  description: "Calcule uma estimativa inicial de taxa metabólica basal e gasto energético diário.",
+  alternates: { canonical: "/avaliacao-inicial/calorias" }
 };
 
 export default function CalorieResultPage() {

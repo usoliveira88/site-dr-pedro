@@ -6,21 +6,44 @@ import { Header } from "@/components/Header";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { doctor } from "@/data/site";
 
-const siteUrl = "https://doutorpedromachado.com.br";
+const siteUrl = "https://www.doutorpedromachado.com.br";
+
+const homeTitle = "Médico do Emagrecimento em Petrópolis | Dr. Pedro Machado";
+const homeDescription =
+  "Dr. Pedro Machado é médico em Petrópolis com acompanhamento para emagrecimento, saúde hormonal, composição corporal, sobrepeso, obesidade e prevenção.";
+const homeSocialDescription =
+  "Conheça o acompanhamento médico do Dr. Pedro Machado em Petrópolis para emagrecimento, saúde hormonal, composição corporal e prevenção.";
 
 export const metadata: Metadata = {
   title: {
-    default: "Dr. Pedro Machado | Site institucional",
+    default: homeTitle,
     template: "%s | Dr. Pedro Machado"
   },
-  description:
-    "Dr. Pedro Machado, médico em Petrópolis. Acompanhamento médico para emagrecimento, saúde hormonal, composição corporal e prevenção.",
+  description: homeDescription,
   metadataBase: new URL(siteUrl),
+  authors: [{ name: "Dr. Pedro Machado" }],
+  creator: "Dr. Pedro Machado",
+  publisher: "Dr. Pedro Machado",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true
+    }
+  },
   openGraph: {
-    title: "Dr. Pedro Machado",
-    description:
-      "Médico em Petrópolis, com acompanhamento individualizado para saúde metabólica, peso, composição corporal e qualidade de vida.",
+    title: homeTitle,
+    description: homeSocialDescription,
+    url: "/",
+    siteName: "Dr. Pedro Machado",
+    locale: "pt_BR",
     type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: homeTitle,
+    description: homeSocialDescription
   }
 };
 

@@ -27,8 +27,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${service.shortTitle} | Dr. Pedro Machado`,
-    description: service.description
+    title: { absolute: `${service.shortTitle} | Dr. Pedro Machado` },
+    description: service.description,
+    alternates: { canonical: `/servicos/${service.slug}` },
+    openGraph: {
+      title: `${service.shortTitle} | Dr. Pedro Machado`,
+      description: service.description,
+      url: `/servicos/${service.slug}`,
+      type: "website",
+      locale: "pt_BR"
+    }
   };
 }
 

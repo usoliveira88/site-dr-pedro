@@ -8,9 +8,10 @@ import { TrackedWhatsAppLink } from "@/components/TrackedWhatsAppLink";
 import { doctor } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Atendimentos | Dr. Pedro Machado em Petrópolis",
+  title: { absolute: "Atendimentos | Dr. Pedro Machado em Petrópolis" },
   description:
-    "Conheça os acompanhamentos médicos do Dr. Pedro Machado em Petrópolis: emagrecimento estético, sobrepeso e obesidade, saúde hormonal, hipertrofia e check-up da saúde."
+    "Conheça os acompanhamentos médicos do Dr. Pedro Machado em Petrópolis: emagrecimento estético, sobrepeso e obesidade, saúde hormonal, hipertrofia e check-up da saúde.",
+  alternates: { canonical: "/servicos" }
 };
 
 const heroBadges = [

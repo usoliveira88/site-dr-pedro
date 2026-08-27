@@ -67,9 +67,10 @@ const contactFaq = [
 ];
 
 export const metadata: Metadata = {
-  title: "Contato | Dr. Pedro Machado em Petrópolis",
+  title: { absolute: "Contato | Dr. Pedro Machado em Petrópolis" },
   description:
-    "Entre em contato com a equipe do Dr. Pedro Machado em Petrópolis. WhatsApp, endereço, localização no mapa e informações para agendamento."
+    "Entre em contato com a equipe do Dr. Pedro Machado em Petrópolis. WhatsApp, endereço, localização no mapa e informações para agendamento.",
+  alternates: { canonical: "/contato" }
 };
 
 export default function ContactPage() {

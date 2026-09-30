@@ -7,7 +7,6 @@ import { CTASection } from "@/components/CTASection";
 import { FAQ } from "@/components/FAQ";
 import { StarIcon } from "@/components/Icons";
 import { Section, SectionHeading } from "@/components/Section";
-import { VideoBlock } from "@/components/VideoBlock";
 import { doctor, googleReviews, processSteps, serviceEvidenceStats, services, type Service } from "@/data/site";
 
 type PageProps = {
@@ -27,8 +26,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${service.shortTitle} | Dr. Pedro Machado`,
-    description: service.description
+    title: { absolute: `${service.shortTitle} | Dr. Pedro Machado` },
+    description: service.description,
+    alternates: { canonical: `/servicos/${service.slug}` },
+    openGraph: {
+      title: `${service.shortTitle} | Dr. Pedro Machado`,
+      description: service.description,
+      url: `/servicos/${service.slug}`,
+      type: "website",
+      locale: "pt_BR"
+    }
   };
 }
 
@@ -117,9 +124,6 @@ export default async function ServicePage({ params }: PageProps) {
             </ButtonLink>
           </div>
         </div>
-      </Section>
-      <Section>
-        <VideoBlock title={service.videoPlaceholder} text="Conteúdo educativo sobre o acompanhamento, com explicação objetiva, natural e sem promessa de resultado." />
       </Section>
       <Section className="bg-linen">
         <div className="grid gap-10 lg:grid-cols-2">

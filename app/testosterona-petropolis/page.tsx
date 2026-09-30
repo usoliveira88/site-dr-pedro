@@ -5,7 +5,7 @@ import { getArticleBySlug } from "@/data/articles";
 const article = getArticleBySlug("testosterona-petropolis");
 
 export const metadata: Metadata = {
-  title: article?.metaTitle,
+  title: article?.metaTitle ? { absolute: article.metaTitle } : undefined,
   description: article?.description,
   alternates: {
     canonical: "/testosterona-petropolis"
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: article?.metaTitle,
     description: article?.description,
+    url: "/testosterona-petropolis",
     type: "article",
     images: article ? [article.coverImage] : undefined
   }

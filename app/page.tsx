@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { AnamnesePopup } from "@/components/AnamnesePopup";
 import { FAQ } from "@/components/FAQ";
 import { GoogleReviews } from "@/components/GoogleReviews";
@@ -13,6 +14,42 @@ import {
 import { HomeHero } from "@/components/HomeHero";
 import { Section, SectionHeading } from "@/components/Section";
 import { processSteps, generalFaq } from "@/data/site";
+
+const title = "Médico do Emagrecimento em Petrópolis | Dr. Pedro Machado";
+const description =
+  "Dr. Pedro Machado é médico em Petrópolis com acompanhamento para emagrecimento, saúde hormonal, composição corporal, sobrepeso, obesidade e prevenção.";
+const socialDescription =
+  "Conheça o acompanhamento médico do Dr. Pedro Machado em Petrópolis para emagrecimento, saúde hormonal, composição corporal e prevenção.";
+
+export const metadata: Metadata = {
+  title: { absolute: title },
+  description,
+  keywords: [
+    "médico do emagrecimento em Petrópolis",
+    "médico para emagrecimento em Petrópolis",
+    "emagrecimento médico Petrópolis",
+    "Dr. Pedro Machado",
+    "saúde hormonal Petrópolis",
+    "composição corporal Petrópolis",
+    "sobrepeso e obesidade Petrópolis",
+    "medicina esportiva Petrópolis",
+    "check-up médico Petrópolis"
+  ],
+  alternates: { canonical: "/" },
+  robots: { index: true, follow: true },
+  openGraph: {
+    title,
+    description: socialDescription,
+    url: "/",
+    type: "website",
+    locale: "pt_BR"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description: socialDescription
+  }
+};
 
 export default function Home() {
   return (

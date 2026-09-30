@@ -7,6 +7,7 @@ import { HealthAttentionList } from "@/components/calculators/HealthAttentionLis
 import { OtherCalculators } from "@/components/calculators/OtherCalculators";
 import { readCalculatorResult, saveCalculatorResult } from "@/components/calculators/calculatorSession";
 import { ButtonLink } from "@/components/ButtonLink";
+import { doctor } from "@/data/site";
 import {
   calculateCaloriesEstimate,
   formatHealthDecimal,
@@ -124,7 +125,7 @@ export function CalorieResultClient() {
       />
 
       <div className="flex flex-col gap-3 sm:flex-row">
-        <ButtonLink href="https://wa.me/552422459374?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20a%20consulta%20com%20o%20Dr.%20Pedro." className="w-full sm:w-auto">Quero avaliar minha estratégia</ButtonLink>
+        <ButtonLink href={doctor.whatsappUrl} className="w-full sm:w-auto">Quero avaliar minha estratégia</ButtonLink>
         <ButtonLink href="/anamnese" variant="secondary" className="w-full sm:w-auto">Preencher anamnese completa</ButtonLink>
       </div>
 

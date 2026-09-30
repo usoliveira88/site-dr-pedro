@@ -3,9 +3,10 @@ import { AnamneseForm } from "@/components/anamnese/AnamneseForm";
 import { doctor } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Anamnese Inicial | Dr. Pedro Machado",
+  title: { absolute: "Anamnese Inicial | Dr. Pedro Machado" },
   description:
-    "Preencha a avaliação inicial do Dr. Pedro Machado em Petrópolis e informe seus objetivos, hábitos e rotina para que a equipe possa orientar o próximo passo."
+    "Preencha a avaliação inicial do Dr. Pedro Machado em Petrópolis e informe seus objetivos, hábitos e rotina para que a equipe possa orientar o próximo passo.",
+  alternates: { canonical: "/anamnese" }
 };
 
 const trustItems = ["Atendimento em Petrópolis", doctor.professionalId, "Avaliação individualizada", "Acompanhamento médico com segurança"];

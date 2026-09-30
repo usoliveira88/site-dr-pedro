@@ -6,7 +6,8 @@ import { Section } from "@/components/Section";
 
 export const metadata: Metadata = {
   title: "Calculadora de IMC",
-  description: "Calcule seu IMC e veja uma interpretação inicial. Resultado informativo que não substitui avaliação médica."
+  description: "Calcule seu IMC e veja uma interpretação inicial. Resultado informativo que não substitui avaliação médica.",
+  alternates: { canonical: "/avaliacao-inicial/imc" }
 };
 
 export default function BmiResultPage() {

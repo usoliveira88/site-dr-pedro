@@ -1,0 +1,27 @@
+.button {
+  position: fixed;
+  right: 20px;
+  bottom: calc(20px + env(safe-area-inset-bottom));
+  z-index: 80;
+  display: inline-flex;
+  width: 56px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 10px 24px rgb(18 140 82 / 28%);
+  transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+}
+
+.button:hover { background: #20bd5a; transform: scale(1.05); box-shadow: 0 13px 28px rgb(18 140 82 / 34%); }
+.button:focus-visible { outline: 3px solid #f5c979; outline-offset: 4px; }
+.icon { display: block; width: 36px; height: 36px; flex: 0 0 36px; fill: currentColor; }
+
+@media (max-width: 767px) {
+  .button { right: 20px; bottom: calc(16px + env(safe-area-inset-bottom)); width: 54px; height: 54px; }
+  .icon { width: 34px; height: 34px; flex-basis: 34px; }
+}
+
+@media (prefers-reduced-motion: reduce) { .button { transition: none; } }

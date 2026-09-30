@@ -8,7 +8,8 @@ import { Section } from "@/components/Section";
 export const metadata: Metadata = {
   title: "Avaliação Inicial Gratuita",
   description:
-    "Calcule IMC, relação cintura-quadril e estimativa calórica com ferramentas gratuitas do Dr. Pedro Machado em Petrópolis."
+    "Calcule IMC, relação cintura-quadril e estimativa calórica com ferramentas gratuitas do Dr. Pedro Machado em Petrópolis.",
+  alternates: { canonical: "/avaliacao-inicial" }
 };
 
 export default function InitialEvaluationPage() {

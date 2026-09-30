@@ -9,7 +9,8 @@ import { doctor, services } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Sobre",
-  description: "Conheça a trajetória, a forma de atendimento e os princípios que orientam o cuidado médico do Dr. Pedro Machado em Petrópolis."
+  description: "Conheça a trajetória, a forma de atendimento e os princípios que orientam o cuidado médico do Dr. Pedro Machado em Petrópolis.",
+  alternates: { canonical: "/sobre" }
 };
 
 const aboutHeroKeywords = ["Escuta clínica", "Exames", "Composição corporal", "Saúde metabólica", "Medicina esportiva", "Petrópolis/RJ"];

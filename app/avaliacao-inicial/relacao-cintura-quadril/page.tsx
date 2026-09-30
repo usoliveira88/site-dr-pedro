@@ -7,7 +7,8 @@ import { Section } from "@/components/Section";
 export const metadata: Metadata = {
   title: "Calculadora Cintura-Quadril",
   description:
-    "Calcule sua relação cintura-quadril e veja um indicador inicial relacionado à distribuição de gordura corporal."
+    "Calcule sua relação cintura-quadril e veja um indicador inicial relacionado à distribuição de gordura corporal.",
+  alternates: { canonical: "/avaliacao-inicial/relacao-cintura-quadril" }
 };
 
 export default function WaistHipResultPage() {

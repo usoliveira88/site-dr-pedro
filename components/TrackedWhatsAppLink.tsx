@@ -2,8 +2,7 @@
 
 import type { AnchorHTMLAttributes, MouseEvent, ReactNode } from "react";
 import { trackContact } from "@/lib/metaPixel";
-
-const whatsappNumber = "552422459374";
+import { WHATSAPP_NUMBER } from "@/data/site";
 
 type TrackedWhatsAppLinkProps = Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href"> & {
   href: string;
@@ -11,7 +10,7 @@ type TrackedWhatsAppLinkProps = Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "h
 };
 
 function isTrackedWhatsAppUrl(href: string): boolean {
-  return href.replace(/\D/g, "").includes(whatsappNumber);
+  return href.replace(/\D/g, "").includes(WHATSAPP_NUMBER);
 }
 
 export function TrackedWhatsAppLink({

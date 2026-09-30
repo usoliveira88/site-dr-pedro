@@ -3,8 +3,9 @@
 import { useState } from "react";
 import { AnamneseHealthIndicators, type HealthIndicatorsPayload } from "@/components/anamnese/AnamneseHealthIndicators";
 import { TrackedWhatsAppLink } from "@/components/TrackedWhatsAppLink";
+import { doctor } from "@/data/site";
 
-const whatsappUrl = "https://wa.me/552422459374?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20a%20consulta%20com%20o%20Dr.%20Pedro.";
+const whatsappUrl = doctor.whatsappUrl;
 
 type Question = {
   id: string;

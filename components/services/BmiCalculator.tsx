@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { TrackedWhatsAppLink } from "@/components/TrackedWhatsAppLink";
+import { doctor } from "@/data/site";
 
 type Cta = {
   label: string;
@@ -22,7 +23,7 @@ type CalculatorResult = {
 
 type Sex = "homem" | "mulher";
 
-const whatsappUrl = "https://wa.me/552422459374?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20a%20consulta%20com%20o%20Dr.%20Pedro.";
+const whatsappUrl = doctor.whatsappUrl;
 
 function parseNumber(value: string) {
   const normalized = value.replace(",", ".").trim();

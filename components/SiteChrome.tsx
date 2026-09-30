@@ -8,7 +8,7 @@ import { buildWhatsAppUrl, KORPER_WHATSAPP_MESSAGE } from "@/data/site";
 
 export function SiteChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const usesCustomChrome = pathname === "/korper" || pathname.startsWith("/korper/");
+  const usesCustomChrome = pathname === "/korper" || pathname.startsWith("/korper/") || pathname === "/parceria-korper";
 
   return (
     <>

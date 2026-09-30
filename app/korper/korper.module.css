@@ -160,11 +160,6 @@
 .doctorBody p + p { margin-top: 18px; }
 .doctorStatement { margin-top: 56px !important; color: #f3f0e8; font-family: var(--font-korper-display), sans-serif; font-size: clamp(2.55rem, 4vw, 4.35rem); font-weight: 700; letter-spacing: -.01em; line-height: .92; text-transform: uppercase; }
 .doctorStatement em { color: var(--orange); font-style: normal; }
-.doctorLinks { display: flex; flex-wrap: wrap; gap: 12px 22px; margin-top: 34px; }
-.doctorLink { display: inline-flex; align-items: center; gap: 9px; color: #e8e5df !important; font-size: .78rem; font-weight: 650; line-height: 1.4; text-decoration: none; transition: color .2s ease; }
-.doctorLink svg { display: block; width: 20px; height: 20px; flex: 0 0 20px; color: var(--orange); }
-.doctorLink:hover { color: var(--white) !important; text-decoration: underline; text-underline-offset: 4px; }
-.doctorLink:focus-visible { outline: 2px solid var(--champagne); outline-offset: 4px; }
 .partnershipInner .primaryButton:hover { border-color: var(--white); background: var(--white); color: var(--ink) !important; }
 
 .careSection { background: var(--paper); }
@@ -246,7 +241,13 @@
 
 .footer { display: flex; min-height: 150px; align-items: center; justify-content: space-between; gap: 40px; width: min(1220px, calc(100% - 96px)); margin: 0 auto; background: var(--paper); }
 .footer .brandLockup > img:first-child { filter: brightness(0); }
-.footer p { max-width: 420px; color: var(--muted); font-size: .66rem; line-height: 1.6; text-align: right; }
+.footerBrand { display: grid; gap: 14px; }
+.footerBrand p { max-width: 420px; color: var(--muted); font-size: .66rem; line-height: 1.6; }
+.footerLinks { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 14px 24px; }
+.footerLinks a { display: inline-flex; align-items: center; gap: 8px; color: var(--graphite); font-size: .74rem; font-weight: 650; line-height: 1.4; text-decoration: none; }
+.footerLinks svg { width: 18px; height: 18px; flex: 0 0 18px; color: var(--orange); }
+.footerLinks a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.footerLinks a:focus-visible { outline: 2px solid var(--orange); outline-offset: 4px; }
 
 @keyframes intro { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -262,16 +263,17 @@
 
 @media (max-width: 767px) {
   .heroInner, .lightInner, .darkInner, .faqInner, .partnershipInner, .finalInner, .footer { width: calc(100% - 40px); }
-  .hero { min-height: 1320px; }
-  .heroInner { display: block; min-height: 1320px; padding-top: 0; }
-  .heroCopy { padding: 74px 0 0; }
-  .heroCopy h1 { margin-top: 40px; font-size: clamp(3.85rem, 18.2vw, 5rem); line-height: .9; }
+  .hero { min-height: 980px; }
+  .heroInner { display: block; min-height: 980px; padding-top: 0; }
+  .heroCopy { width: 70%; padding: 62px 0 0; }
+  .heroCopy h1 { margin-top: 24px; font-size: clamp(2.75rem, 12.6vw, 3.15rem); line-height: .9; }
   .heroCopy h1 .heroPause { margin-top: .08em; }
-  .heroText { max-width: 350px; margin-top: 30px !important; font-size: .94rem; line-height: 1.7; }
-  .heroAction { display: block; margin-top: 28px; }
-  .heroAction small { display: block; max-width: none; margin-top: 14px; }
+  .heroText { max-width: 350px; margin-top: 22px !important; font-size: .9rem; line-height: 1.58; }
+  .heroAction { display: block; margin-top: 22px; }
+  .heroAction small { display: block; max-width: 215px; margin-top: 14px; }
+  .heroAction .primaryButton { gap: 11px; padding-right: 14px; padding-left: 14px; font-size: .62rem; letter-spacing: .1em; white-space: nowrap; }
   .primaryButton { min-height: 56px; padding: 0 23px; }
-  .heroVisual { position: absolute; right: -14%; bottom: 0; width: 94%; min-height: 500px; }
+  .heroVisual { position: absolute; right: -18%; bottom: 0; width: 82%; min-height: 600px; }
   .heroPortrait { object-position: bottom right; }
   .heroArc { top: 13%; left: -3%; width: 105%; }
   .heroCoordinate { display: none; }
@@ -282,7 +284,7 @@
   .performanceSection h2 span { margin-top: .62em; font-size: .3em; line-height: 1.28; }
   .performanceList { grid-template-columns: 1fr; gap: 50px; margin-top: 82px; }
   .performanceList article > span { margin-bottom: 18px; }
-  .performanceList h3 { font-size: .78rem; }
+  .performanceList h3 { font-size: .92rem; }
   .performanceList p { max-width: 340px; margin-top: 13px; font-size: .91rem; line-height: 1.7; }
 
   .equationSection .lightInner { display: block; padding: 120px 0 128px; }
@@ -304,8 +306,6 @@
   .doctorCredentials { margin-top: 28px; font-size: .69rem; }
   .doctorBody { margin-top: 32px; font-size: .94rem; }
   .doctorStatement { margin-top: 46px !important; font-size: 3.35rem; }
-  .doctorLinks { flex-direction: column; align-items: flex-start; gap: 16px; margin-top: 30px; }
-  .doctorLink { font-size: .86rem; }
 
   .careSection .lightInner { padding: 72px 0 76px; }
   .careHeading { display: block; }
@@ -317,13 +317,14 @@
   .careItem p { font-size: 1.125rem; line-height: 1.25; }
 
   .processSection .lightInner { padding: 48px 0 132px; }
+  .processHeading h2 { max-width: 11.5ch; font-size: clamp(2.45rem, 10.7vw, 2.9rem); line-height: .98; }
   .timeline { display: block; margin-top: 80px; padding-left: 30px; }
   .timeline::before { top: 8px; bottom: 8px; left: 6px; width: 1px; height: auto; right: auto; }
   .timeline li { min-height: 210px; padding: 0 0 65px 34px; }
   .timeline li:last-child { min-height: 0; padding-bottom: 0; }
   .stepNumber { position: static; display: block; margin-bottom: 20px; font-size: 4.3rem; }
   .timeline i { top: 3px; left: -30px; }
-  .timeline h3 { font-size: .78rem; }
+  .timeline h3 { font-size: .9rem; }
   .timeline p { margin-top: 14px; font-size: 1rem; line-height: 1.7; }
   .processCta { width: 100%; margin-top: 64px; padding-right: 14px; padding-left: 14px; font-size: .67rem; }
 
@@ -354,17 +355,20 @@
   .finalInner h2 { margin-top: 42px; font-size: clamp(4.3rem, 20vw, 5.5rem); line-height: .87; }
   .finalInner h2 span { font-size: .36em; line-height: 1.12; }
 
-  .footer { display: block; padding: 48px 0 104px; }
-  .footer p { margin-top: 28px; text-align: left; }
+  .footer { display: grid; gap: 28px; padding: 48px 0 104px; }
+  .footerLinks { display: grid; justify-content: stretch; gap: 18px; }
+  .footerLinks a { font-size: .82rem; }
 
 }
 
 @media (max-width: 389px) {
   .heroInner, .lightInner, .darkInner, .faqInner, .partnershipInner, .finalInner, .footer { width: calc(100% - 32px); }
-  .hero { min-height: 1280px; }
-  .heroInner { min-height: 1280px; }
-  .heroCopy h1 { font-size: 3.65rem; }
-  .heroVisual { right: -18%; min-height: 480px; }
+  .hero { min-height: 940px; }
+  .heroInner { min-height: 940px; }
+  .heroCopy { width: 72%; padding-top: 54px; }
+  .heroCopy h1 { font-size: 2.65rem; }
+  .heroAction small { max-width: 180px; }
+  .heroVisual { right: -28%; bottom: 52px; min-height: 560px; }
   .primaryButton { gap: 14px; font-size: .68rem; padding: 0 19px; }
 }
 

@@ -99,23 +99,6 @@ function AbstractArc({ className = "" }: { className?: string }) {
   );
 }
 
-type PartnershipQuoteData = {
-  quote: string;
-  name: string;
-  role: string;
-};
-
-function PartnershipQuote({ quote }: { quote: PartnershipQuoteData | null }) {
-  if (!quote) return null;
-
-  return (
-    <blockquote className={styles.partnershipQuote}>
-      <p>&ldquo;{quote.quote}&rdquo;</p>
-      <footer>{quote.name} · {quote.role} · Körper Academia</footer>
-    </blockquote>
-  );
-}
-
 function BrandLockup({ light = false }: { light?: boolean }) {
   return (
     <div className={`${styles.brandLockup} ${light ? styles.brandLockupLight : ""}`}>
@@ -213,17 +196,6 @@ export default function KorperLandingPage() {
             <p>A proposta é entender rotina, treino, histórico, objetivos e contexto clínico para construir uma estratégia coerente com cada paciente.</p>
           </div>
           <p className={styles.doctorStatement}>Não existe<br /><em>fórmula pronta.</em></p>
-          <nav className={styles.doctorLinks} aria-label="Links sobre o Dr. Pedro Machado">
-            <a className={styles.doctorLink} href="https://www.instagram.com/drpedromachado_/" target="_blank" rel="noopener noreferrer">
-              <InstagramIcon /> <span>Siga Meu Perfil</span>
-            </a>
-            <a className={styles.doctorLink} href="https://www.doutorpedromachado.com.br" target="_blank" rel="noopener noreferrer">
-              <WebsiteIcon /> <span>Conheça Mais Sobre Minha Atuação</span>
-            </a>
-            <a className={styles.doctorLink} href="https://google.com/maps?ll=-22.506091,-43.195847&z=15&t=m&hl=pt-BR&gl=US&mapclient=embed&cid=11178659947781709425" target="_blank" rel="noopener noreferrer">
-              <MapPinIcon /> <span>Visite a Clínica</span>
-            </a>
-          </nav>
         </div>
       </section>
 
@@ -277,7 +249,6 @@ export default function KorperLandingPage() {
             <p className={styles.exclusiveText}>A parceria entre a Körper e o Dr. Pedro Machado foi pensada para oferecer condições exclusivas aos alunos da academia.</p>
           </div>
           <KorperCta href={APPOINTMENT_URL} eventName="korper_section_cta_click" className={styles.primaryButton}><WhatsAppIcon /> Quero conhecer a condição</KorperCta>
-          <PartnershipQuote quote={null} />
         </div>
       </section>
 
@@ -303,10 +274,22 @@ export default function KorperLandingPage() {
       </section>
 
       <footer className={styles.footer}>
-        <BrandLockup />
-        <p>{doctor.professionalId} · Comunicação médica informativa, sem promessa de resultados.</p>
+        <div className={styles.footerBrand}>
+          <BrandLockup />
+          <p>{doctor.professionalId} · Comunicação médica informativa, sem promessa de resultados.</p>
+        </div>
+        <nav className={styles.footerLinks} aria-label="Links do Dr. Pedro Machado">
+          <a href="https://www.instagram.com/drpedromachado_/" target="_blank" rel="noopener noreferrer">
+            <InstagramIcon /> <span>Siga Meu Perfil</span>
+          </a>
+          <a href="https://www.doutorpedromachado.com.br" target="_blank" rel="noopener noreferrer">
+            <WebsiteIcon /> <span>Conheça Mais Sobre Minha Atuação</span>
+          </a>
+          <a href="https://google.com/maps?ll=-22.506091,-43.195847&z=15&t=m&hl=pt-BR&gl=US&mapclient=embed&cid=11178659947781709425" target="_blank" rel="noopener noreferrer">
+            <MapPinIcon /> <span>Visite a Clínica</span>
+          </a>
+        </nav>
       </footer>
-
     </div>
   );
 }

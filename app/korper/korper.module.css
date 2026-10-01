@@ -126,6 +126,9 @@
 .performanceList article > span { display: block; margin-bottom: 28px; color: var(--orange); font-size: .68rem; font-weight: 800; letter-spacing: .2em; }
 .performanceList h3 { color: #f0ede6; font-size: .9rem; font-weight: 700; letter-spacing: .055em; text-transform: uppercase; }
 .performanceList p { margin-top: 16px; color: #c0bbb2; font-size: .92rem; font-weight: 400; letter-spacing: 0; line-height: 1.72; }
+.healthCallout { display: grid; grid-template-columns: minmax(240px, .8fr) 1.2fr; gap: 42px; align-items: baseline; margin-top: 72px; border-top: 1px solid #323232; padding-top: 25px; }
+.healthCallout h3 { color: #f0ede6; font-size: .9rem; font-weight: 700; letter-spacing: .055em; text-transform: uppercase; }
+.healthCallout p { max-width: 720px; color: #c0bbb2; font-size: .92rem; line-height: 1.72; }
 
 .equationSection { background: var(--paper); }
 .equationSection .lightInner { display: grid; grid-template-columns: .8fr 1.2fr; gap: 100px; padding: 170px 0; }
@@ -289,6 +292,8 @@
   .performanceList article > span { margin-bottom: 18px; }
   .performanceList h3 { font-size: .92rem; }
   .performanceList p { max-width: 340px; margin-top: 13px; font-size: .91rem; line-height: 1.7; }
+  .healthCallout { grid-template-columns: 1fr; gap: 14px; margin-top: 54px; padding-top: 20px; }
+  .healthCallout p { font-size: .91rem; line-height: 1.7; }
 
   .equationSection .lightInner { display: block; padding: 120px 0 128px; }
   .equationHeading h2, .processSection h2, .faqSection h2, .partnershipInner h2 { font-size: clamp(3.1rem, 14vw, 4.25rem); line-height: .98; }

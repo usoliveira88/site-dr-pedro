@@ -67,20 +67,24 @@ const careHighlights = [
 
 const faqItems = [
   {
+    question: "Alunos da Körper têm desconto?",
+    answer: "Sim. Alunos da Körper têm acesso a condições especiais para o atendimento. Fale com a equipe para consultar os detalhes e a disponibilidade no momento do agendamento."
+  },
+  {
+    question: "Vou precisar gastar com manipulados, suplementos, fitoterápicos, reposições, magnésio ou canetas?",
+    answer: "Na maioria dos casos, o acompanhamento não exige suplementação ou reposição. Manipulados, suplementos, fitoterápicos, reposições ou canetas são considerados apenas em situações específicas, após avaliação médica individualizada; não são uma parte automática do atendimento."
+  },
+  {
+    question: "O atendimento também é para pessoas idosas?",
+    answer: "Sim. Pessoas idosas também podem ser atendidas. A avaliação considera histórico de saúde, condições atuais, rotina e objetivos. Check-ups e aspectos metabólicos ou hormonais podem ser considerados quando fizerem sentido para cada pessoa, sempre com avaliação médica individualizada."
+  },
+  {
     question: "Como funciona a consulta?",
     answer: "A consulta começa por uma conversa sobre histórico, rotina e objetivos. A partir da avaliação individual, o Dr. Pedro orienta os próximos passos adequados para cada pessoa."
   },
   {
     question: "O atendimento é individualizado?",
     answer: "Sim. O acompanhamento considera saúde, composição corporal, rotina, histórico e objetivos, sem usar uma fórmula pronta."
-  },
-  {
-    question: "O acompanhamento pode incluir suplementos ou medicamentos?",
-    answer: "Pode, quando houver indicação após avaliação médica. A estratégia pode envolver orientações sobre suplementação, medicamentos e recursos terapêuticos específicos, sempre considerando o contexto e a segurança de cada paciente."
-  },
-  {
-    question: "Preciso ser aluno da Körper?",
-    answer: "A parceria oferece uma condição especial para alunos Körper. A equipe confirma as condições disponíveis no momento do agendamento."
   },
   {
     question: "Como faço para agendar?",
@@ -149,7 +153,7 @@ export default function KorperLandingPage() {
 
       <section className={styles.performanceSection}>
         <div className={styles.darkInner}>
-          <h2>Você treina.<span>Mas está evoluindo<br />como gostaria?</span></h2>
+          <h2>Você treina.<span>Mas os resultados não te acompanham?</span></h2>
           <div className={styles.performanceList}>
             {performancePoints.map(([number, label, text]) => (
               <article key={number}>
@@ -159,6 +163,10 @@ export default function KorperLandingPage() {
               </article>
             ))}
           </div>
+          <aside className={styles.healthCallout}>
+            <h3>Saúde e prevenção em diferentes fases da vida</h3>
+            <p>Check-ups e avaliação de saúde metabólica e hormonal, além de acompanhamento individualizado para pessoas idosas, conforme histórico, necessidades e avaliação médica.</p>
+          </aside>
         </div>
       </section>
 
@@ -192,8 +200,8 @@ export default function KorperLandingPage() {
             <span>Médico | {doctor.professionalId}</span>
           </div>
           <div className={styles.doctorBody}>
-            <p>Dr. Pedro Machado trabalha com acompanhamento médico individualizado para pessoas que buscam emagrecimento, hipertrofia, melhor composição corporal, evolução na musculação, mais disposição e performance.</p>
-            <p>A proposta é entender rotina, treino, histórico, objetivos e contexto clínico para construir uma estratégia coerente com cada paciente.</p>
+            <p>Prazer, seja bem-vindo! Meu nome é Dr. Pedro Machado. Trabalho com acompanhamento médico individualizado para pessoas que buscam emagrecimento, hipertrofia, melhora da composição corporal, evolução na musculação, mais disposição e performance.</p>
+            <p>Minha proposta é entender sua rotina, seu treino, seu histórico, seus objetivos e seu contexto clínico para construir com você uma estratégia coerente com a sua realidade.</p>
           </div>
           <p className={styles.doctorStatement}>Não existe<br /><em>fórmula pronta.</em></p>
         </div>
@@ -268,7 +276,7 @@ export default function KorperLandingPage() {
         <div className={styles.finalOverlay} />
         <div className={styles.finalInner}>
           <p className={styles.eyebrow}>Körper + Dr. Pedro Machado</p>
-          <h2>Você já começou.<span>Agora entenda melhor<br />o seu corpo.</span></h2>
+          <h2>Você já começou.<span>Agora entenda melhor<br />seu corpo.</span></h2>
           <KorperCta href={APPOINTMENT_URL} eventName="final_cta_click" className={styles.finalButton}><WhatsAppIcon /> Agendar pelo WhatsApp</KorperCta>
         </div>
       </section>

@@ -152,7 +152,7 @@
 
 .doctorSection { position: relative; display: block; min-height: 0; overflow: hidden; background: var(--graphite); color: var(--white); }
 .doctorImageWrap { position: absolute; inset: 0 0 0 34%; overflow: hidden; background: #0f0f0f; }
-.doctorImage { object-fit: cover; object-position: 52% 24%; filter: saturate(.86) contrast(.98) brightness(.82); }
+.doctorImage { object-fit: cover; object-position: 52% 48%; filter: saturate(.86) contrast(.98) brightness(.82); }
 .doctorImageWrap::before { position: absolute; z-index: 1; inset: 34px 34px; border: 1px solid rgb(255 116 0 / 30%); content: ""; pointer-events: none; }
 .doctorImageWrap::after { position: absolute; inset: 0; background: linear-gradient(90deg, var(--graphite) 0%, rgb(19 19 19 / 96%) 22%, rgb(19 19 19 / 78%) 42%, rgb(19 19 19 / 24%) 72%, rgb(19 19 19 / 8%) 100%), linear-gradient(0deg, rgb(19 19 19 / 72%) 0%, transparent 52%); content: ""; }
 .doctorIndex { position: absolute; z-index: 2; right: 48px; bottom: 40px; color: rgb(255 255 255 / 72%); font-size: .6rem; letter-spacing: .2em; }

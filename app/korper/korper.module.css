@@ -71,7 +71,9 @@
 .heroCopy h1 em { color: var(--orange); font-style: normal; }
 .heroText { max-width: 590px; margin-top: 38px !important; color: #42403c; font-size: 1.06rem; line-height: 1.8; }
 .heroAction { display: flex; align-items: center; gap: 25px; margin-top: 34px; }
-.heroAction small { max-width: 190px; color: #5c5a56; font-size: .74rem; line-height: 1.55; }
+.heroAction small { display: flex; max-width: 220px; align-items: center; gap: 11px; border: 1px solid rgb(255 116 0 / 32%); background: #fff8f1; box-shadow: 0 5px 14px rgb(8 8 8 / 5%); padding: 11px 14px; color: #302c27; font-size: .84rem; font-weight: 600; line-height: 1.35; }
+.heroAction small::before { width: 3px; height: 29px; flex: 0 0 3px; border-radius: 3px; background: var(--orange); content: ""; }
+.heroAction small strong { color: #c95500; font-weight: 800; }
 
 .primaryButton, .finalButton, .doctorCta, .processCta {
   display: inline-flex;
@@ -271,7 +273,7 @@
   .heroCopy h1 .heroPause { margin-top: .08em; }
   .heroText { max-width: 420px; margin-top: 16px !important; font-size: .84rem; line-height: 1.48; }
   .heroAction { display: block; margin-top: 16px; }
-  .heroAction small { display: block; max-width: 215px; margin-top: 14px; }
+  .heroAction small { width: fit-content; max-width: 235px; margin-top: 14px; }
   .heroAction .primaryButton { gap: 11px; padding-right: 14px; padding-left: 14px; font-size: .62rem; letter-spacing: .1em; white-space: nowrap; }
   .primaryButton { min-height: 56px; padding: 0 23px; }
   .heroVisual { position: relative; right: auto; bottom: auto; width: 100%; height: min(104vw, 410px); min-height: 310px; margin-top: -4px; }

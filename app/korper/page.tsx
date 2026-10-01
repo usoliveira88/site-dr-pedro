@@ -130,7 +130,7 @@ export default function KorperLandingPage() {
               <KorperCta href={APPOINTMENT_URL} eventName="hero_cta_click" className={styles.primaryButton}>
                 <WhatsAppIcon /> Agendar pelo WhatsApp
               </KorperCta>
-              <small>Condição especial para alunos Körper.</small>
+              <small>Condição especial para <strong>alunos Körper.</strong></small>
             </div>
           </div>
 

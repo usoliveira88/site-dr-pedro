@@ -280,7 +280,7 @@
   .heroPortrait { object-position: bottom right; }
   .heroArc { top: 4%; left: 16%; width: 78%; }
   .heroCoordinate { display: none; }
-  .heroIdentity { left: 0; bottom: 18px; min-width: 164px; padding: 10px 12px; }
+  .heroIdentity { left: 0; bottom: 54px; min-width: 164px; padding: 10px 12px; }
 
   .darkInner { padding: 112px 0 116px; }
   .performanceSection h2 { font-size: clamp(4rem, 19vw, 5.2rem); line-height: .9; }

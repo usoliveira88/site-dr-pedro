@@ -71,8 +71,8 @@
 .heroCopy h1 em { color: var(--orange); font-style: normal; }
 .heroText { max-width: 590px; margin-top: 38px !important; color: #42403c; font-size: 1.06rem; line-height: 1.8; }
 .heroAction { display: flex; align-items: center; gap: 25px; margin-top: 34px; }
-.heroAction small { display: flex; max-width: 220px; align-items: center; gap: 11px; border: 1px solid rgb(255 116 0 / 32%); background: #fff8f1; box-shadow: 0 5px 14px rgb(8 8 8 / 5%); padding: 11px 14px; color: #302c27; font-size: .84rem; font-weight: 600; line-height: 1.35; }
-.heroAction small::before { width: 3px; height: 29px; flex: 0 0 3px; border-radius: 3px; background: var(--orange); content: ""; }
+.heroAction small { position: relative; display: block; max-width: 220px; border: 1px solid rgb(255 116 0 / 32%); background: #fff8f1; box-shadow: 0 5px 14px rgb(8 8 8 / 5%); padding: 11px 14px 11px 24px; color: #302c27; font-size: .84rem; font-weight: 600; line-height: 1.35; text-align: left; text-justify: auto; }
+.heroAction small::before { position: absolute; top: 50%; left: 11px; width: 3px; height: 29px; border-radius: 3px; background: var(--orange); content: ""; transform: translateY(-50%); }
 .heroAction small strong { color: #c95500; font-weight: 800; }
 
 .primaryButton, .finalButton, .doctorCta, .processCta {

@@ -96,6 +96,7 @@
 .primaryButton svg, .finalButton svg, .doctorCta svg, .processCta svg { display: block; width: 20px; height: 20px; flex: 0 0 20px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5; }
 .primaryButton:hover, .finalButton:hover, .doctorCta:hover, .processCta:hover { background: var(--ink); color: var(--white) !important; transform: translateY(-2px); }
 .primaryButton:focus-visible, .finalButton:focus-visible, .doctorCta:focus-visible, .processCta:focus-visible { outline: 3px solid var(--champagne); outline-offset: 4px; }
+.heroAction :global(.whatsappBrandIcon) { width: 26px; height: 26px; flex: 0 0 26px; }
 
 .heroVisual { align-self: stretch; position: relative; min-height: 760px; }
 .heroVisual::after { position: absolute; right: 2%; bottom: 5%; width: 72%; height: 20%; border-radius: 50%; background: rgb(8 8 8 / 14%); content: ""; filter: blur(35px); transform: perspective(300px) rotateX(68deg); }
@@ -305,7 +306,7 @@
 
   .doctorSection { padding-bottom: 76px; }
   .doctorImageWrap { position: relative; inset: auto; width: 100%; height: min(118vw, 500px); min-height: 400px; }
-  .doctorImage { object-position: 50% 23%; }
+  .doctorImage { object-position: 50% 68%; }
   .doctorImageWrap::before { inset: 18px 18px 88px; border-color: rgb(255 255 255 / 34%); }
   .doctorImageWrap::after { background: linear-gradient(0deg, var(--graphite) 0%, rgb(19 19 19 / 88%) 22%, rgb(19 19 19 / 20%) 58%, rgb(19 19 19 / 8%) 100%); }
   .doctorIndex { right: 28px; bottom: 28px; }
@@ -367,6 +368,10 @@
   .footerLinks { display: grid; justify-content: stretch; gap: 18px; }
   .footerLinks a { font-size: .82rem; }
 
+}
+
+@media (max-width: 480px) {
+  .doctorImage { object-position: 50% 100%; }
 }
 
 @media (max-width: 389px) {

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Barlow_Condensed, Manrope } from "next/font/google";
 import { InstagramIcon, MapPinIcon, WebsiteIcon } from "@/components/Icons";
-import { KorperCta, KorperViewTracker, WhatsAppIcon } from "@/components/korper/KorperInteractions";
+import { KorperCta, KorperViewTracker, WhatsAppBrandIcon, WhatsAppIcon } from "@/components/korper/KorperInteractions";
 import { buildWhatsAppUrl, doctor, KORPER_WHATSAPP_MESSAGE } from "@/data/site";
 import styles from "./korper.module.css";
 
@@ -83,6 +83,14 @@ const faqItems = [
     answer: "A consulta começa por uma conversa sobre histórico, rotina e objetivos. A partir da avaliação individual, o Dr. Pedro orienta os próximos passos adequados para cada pessoa."
   },
   {
+    question: "O que esperar da consulta do Dr. Pedro?",
+    answer: "Uma consulta individualizada, voltada aos seus planos e objetivos. A conversa considera seu histórico, sua rotina e seu contexto de saúde para construir, em conjunto, estratégias de mudança do estilo de vida que façam sentido. O foco é fortalecer sua autonomia e hábitos sustentáveis, sem pressupor acompanhamento contínuo por tempo indeterminado."
+  },
+  {
+    question: "O que não devo esperar da consulta?",
+    answer: "Não há protocolo único nem indicação automática de soroterapia, reposições ou implantes hormonais, manipulados ou suplementos. Exames e condutas são considerados quando houver indicação clínica, após avaliação individual, com atenção à necessidade, à segurança e às evidências — sem intervenções desnecessárias."
+  },
+  {
     question: "O atendimento é individualizado?",
     answer: "Sim. O acompanhamento considera saúde, composição corporal, rotina, histórico e objetivos, sem usar uma fórmula pronta."
   },
@@ -132,7 +140,7 @@ export default function KorperLandingPage() {
             <p className={styles.heroText}>Seu treino mostra que você já decidiu cuidar do corpo. O próximo passo é entender melhor como ele está respondendo e construir uma estratégia alinhada aos seus objetivos.</p>
             <div className={styles.heroAction}>
               <KorperCta href={APPOINTMENT_URL} eventName="hero_cta_click" className={styles.primaryButton}>
-                <WhatsAppIcon /> Agendar pelo WhatsApp
+                <WhatsAppBrandIcon /> Oportunidade Körper
               </KorperCta>
               <small>Condição especial para <strong>alunos Körper.</strong></small>
             </div>

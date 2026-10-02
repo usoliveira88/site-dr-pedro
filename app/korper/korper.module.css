@@ -97,6 +97,10 @@
 .primaryButton:hover, .finalButton:hover, .doctorCta:hover, .processCta:hover { background: var(--ink); color: var(--white) !important; transform: translateY(-2px); }
 .primaryButton:focus-visible, .finalButton:focus-visible, .doctorCta:focus-visible, .processCta:focus-visible { outline: 3px solid var(--champagne); outline-offset: 4px; }
 .heroAction :global(.whatsappBrandIcon) { width: 26px; height: 26px; flex: 0 0 26px; }
+.primaryButton :global(.whatsappBrandIcon), .finalButton :global(.whatsappBrandIcon), .doctorCta :global(.whatsappBrandIcon), .processCta :global(.whatsappBrandIcon) { display: block; fill: initial; stroke: none; }
+.primaryButton :global(.whatsappBrandIcon circle), .finalButton :global(.whatsappBrandIcon circle), .doctorCta :global(.whatsappBrandIcon circle), .processCta :global(.whatsappBrandIcon circle) { fill: #25d366 !important; stroke: none !important; }
+.primaryButton :global(.whatsappBrandIcon path:first-of-type), .finalButton :global(.whatsappBrandIcon path:first-of-type), .doctorCta :global(.whatsappBrandIcon path:first-of-type), .processCta :global(.whatsappBrandIcon path:first-of-type) { fill: none !important; stroke: #fff !important; stroke-width: 1.45 !important; }
+.primaryButton :global(.whatsappBrandIcon path:last-of-type), .finalButton :global(.whatsappBrandIcon path:last-of-type), .doctorCta :global(.whatsappBrandIcon path:last-of-type), .processCta :global(.whatsappBrandIcon path:last-of-type) { fill: #fff !important; stroke: none !important; }
 
 .heroVisual { align-self: stretch; position: relative; min-height: 760px; }
 .heroVisual::after { position: absolute; right: 2%; bottom: 5%; width: 72%; height: 20%; border-radius: 50%; background: rgb(8 8 8 / 14%); content: ""; filter: blur(35px); transform: perspective(300px) rotateX(68deg); }
